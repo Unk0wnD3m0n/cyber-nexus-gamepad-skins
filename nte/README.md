@@ -1,12 +1,16 @@
-# 🌆 Cyber Nexus × NTE Controller
+# 🌆 Cyber Nexus × Neverness to Everness Controller
 
 This folder contains the dedicated **Neverness to Everness (NTE)** GamePad Viewer skin for the Cyber Nexus stream.
 
-## Planned assets
+<p align="center">
+  <img src="assets/base.png" alt="Cyber Nexus Neverness to Everness Controller" width="700">
+</p>
 
-All NTE-specific artwork will live inside `nte/assets/` and will be kept completely separate from the Wuthering Waves and Mortal Kombat 1 skins.
+## Assets
 
-Planned files:
+All NTE-specific artwork lives inside `nte/assets/` and is kept completely separate from the Wuthering Waves and Mortal Kombat 1 skins.
+
+Files:
 
 - `base.png`
 - `dpad.png`
@@ -16,6 +20,14 @@ Planned files:
 - `bumpers.png`
 - `triggers.png`
 
-The final stylesheet will be `nte-gamepad.css`.
+The official stylesheet is `nte-gamepad.css`.
 
-> 🚧 Controller artwork and input calibration are currently in development.
+## 🎮 GamePad Viewer
+
+This controller uses the **PS4 White / DS4 layout (`s=8`)** from GamePad Viewer and loads the Cyber Nexus skin through custom CSS hosted with GitHub Pages.
+
+Current development order:
+
+**Controller base → D-pad calibration → analog sticks → face buttons → Create/Options → L1/R1 → L2/R2 → stick clicks**
+
+> 🛠️ Controller artwork is installed and live input calibration is currently in development.
