@@ -17,10 +17,12 @@ Each controller has its own visual identity, assets and calibration while sharin
 <tr>
 <td width="33%" align="center">
 <h3>🌊 Wuthering Waves</h3>
-<img src="assets/base.png" alt="Cyber Nexus Wuthering Waves Controller" width="100%">
+<img src="wuwa/assets/base.png" alt="Cyber Nexus Wuthering Waves Controller" width="100%">
 <br><br>
 <strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>
 Main Cyber Nexus controller currently being calibrated for GamePad Viewer.
+<br><br>
+<a href="wuwa/">Open Wuthering Waves Project</a>
 </td>
 <td width="33%" align="center">
 <h3>🌆 Neverness to Everness</h3>
@@ -58,15 +60,16 @@ Each skin is developed independently so its artwork and input positions can be c
 ```text
 cyber-nexus-wuwa-gamepad/
 │
-├── cyber-nexus-wuwa-gamepad.css     # 🌊 Wuthering Waves official CSS
-├── assets/                           # 🌊 Wuthering Waves assets
-│   ├── base.png
-│   ├── dpad.png
-│   ├── sticks.png
-│   ├── face-buttons.png
-│   ├── menu-buttons.png
-│   ├── bumpers.png
-│   └── triggers.png
+├── wuwa/                             # 🌊 Wuthering Waves
+│   ├── wuwa-gamepad.css              # Wuwa official CSS
+│   └── assets/
+│       ├── base.png
+│       ├── dpad.png
+│       ├── sticks.png
+│       ├── face-buttons.png
+│       ├── menu-buttons.png
+│       ├── bumpers.png
+│       └── triggers.png
 │
 ├── nte/                              # 🌆 Neverness to Everness
 │   ├── README.md
