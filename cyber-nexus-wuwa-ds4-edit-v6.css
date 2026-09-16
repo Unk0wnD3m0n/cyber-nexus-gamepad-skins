@@ -82,3 +82,8 @@ html, body {
 .controller.edit.disconnected {
     opacity: .45 !important;
 }
+
+/* ===== CALIBRACIÓN D-PAD ===== */
+.controller.edit .dpad {
+    transform: translate(35px, 25px) !important;
+}
