@@ -1,0 +1,219 @@
+/*
+  CYBER NEXUS x Wuthering Waves — GamePad Viewer DualSense skin
+  v0.1
+
+  IMPORTANT:
+  Replace the ASSET_* URLs below with direct public PNG URLs.
+  Designed around GamePad Viewer's Xbox-layout DOM because the public
+  DualSense skin uses the same mapping for PS5 controls.
+*/
+
+:root {
+  --wuwa-glow: drop-shadow(0 0 6px rgba(120,190,255,.95))
+               drop-shadow(0 0 14px rgba(90,150,255,.55));
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+/* ---------- BASE CONTROLLER ---------- */
+.controller.custom {
+  position: relative;
+  width: 807px;
+  height: 651px;
+  margin: 0;
+  background: transparent url("ASSET_BASE_URL") center top / 807px 651px no-repeat;
+}
+
+/* ---------- ANALOG STICKS ---------- */
+.custom .sticks {
+  position: absolute;
+  width: 367px;
+  height: 100px;
+  left: 220px;
+  top: 333px;
+}
+
+.custom .stick {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: transparent url("ASSET_STICKS_URL") 0 0 / auto 100px no-repeat;
+  filter: var(--wuwa-glow);
+}
+
+.custom .stick.left { left: 0; top: 0; }
+.custom .stick.right { left: 267px; top: 0; }
+
+.custom .stick.pressed {
+  background-position: -102px 0;
+  filter: brightness(1.35) var(--wuwa-glow);
+}
+
+/* ---------- △ ○ × □ ---------- */
+.custom .abxy {
+  position: absolute;
+  width: 181px;
+  height: 181px;
+  left: 573px;
+  top: 178px;
+}
+
+.custom .button {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background-image: url("ASSET_FACE_BUTTONS_URL");
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 4px rgba(110,180,255,.45));
+}
+
+/* GamePad Viewer Xbox mapping:
+   a = Cross, b = Circle, x = Square, y = Triangle */
+.custom .a { background-position:   0     0; left: 61px;  top: 123px; } /* × */
+.custom .b { background-position: -59px   0; left: 123px; top: 62px;  } /* ○ */
+.custom .x { background-position: -118px  0; left: 0;     top: 61px;  } /* □ */
+.custom .y { background-position: -177px  0; left: 61px;  top: 0;     } /* △ */
+
+.custom .button.pressed {
+  background-position-y: -59px;
+  margin-top: 0;
+  filter: brightness(1.65) var(--wuwa-glow);
+}
+
+/* ---------- CREATE / OPTIONS ---------- */
+.custom .arrows {
+  position: absolute;
+  left: 195px;
+  top: 140px;
+  width: 416px;
+  height: 57px;
+}
+
+.custom .back,
+.custom .start {
+  width: 27px;
+  height: 57px;
+  background-image: url("ASSET_MENU_BUTTONS_URL");
+  background-repeat: no-repeat;
+  opacity: .35;
+}
+
+.custom .back { float: left; background-position: 0 0; }
+.custom .start { float: right; background-position: -27px 0; }
+
+.custom .back.pressed,
+.custom .start.pressed {
+  opacity: 1;
+  filter: var(--wuwa-glow);
+}
+
+.custom .quadrant { display: none; }
+
+/* ---------- D-PAD ---------- */
+.custom .dpad {
+  position: absolute;
+  width: 144px;
+  height: 144px;
+  left: 71px;
+  top: 196px;
+}
+
+.custom .face {
+  position: absolute;
+  background-image: url("ASSET_DPAD_URL");
+  background-repeat: no-repeat;
+  opacity: .28;
+}
+
+.custom .face.up {
+  background-position: 0 -68px;
+  width: 52px; height: 63px;
+  left: 46px; top: 0;
+}
+.custom .face.down {
+  background-position: -54px -68px;
+  width: 52px; height: 63px;
+  left: 46px; top: 81px;
+}
+.custom .face.left {
+  background-position: -108px -68px;
+  width: 64px; height: 52px;
+  left: -1px; top: 47px;
+}
+.custom .face.right {
+  background-position: -175px -68px;
+  width: 63px; height: 52px;
+  left: 81px; top: 46px;
+}
+
+.custom .face.pressed {
+  opacity: 1;
+  filter: brightness(1.6) var(--wuwa-glow);
+}
+
+/* ---------- L1 / R1 ---------- */
+.custom .bumpers {
+  position: absolute;
+  width: 620px;
+  height: 35px;
+  left: 93px;
+  top: 114px;
+}
+
+.custom .bumper {
+  width: 110px;
+  height: 35px;
+  background: transparent url("ASSET_BUMPERS_URL") 0 0 no-repeat;
+  opacity: .25;
+}
+.custom .bumper.left { float: left; }
+.custom .bumper.right {
+  float: right;
+  background-position: -112px 0;
+}
+.custom .bumper.pressed {
+  opacity: 1;
+  filter: var(--wuwa-glow);
+}
+
+/* ---------- L2 / R2 ---------- */
+.custom .triggers {
+  position: absolute;
+  width: 619px;
+  height: 108px;
+  left: 94px;
+  top: 0;
+}
+
+.custom .trigger {
+  width: 111px;
+  height: 108px;
+  background: transparent url("ASSET_TRIGGERS_URL") 0 0 no-repeat;
+  opacity: .20;
+}
+.custom .trigger.left { float: left; }
+.custom .trigger.right {
+  float: right;
+  background-position: -113px 0;
+  transform: rotateY(0);
+}
+.custom .trigger.pressed {
+  opacity: 1;
+  filter: brightness(1.45) var(--wuwa-glow);
+}
+
+/* Optional: hide unsupported/unused elements cleanly */
+.custom .meta,
+.custom .p0,
+.custom .p1,
+.custom .p2,
+.custom .p3 {
+  pointer-events: none;
+}
