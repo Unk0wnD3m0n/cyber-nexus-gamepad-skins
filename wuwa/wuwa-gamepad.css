@@ -32,7 +32,7 @@ html, body {
     height: 651px;
     z-index: 1;
     pointer-events: none;
-    background: url("https://unk0wnd3m0n.github.io/cyber-nexus-wuwa-gamepad/assets/base.png") center / contain no-repeat;
+    background: url("https://unk0wnd3m0n.github.io/cyber-nexus-wuwa-gamepad/wuwa/assets/base.png") center / contain no-repeat;
 }
 
 /* Keep GPV state elements alive while hiding stock DS4 artwork. */
