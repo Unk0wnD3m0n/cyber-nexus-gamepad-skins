@@ -102,6 +102,17 @@ Cada carpeta incluye un `README.md` en inglés y un `README_ES.md` en español. 
 
 ---
 
+## © Copyright / Derechos de autor
+
+**🇺🇸 © 2026 Cyber Nexus. All rights reserved.** Original custom designs, graphical assets and skins created for this repository belong to **Cyber Nexus**. Unauthorized copying, redistribution, modification or commercial use is prohibited and may result in appropriate legal action to protect the creator's rights.
+
+**🇪🇸 © 2026 Cyber Nexus. Todos los derechos reservados.** Los diseños personalizados originales, recursos gráficos y skins creados para este repositorio pertenecen a **Cyber Nexus**. Queda prohibida su copia, redistribución, modificación o uso comercial no autorizado. Cualquier uso no autorizado podrá dar lugar a las acciones legales correspondientes para proteger los derechos del autor.
+
+Game names, characters, logos and other third-party intellectual property remain the property of their respective owners.  
+Los nombres de juegos, personajes, logotipos y demás propiedad intelectual de terceros pertenecen a sus respectivos propietarios.
+
+---
+
 <div align="center">
 
 ## ⚡ CYBER NEXUS
