@@ -101,11 +101,10 @@ so the glow stays inside the artwork instead of covering the center.
 
 /* UP */
 .controller.edit .dpad .face.up {
-    left: 134px !important;
-    top: 174px !important;
+    left: 154px !important;
+    top: 178px !important;
     width: 43px !important;
     height: 48px !important;
-    border-radius: 11px 11px 15px 15px !important;
 }
 
 /* DOWN */
