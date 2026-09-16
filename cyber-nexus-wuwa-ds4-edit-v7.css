@@ -155,8 +155,8 @@ html, body {
 /* ===== AJUSTE INDIVIDUAL D-PAD ===== */
 /* ↑ ARRIBA */
 .controller.edit .dpad .face.up {
-    left: 145px !important;
-    top: 190px !important;
+    left: 165px !important;
+    top: 198px !important;
     width: 60px !important;
     height: 65px !important;
 }
