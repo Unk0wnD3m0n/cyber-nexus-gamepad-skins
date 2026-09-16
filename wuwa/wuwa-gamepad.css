@@ -1,7 +1,6 @@
 /*
 CYBER NEXUS x WUTHERING WAVES — OFFICIAL BASE v0
 Consolidated GPV skin. Target: app.gpv.gg PS4 White skin (s=8) + editcss.
-This replaces the experimental versioned CSS files once testing is complete.
 */
 
 html, body {
@@ -43,16 +42,33 @@ html, body {
 .controller.edit .sticks,
 .controller.edit .dpad { z-index: 5 !important; }
 
+/* Hide stock artwork for fixed buttons, but DO NOT override .stick transforms/position.
+   GamePad Viewer updates analog stick movement dynamically and must retain control of it. */
 .controller.edit .trigger,
 .controller.edit .bumper,
 .controller.edit .back,
 .controller.edit .start,
 .controller.edit .button,
-.controller.edit .face,
-.controller.edit .stick {
+.controller.edit .face {
     background-image: none !important;
     background-color: transparent !important;
     box-shadow: none !important;
+}
+
+/* Analog sticks: preserve GPV's native movement while making the moving element visible
+   as a transparent Cyber Nexus input layer over the controller artwork. */
+.controller.edit .sticks {
+    z-index: 8 !important;
+    pointer-events: none !important;
+}
+
+.controller.edit .stick {
+    background-image: none !important;
+    background-color: rgba(105,205,255,.06) !important;
+    border-radius: 50% !important;
+    box-shadow: inset 0 0 5px rgba(105,205,255,.22) !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
 }
 
 .controller.edit .dpad {
@@ -80,24 +96,25 @@ html, body {
 .controller.edit .dpad .face.left { left:82px !important; top:221px !important; width:49px !important; height:42px !important; border-radius:11px 15px 15px 11px !important; }
 .controller.edit .dpad .face.right { left:180px !important; top:221px !important; width:49px !important; height:42px !important; border-radius:15px 11px 11px 15px !important; }
 
-/* Calibrated press effect: keep the light inside each D-pad direction instead of flooding the center/casing. */
 .controller.edit .dpad .face.pressed {
     opacity:1 !important;
     background:rgba(65,185,255,.20) !important;
-    box-shadow:
-        inset 0 0 6px rgba(180,240,255,.72),
-        0 0 2px rgba(90,215,255,.88),
-        0 0 4px rgba(55,155,255,.48) !important;
+    box-shadow:inset 0 0 6px rgba(180,240,255,.72),0 0 2px rgba(90,215,255,.88),0 0 4px rgba(55,155,255,.48) !important;
 }
 
 .controller.edit .button.pressed,
 .controller.edit .bumper.pressed,
 .controller.edit .trigger.pressed,
 .controller.edit .back.pressed,
-.controller.edit .start.pressed,
-.controller.edit .stick.pressed {
+.controller.edit .start.pressed {
     background-color:rgba(105,205,255,.18) !important;
     box-shadow:0 0 9px rgba(105,205,255,.9) !important;
 }
+
+.controller.edit .stick.pressed {
+    background-color:rgba(105,205,255,.20) !important;
+    box-shadow:inset 0 0 6px rgba(180,240,255,.55),0 0 7px rgba(105,205,255,.75) !important;
+}
+
 .controller.edit .button.pressed,.controller.edit .stick.pressed { border-radius:50% !important; }
 .controller.edit.disconnected { opacity:.45 !important; }
