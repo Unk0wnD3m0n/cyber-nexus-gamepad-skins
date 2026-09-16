@@ -42,8 +42,6 @@ html, body {
 .controller.edit .sticks,
 .controller.edit .dpad { z-index: 5 !important; }
 
-/* Hide stock artwork for fixed buttons, but DO NOT override .stick transforms/position.
-   GamePad Viewer updates analog stick movement dynamically and must retain control of it. */
 .controller.edit .trigger,
 .controller.edit .bumper,
 .controller.edit .back,
@@ -55,8 +53,12 @@ html, body {
     box-shadow: none !important;
 }
 
-/* Analog sticks: preserve GPV's native movement while making the moving element visible
-   as a transparent Cyber Nexus input layer over the controller artwork. */
+/* Wuwa face-button calibration: Cross / X (DS4 class .a). */
+.controller.edit.ds4 .a,
+.controller.ds4.edit .a {
+    left: 50px !important;
+}
+
 .controller.edit .sticks {
     z-index: 8 !important;
     pointer-events: none !important;
