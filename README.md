@@ -13,37 +13,11 @@ Each controller has its own visual identity, assets and calibration while sharin
 
 ## 🎨 Controller Collection
 
-<table>
-<tr>
-<td width="33%" align="center">
-<h3>🌊 Wuthering Waves</h3>
-<img src="wuwa/assets/base.png" alt="Cyber Nexus Wuthering Waves Controller" width="100%">
-<br><br>
-<strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>
-Main Cyber Nexus controller currently being calibrated for GamePad Viewer.
-<br><br>
-<a href="wuwa/">Open Wuthering Waves Project</a>
-</td>
-<td width="33%" align="center">
-<h3>🌆 Neverness to Everness</h3>
-<img src="nte/assets/base.png" alt="Cyber Nexus Neverness to Everness Controller" width="100%">
-<br><br>
-<strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>
-Main Cyber Nexus controller currently being calibrated for GamePad Viewer.
-<br><br>
-<a href="nte/">Open NTE Project</a>
-</td>
-<td width="33%" align="center">
-<h3>❄️ Mortal Kombat 1 — Sub-Zero</h3>
-<img src="mk1/assets/base.png" alt="Cyber Nexus Mortal Kombat 1 Sub-Zero Controller" width="100%">
-<br><br>
-<strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>
-Main Cyber Nexus controller currently being calibrated for GamePad Viewer.
-<br><br>
-<a href="mk1/">Open MK1 Project</a>
-</td>
-</tr>
-</table>
+<table><tr>
+<td width="33%" align="center"><h3>🌊 Wuthering Waves</h3><img src="wuwa/assets/base.png" alt="Cyber Nexus Wuthering Waves Controller" width="100%"><br><br><strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>Main Cyber Nexus controller currently being calibrated for GamePad Viewer.<br><br><a href="wuwa/">Open Wuthering Waves Project</a></td>
+<td width="33%" align="center"><h3>🌆 Neverness to Everness</h3><img src="nte/assets/base.png" alt="Cyber Nexus Neverness to Everness Controller" width="100%"><br><br><strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>Main Cyber Nexus controller currently being calibrated for GamePad Viewer.<br><br><a href="nte/">Open NTE Project</a></td>
+<td width="33%" align="center"><h3>❄️ Mortal Kombat 1 — Sub-Zero</h3><img src="mk1/assets/base.png" alt="Cyber Nexus Mortal Kombat 1 Sub-Zero Controller" width="100%"><br><br><strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>Main Cyber Nexus controller currently being calibrated for GamePad Viewer.<br><br><a href="mk1/">Open MK1 Project</a></td>
+</tr></table>
 
 ---
 
@@ -58,11 +32,11 @@ Each skin is developed independently so its artwork and input positions can be c
 ## 🗂️ Project Layout
 
 ```text
-cyber-nexus-wuwa-gamepad/
+cyber-nexus-gamepad-skins/
 │
 ├── wuwa/                             # 🌊 Wuthering Waves
 │   ├── README.md
-│   ├── wuwa-gamepad.css              # Wuwa official CSS
+│   ├── wuwa-gamepad.css
 │   └── assets/
 │       ├── base.png
 │       ├── dpad.png
@@ -74,7 +48,7 @@ cyber-nexus-wuwa-gamepad/
 │
 ├── nte/                              # 🌆 Neverness to Everness
 │   ├── README.md
-│   ├── nte-gamepad.css               # NTE official CSS
+│   ├── nte-gamepad.css
 │   └── assets/
 │       ├── base.png
 │       ├── dpad.png
@@ -86,7 +60,7 @@ cyber-nexus-wuwa-gamepad/
 │
 └── mk1/                              # ❄️ Mortal Kombat 1 — Sub-Zero
     ├── README.md
-    ├── mk1-gamepad.css               # MK1 official CSS
+    ├── mk1-gamepad.css
     └── assets/
         ├── base.png
         ├── dpad.png
