@@ -152,9 +152,11 @@ html, body {
     opacity: .45 !important;
 }
 
+/* ===== AJUSTE INDIVIDUAL D-PAD ===== */
+/* ↑ ARRIBA */
 .controller.edit .dpad .face.up {
-    left: 200px !important;
-    top: 200px !important;
-    width: 25px !important;
-    height: 25px !important;
+    left: 145px !important;
+    top: 190px !important;
+    width: 40px !important;
+    height: 48px !important;
 }
