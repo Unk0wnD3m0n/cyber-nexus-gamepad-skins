@@ -156,8 +156,8 @@ html, body {
 .controller.edit .dpad .face.up {
     left: 300px !important;
     top: 270px !important;
-    width: 40px !important;
-    height: 48px !important;
+    width: 10px !important;
+    height: 10px !important;
 }
 
 /* ↓ ABAJO */
