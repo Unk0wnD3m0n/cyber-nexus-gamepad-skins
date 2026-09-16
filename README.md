@@ -1,63 +1,111 @@
 <div align="center">
 
-# 🎮 CYBER NEXUS × WUTHERING WAVES
-### Custom GamePad Viewer Skin
+# 🎮 CYBER NEXUS — CUSTOM GAMEPAD COLLECTION
+### GamePad Viewer skins built for the Cyber Nexus stream
 
-A custom **PlayStation-style controller overlay** created for the **Cyber Nexus** streaming channel and inspired by the visual style of **Wuthering Waves**.
+Custom PlayStation-style controller overlays for **Wuthering Waves**, **Neverness to Everness (NTE)** and **Mortal Kombat 1**.
 
-![Cyber Nexus Controller](assets/base.png)
+Each controller has its own visual identity, assets and calibration while sharing the same goal: **showing controller inputs live on stream without using a generic controller skin.**
 
 </div>
 
 ---
 
-## 🌊 About the Project
+## 🎨 Controller Collection
 
-The purpose of this repository is to create and maintain a fully customized controller overlay for **GamePad Viewer (GPV)**.
+<table>
+<tr>
+<td width="33%" align="center">
+<h3>🌊 Wuthering Waves</h3>
+<img src="assets/base.png" alt="Cyber Nexus Wuthering Waves Controller" width="100%">
+<br><br>
+<strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>
+Main Cyber Nexus controller currently being calibrated for GamePad Viewer.
+</td>
+<td width="33%" align="center">
+<h3>🌆 Neverness to Everness</h3>
+<br><br>
+<strong>NTE CONTROLLER</strong><br><br>
+<strong>STATUS: 🎨 ARTWORK PENDING</strong><br>
+Dedicated NTE-themed controller and asset pack.
+<br><br>
+<a href="nte/">Open NTE Project</a>
+</td>
+<td width="33%" align="center">
+<h3>🐉 Mortal Kombat 1</h3>
+<br><br>
+<strong>MK1 CONTROLLER</strong><br><br>
+<strong>STATUS: 🎨 ARTWORK PENDING</strong><br>
+Dedicated Mortal Kombat 1 controller for Cyber Nexus MK1 streams.
+<br><br>
+<a href="mk1/">Open MK1 Project</a>
+</td>
+</tr>
+</table>
 
-Instead of using the standard controller appearance, this project replaces it with a unique **Cyber Nexus × Wuthering Waves** design while keeping the controller inputs responsive in real time.
+---
 
-The overlay is designed primarily for use during livestreams and gameplay recordings, including **OBS Studio** and other browser-source compatible streaming software.
+## ⚡ Purpose
 
-## ✨ Goals
+This repository is the home of the **Cyber Nexus custom controller overlay collection**. The project replaces the standard GamePad Viewer appearance with game-specific designs while preserving live controller input feedback.
 
-- 🎮 Display controller inputs live while playing.
-- 🌊 Create a controller design inspired by Wuthering Waves.
-- ⚡ Give the Cyber Nexus stream its own recognizable visual identity.
-- 💠 Add visual feedback when buttons, D-pad directions, sticks and triggers are pressed.
-- 🎥 Provide a clean overlay suitable for livestreams and recorded gameplay.
+The overlays are intended for livestreams and gameplay recordings using **OBS Studio**, browser sources and other compatible streaming software.
 
-## 🛠️ Current Development
+Each skin is developed independently so its artwork and input positions can be changed without affecting the other games.
 
-The controller is currently being calibrated so that every interactive element lines up precisely with the custom artwork.
+## 🗂️ Project Layout
 
-Current focus:
+```text
+cyber-nexus-wuwa-gamepad/
+│
+├── cyber-nexus-wuwa-gamepad.css     # 🌊 Wuthering Waves official CSS
+├── assets/                           # 🌊 Wuthering Waves assets
+│   ├── base.png
+│   ├── dpad.png
+│   ├── sticks.png
+│   ├── face-buttons.png
+│   ├── menu-buttons.png
+│   ├── bumpers.png
+│   └── triggers.png
+│
+├── nte/                              # 🌆 Neverness to Everness
+│   ├── README.md
+│   ├── nte-gamepad.css               # planned
+│   └── assets/                       # NTE-only artwork
+│
+└── mk1/                              # 🐉 Mortal Kombat 1
+    ├── README.md
+    ├── mk1-gamepad.css               # planned
+    └── assets/                       # MK1-only artwork
+```
 
-**D-pad → Analog Sticks → △ ○ × □ → L1/R1 → L2/R2**
+## 🎮 Input System
 
-The main controller artwork and dimensions are already established. Future updates focus on input animations, positioning and visual polish without changing the base design.
+Each finished controller is intended to support real-time feedback for:
 
-## 📁 Repository Structure
+**D-pad • Analog sticks • △ ○ × □ • Create/Options • L1/R1 • L2/R2 • Stick clicks**
 
-`cyber-nexus-wuwa-gamepad.css` — Main and official GamePad Viewer stylesheet.
+The Wuthering Waves controller currently uses the **PS4 White / DS4 layout (`s=8`)** from GamePad Viewer with custom CSS loaded through `editcss` and hosted through GitHub Pages.
 
-`assets/` — Controller artwork and graphical assets used by the skin.
+## 🚧 Development Roadmap
 
-`README.md` — Project information and documentation.
+### 🌊 Wuthering Waves
+**Current:** controller base established → D-pad calibration → analog sticks → face buttons → shoulder buttons/triggers.
 
-## 💻 GamePad Viewer
+### 🌆 NTE
+**Next:** create the NTE controller artwork → split interactive assets → create dedicated CSS → calibrate GPV inputs.
 
-This project is designed around the **PS4 White / DS4 layout (`s=8`)** from GamePad Viewer and loads the custom styling through the `editcss` parameter.
-
-The CSS and assets are hosted through **GitHub Pages**, allowing the overlay to be loaded directly by GamePad Viewer and used as a browser source in streaming software.
+### 🐉 Mortal Kombat 1
+**Next:** create the MK1 controller artwork → split interactive assets → create dedicated CSS → calibrate GPV inputs.
 
 ---
 
 <div align="center">
 
-### ⚡ CYBER NEXUS
-**Custom streaming graphics • Gaming • Wuthering Waves**
+## ⚡ CYBER NEXUS
 
-Made for the **Cyber Nexus** community. 🎮🌊
+**Wuthering Waves 🌊 • NTE 🌆 • Mortal Kombat 1 🐉**
+
+Custom controller overlays built for the **Cyber Nexus** streaming community.
 
 </div>
