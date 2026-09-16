@@ -151,35 +151,3 @@ html, body {
 .controller.edit.disconnected {
     opacity: .45 !important;
 }
-
-/* ↑ ARRIBA */
-.controller.edit .dpad .face.up {
-    left: 0px !important;
-    top: 0px !important;
-    width: 0px !important;
-    height: 0px !important;
-}
-
-/* ↓ ABAJO */
-.controller.edit .dpad .face.down {
-    left: 145px !important;
-    top: 300px !important;
-    width: 40px !important;
-    height: 48px !important;
-}
-
-/* ← IZQUIERDA */
-.controller.edit .dpad .face.left {
-    left: 115px !important;   /* coordenada propia */
-    top: 239px !important;
-    width: 48px !important;   /* tamaño propio */
-    height: 40px !important;
-}
-
-/* → DERECHA */
-.controller.edit .dpad .face.right {
-    left: 188px !important;
-    top: 239px !important;
-    width: 48px !important;
-    height: 40px !important;
-}
