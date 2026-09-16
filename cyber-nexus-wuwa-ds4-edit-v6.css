@@ -87,3 +87,12 @@ html, body {
 .controller.edit .dpad {
     transform: translate(55px, 32px) !important;
 }
+
+/* ===== TAMAÑO DEL EFECTO D-PAD ===== */
+.controller.edit .dpad .face.pressed {
+    transform: scale(0.55) !important;
+    transform-origin: center center !important;
+    box-shadow:
+        0 0 6px rgba(105, 205, 255, 1),
+        0 0 12px rgba(105, 170, 255, .8) !important;
+}
