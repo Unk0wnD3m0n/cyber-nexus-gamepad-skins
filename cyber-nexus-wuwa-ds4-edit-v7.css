@@ -151,3 +151,21 @@ html, body {
 .controller.edit.disconnected {
     opacity: .45 !important;
 }
+
+/* ===== AJUSTE INDIVIDUAL D-PAD ===== */
+
+/* ↑ ARRIBA */
+.controller.edit .dpad .face.up {
+    left: 145px !important;
+    top: 190px !important;
+    width: 40px !important;
+    height: 48px !important;
+}
+
+/* APARIENCIA CUANDO SE PRESIONA */
+.controller.edit .dpad .face.pressed {
+    background: rgba(70, 190, 255, 0.35) !important;
+    box-shadow:
+        0 0 5px rgba(100, 220, 255, 1),
+        0 0 10px rgba(60, 170, 255, .8) !important;
+}
