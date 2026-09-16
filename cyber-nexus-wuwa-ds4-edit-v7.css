@@ -163,7 +163,7 @@ html, body {
 /* ↓ ABAJO */
 .controller.edit .dpad .face.down {
     left: 145px !important;
-    top: 285px !important;
+    top: 300px !important;
     width: 40px !important;
     height: 48px !important;
 }
