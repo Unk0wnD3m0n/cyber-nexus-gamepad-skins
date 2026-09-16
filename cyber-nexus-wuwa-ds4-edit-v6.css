@@ -1,0 +1,84 @@
+/*
+CYBER NEXUS x WUTHERING WAVES — GPV DS4 EDIT v6
+Target: PS4 White (s=8) + editcss + GitHub Pages
+v6: 92% scale, centered, no responsive downscaling.
+*/
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+    overflow: hidden !important;
+}
+
+.controller.edit {
+    position: absolute !important;
+    width: 807px !important;
+    height: 651px !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) scale(0.92) !important;
+    transform-origin: center center !important;
+    background: none !important;
+}
+
+.controller.edit::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    inset: 0;
+    width: 807px;
+    height: 651px;
+    background: url("https://unk0wnd3m0n.github.io/cyber-nexus-wuwa-gamepad/assets/base.png")
+                center center / contain no-repeat;
+}
+
+.controller.edit .triggers,
+.controller.edit .bumpers,
+.controller.edit .touchpad,
+.controller.edit .arrows,
+.controller.edit .abxy,
+.controller.edit .sticks,
+.controller.edit .dpad {
+    z-index: 5 !important;
+}
+
+/* Hide original DS4 graphics but keep GPV input state/positions alive. */
+.controller.edit .trigger,
+.controller.edit .bumper,
+.controller.edit .back,
+.controller.edit .start,
+.controller.edit .button,
+.controller.edit .face,
+.controller.edit .stick {
+    background-image: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* First-pass neon press feedback. */
+.controller.edit .button.pressed,
+.controller.edit .face.pressed,
+.controller.edit .bumper.pressed,
+.controller.edit .trigger.pressed,
+.controller.edit .back.pressed,
+.controller.edit .start.pressed,
+.controller.edit .stick.pressed {
+    background-color: rgba(105,205,255,.22) !important;
+    box-shadow:
+        0 0 10px rgba(105,205,255,1),
+        0 0 22px rgba(105,170,255,.9) !important;
+    filter: brightness(1.5) !important;
+}
+
+.controller.edit .button.pressed,
+.controller.edit .stick.pressed {
+    border-radius: 50% !important;
+}
+
+.controller.edit.disconnected {
+    opacity: .45 !important;
+}
