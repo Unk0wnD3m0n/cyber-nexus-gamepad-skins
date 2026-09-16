@@ -156,8 +156,8 @@ html, body {
 
 /* ↑ ARRIBA */
 .controller.edit .dpad .face.up {
-    left: 145px !important;
-    top: 190px !important;
+    left: 0px !important;
+    top: 0px !important;
     width: 40px !important;
     height: 48px !important;
 }
