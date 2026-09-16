@@ -1,7 +1,7 @@
 /* CYBER NEXUS x MORTAL KOMBAT 1 — SUB-ZERO OFFICIAL BASE */
 html,body{margin:0!important;padding:0!important;width:100%!important;height:100%!important;background:transparent!important;overflow:hidden!important}
 .controller.edit{position:absolute!important;width:807px!important;height:651px!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%) scale(.92)!important;transform-origin:center center!important;background:none!important}
-.controller.edit::after{content:"";position:absolute;inset:0;width:807px;height:651px;z-index:1;pointer-events:none;background:url("https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1/assets/base.png") center/contain no-repeat}
+.controller.edit::after{content:"";position:absolute;inset:0;width:807px;height:651px;z-index:1;pointer-events:none;background:url("https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1/assets/base.png?v=2") center/contain no-repeat}
 .controller.edit .triggers,.controller.edit .bumpers,.controller.edit .touchpad,.controller.edit .arrows,.controller.edit .abxy,.controller.edit .sticks,.controller.edit .dpad{z-index:5!important}
 .controller.edit .trigger,.controller.edit .bumper,.controller.edit .back,.controller.edit .start,.controller.edit .button,.controller.edit .face,.controller.edit .stick{background-image:none!important;background-color:transparent!important;box-shadow:none!important}
 .controller.edit .dpad{position:absolute!important;left:0!important;top:0!important;width:807px!important;height:651px!important;transform:none!important;margin:0!important;padding:0!important;pointer-events:none!important}
