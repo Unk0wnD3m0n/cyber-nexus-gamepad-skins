@@ -3,6 +3,16 @@
 # 🎮 CYBER NEXUS — CUSTOM GAMEPAD COLLECTION
 ### GamePad Viewer skins built for the Cyber Nexus stream
 
+### 🌐 Language / Idioma
+**🇺🇸 English:** use each project's `README.md`  
+**🇪🇸 Español:** use each project's `README_ES.md`
+
+| Project | 🇺🇸 English | 🇪🇸 Español |
+|---|---|---|
+| 🌊 Wuthering Waves | [English](wuwa/README.md) | [Español](wuwa/README_ES.md) |
+| 🌆 Neverness to Everness | [English](nte/README.md) | [Español](nte/README_ES.md) |
+| ❄️ Mortal Kombat 1 — Sub-Zero | [English](mk1/README.md) | [Español](mk1/README_ES.md) |
+
 Custom PlayStation-style controller overlays for **Wuthering Waves**, **Neverness to Everness (NTE)** and **Mortal Kombat 1**.
 
 Each controller has its own visual identity, assets and calibration while sharing the same goal: **showing controller inputs live on stream without using a generic controller skin.**
@@ -35,40 +45,22 @@ Each skin is developed independently so its artwork and input positions can be c
 cyber-nexus-gamepad-skins/
 │
 ├── wuwa/                             # 🌊 Wuthering Waves
-│   ├── README.md
+│   ├── README.md                     # English
+│   ├── README_ES.md                  # Español
 │   ├── wuwa-gamepad.css
 │   └── assets/
-│       ├── base.png
-│       ├── dpad.png
-│       ├── sticks.png
-│       ├── face-buttons.png
-│       ├── menu-buttons.png
-│       ├── bumpers.png
-│       └── triggers.png
 │
 ├── nte/                              # 🌆 Neverness to Everness
-│   ├── README.md
+│   ├── README.md                     # English
+│   ├── README_ES.md                  # Español
 │   ├── nte-gamepad.css
 │   └── assets/
-│       ├── base.png
-│       ├── dpad.png
-│       ├── sticks.png
-│       ├── face-buttons.png
-│       ├── menu-buttons.png
-│       ├── bumpers.png
-│       └── triggers.png
 │
 └── mk1/                              # ❄️ Mortal Kombat 1 — Sub-Zero
-    ├── README.md
+    ├── README.md                     # English
+    ├── README_ES.md                  # Español
     ├── mk1-gamepad.css
     └── assets/
-        ├── base.png
-        ├── dpad.png
-        ├── sticks.png
-        ├── face-buttons.png
-        ├── menu-buttons.png
-        ├── bumpers.png
-        └── triggers.png
 ```
 
 ## 🎮 Input System
@@ -92,12 +84,31 @@ All three Cyber Nexus controllers use the **PS4 White / DS4 layout (`s=8`)** fro
 
 ---
 
+## 🇪🇸 Español
+
+Este repositorio contiene la **colección de controles personalizados de Cyber Nexus** para GamePad Viewer. Cada diseño reemplaza la apariencia estándar del control con una temática específica del juego, manteniendo la respuesta de los botones en tiempo real para streams y grabaciones.
+
+Los tres proyectos utilizan el diseño **PS4 White / DS4 (`s=8`)** de GamePad Viewer con CSS personalizado alojado mediante GitHub Pages.
+
+### 🎨 Colección
+
+**🌊 Wuthering Waves • 🌆 Neverness to Everness • ❄️ Mortal Kombat 1 — Sub-Zero**
+
+Cada carpeta incluye un `README.md` en inglés y un `README_ES.md` en español. Los recursos técnicos y nombres de archivos se mantienen sin traducir para conservar la compatibilidad con GamePad Viewer y GitHub Pages.
+
+### 🚧 Estado
+
+🛠️ **EN DESARROLLO** — Los controles de Cyber Nexus continúan en proceso de calibración para las entradas en vivo de GamePad Viewer.
+
+---
+
 <div align="center">
 
 ## ⚡ CYBER NEXUS
 
 **Wuthering Waves 🌊 • NTE 🌆 • Mortal Kombat 1 ❄️**
 
-Custom controller overlays built for the **Cyber Nexus** streaming community.
+Custom controller overlays built for the **Cyber Nexus** streaming community.  
+Controles personalizados creados para la comunidad de streaming de **Cyber Nexus**.
 
 </div>
