@@ -84,15 +84,53 @@ html, body {
 }
 
 /* ===== CALIBRACIÓN D-PAD ===== */
+
+/* Posición general del D-Pad */
 .controller.edit .dpad {
-    transform: translate(55px, 32px) !important;
+    transform: translate(60px, 32px) !important;
 }
 
-/* ===== TAMAÑO DEL EFECTO D-PAD ===== */
+/* Efecto solamente sobre la dirección presionada */
 .controller.edit .dpad .face.pressed {
-    transform: scale(0.55) !important;
-    transform-origin: center center !important;
+    transform: none !important;
+    background: rgba(80, 190, 255, 0.30) !important;
     box-shadow:
-        0 0 6px rgba(105, 205, 255, 1),
-        0 0 12px rgba(105, 170, 255, .8) !important;
+        0 0 6px rgba(80, 200, 255, 1),
+        0 0 12px rgba(80, 170, 255, .85) !important;
+}
+
+/* ↑ ARRIBA */
+.controller.edit .dpad .face.up {
+    width: 48px !important;
+    height: 55px !important;
+    left: 48px !important;
+    top: 0px !important;
+    border-radius: 12px !important;
+}
+
+/* ↓ ABAJO */
+.controller.edit .dpad .face.down {
+    width: 48px !important;
+    height: 55px !important;
+    left: 48px !important;
+    top: 89px !important;
+    border-radius: 12px !important;
+}
+
+/* ← IZQUIERDA */
+.controller.edit .dpad .face.left {
+    width: 55px !important;
+    height: 48px !important;
+    left: 0px !important;
+    top: 48px !important;
+    border-radius: 12px !important;
+}
+
+/* → DERECHA */
+.controller.edit .dpad .face.right {
+    width: 55px !important;
+    height: 48px !important;
+    left: 89px !important;
+    top: 48px !important;
+    border-radius: 12px !important;
 }
