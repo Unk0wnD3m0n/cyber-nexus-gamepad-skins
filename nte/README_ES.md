@@ -31,3 +31,11 @@ Orden actual de desarrollo:
 **Base del control → calibración del D-pad → sticks analógicos → botones principales → Create/Options → L1/R1 → L2/R2 → clics de los sticks**
 
 > 🛠️ El diseño del control está instalado y la calibración de las entradas en vivo se encuentra actualmente en desarrollo.
+
+---
+
+## © Derechos de autor
+
+**© 2026 Cyber Nexus. Todos los derechos reservados.** Los diseños personalizados originales, recursos gráficos y skins creados para este repositorio pertenecen a **Cyber Nexus**. Queda prohibida su copia, redistribución, modificación o uso comercial no autorizado. Cualquier uso no autorizado podrá dar lugar a las acciones legales correspondientes para proteger los derechos del autor.
+
+Los nombres de juegos, personajes, logotipos y demás propiedad intelectual de terceros pertenecen a sus respectivos propietarios.
