@@ -31,3 +31,11 @@ Current development order:
 **Controller base → D-pad calibration → analog sticks → face buttons → Create/Options → L1/R1 → L2/R2 → stick clicks**
 
 > 🛠️ Controller artwork is installed and live input calibration is currently in development.
+
+---
+
+## © Copyright
+
+**© 2026 Cyber Nexus. All rights reserved.** Original custom designs, graphical assets and skins created for this repository belong to **Cyber Nexus**. Unauthorized copying, redistribution, modification or commercial use is prohibited and may result in appropriate legal action to protect the creator's rights.
+
+Game names, characters, logos and other third-party intellectual property remain the property of their respective owners.
