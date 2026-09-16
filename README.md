@@ -24,10 +24,10 @@ Main Cyber Nexus controller currently being calibrated for GamePad Viewer.
 </td>
 <td width="33%" align="center">
 <h3>🌆 Neverness to Everness</h3>
+<img src="nte/assets/base.png" alt="Cyber Nexus Neverness to Everness Controller" width="100%">
 <br><br>
-<strong>NTE CONTROLLER</strong><br><br>
-<strong>STATUS: 🎨 ARTWORK PENDING</strong><br>
-Dedicated NTE-themed controller and asset pack.
+<strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>
+Cyber Nexus NTE controller artwork and interactive asset pack are now installed.
 <br><br>
 <a href="nte/">Open NTE Project</a>
 </td>
@@ -70,8 +70,15 @@ cyber-nexus-wuwa-gamepad/
 │
 ├── nte/                              # 🌆 Neverness to Everness
 │   ├── README.md
-│   ├── nte-gamepad.css               # planned
-│   └── assets/                       # NTE-only artwork
+│   ├── nte-gamepad.css               # NTE official CSS
+│   └── assets/
+│       ├── base.png
+│       ├── dpad.png
+│       ├── sticks.png
+│       ├── face-buttons.png
+│       ├── menu-buttons.png
+│       ├── bumpers.png
+│       └── triggers.png
 │
 └── mk1/                              # 🐉 Mortal Kombat 1
     ├── README.md
@@ -85,7 +92,7 @@ Each finished controller is intended to support real-time feedback for:
 
 **D-pad • Analog sticks • △ ○ × □ • Create/Options • L1/R1 • L2/R2 • Stick clicks**
 
-The Wuthering Waves controller currently uses the **PS4 White / DS4 layout (`s=8`)** from GamePad Viewer with custom CSS loaded through `editcss` and hosted through GitHub Pages.
+The Wuthering Waves and NTE controllers use the **PS4 White / DS4 layout (`s=8`)** from GamePad Viewer with custom CSS loaded through `editcss` and hosted through GitHub Pages.
 
 ## 🚧 Development Roadmap
 
@@ -93,7 +100,7 @@ The Wuthering Waves controller currently uses the **PS4 White / DS4 layout (`s=8
 **Current:** controller base established → D-pad calibration → analog sticks → face buttons → shoulder buttons/triggers.
 
 ### 🌆 NTE
-**Next:** create the NTE controller artwork → split interactive assets → create dedicated CSS → calibrate GPV inputs.
+**Current:** controller artwork complete → interactive assets installed → dedicated CSS created → GPV input calibration.
 
 ### 🐉 Mortal Kombat 1
 **Next:** create the MK1 controller artwork → split interactive assets → create dedicated CSS → calibrate GPV inputs.
