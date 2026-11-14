@@ -1,23 +1,10 @@
-# CYBER NEXUS — MK1 Sub-Zero V4
-A recolored **classic DS4/PS4 controller silhouette** based on the Dracula theme that you chose as reference. The shape and button layout are **not redrawn**: the modular artwork is sourced from [Dracula Gamepad Viewer](https://github.com/dracula/gamepad-viewer), licensed MIT. Original CYBER NEXUS brand and frost overlays are separate SVG files. The V2 Gamepad API mapping is preserved.
+# CYBER NEXUS — MK1 Sub-Zero V5 (work in progress)
 
-## Live
-- [MK1 V4 transparent](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v4/)
-- [MK1 V4 dark test background](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v4/?bg=1)
+This is a **pixel-for-pixel functional starting point copied from the verified MK1 V4**. All current art, Gamepad API mappings, effects and layout are preserved for safety.
 
-Press any button to activate your PS4/PS5 controller in Chrome or Edge. Test buttons 0–17, analog movement and trigger pressure. This is a **prototype awaiting live visual validation**, not a claim that all controls are calibrated.
+- [V5 preview](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v5/?bg=1)
+- [V4 stable — do not modify](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v4/?bg=1)
 
-## Dependencies
-The Dracula DS4 graphical assets are included **locally** as SVG files in `assets/`; there are no external image dependencies. They preserve the exact classic shape selected. See `DRACULA-LICENSE.txt` for the original MIT license and attribution.
+Future V5 goal: improve Sub-Zero styling, ice textures and CYBER NEXUS identity while retaining the exact classic Dracula DS4 shape, button locations, and validated behavior.
 
-## Files
-- `index.html` standalone viewer
-- `main.js` proven V2 mapping
-- `style.css` Dracula layout + Sub-Zero recoloring
-- `assets/brand.svg` custom branding
-- `assets/ice-overlay.svg` subtle cold accents
-
-Prior MK1, V2 and V3 folders are unchanged.
-
-## OBS
-OBS Browser Source may not expose the physical gamepad. If no input is detected in OBS, use browser Window Capture instead.
+The source DS4 SVGs retain Dracula MIT attribution in DRACULA-LICENSE.txt. V2 and V3 were removed from main at the user's request; Git history retains prior revisions.
