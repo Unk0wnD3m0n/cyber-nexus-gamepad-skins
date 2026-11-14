@@ -21,6 +21,20 @@ Each controller has its own visual identity, assets and calibration while sharin
 
 ---
 
+## 🎮 Mortal Kombat 1 — Current Controller Versions
+
+The working MK1 controller overlays have been renamed for simpler versioning:
+
+| Version | Folder | Live preview |
+|---|---|---|
+| V1 — Stable original | `V1/` | [Open V1](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V1/?bg=1) |
+| V2 — Ice Dragon | `V2/` | [Open V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V2/?bg=1) |
+| V3 — Larger CYBER NEXUS branding | `V3/` | [Open V3](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V3/?bg=1) |
+
+Former folders: `mk1-v4 → V1`, `mk1-v5 → V2`, `mk1-v5.1 → V3`. Relative image and JS paths are preserved. Existing credits and license files remain in each version.
+
+---
+
 ## 🎨 Controller Collection
 
 <table><tr>
