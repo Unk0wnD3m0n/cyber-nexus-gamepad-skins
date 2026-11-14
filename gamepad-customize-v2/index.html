@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#051f1c"><title>CYBER NEXUS — Gamepad Customize V2 · RGB</title><link rel="stylesheet" href="style.css?v=rgb-exact-shell-4"></head>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#051f1c"><title>CYBER NEXUS — Gamepad Customize V2 · RGB</title><link rel="stylesheet" href="style.css?v=button-fx-v1"></head>
 <body><main class="stage" aria-label="CYBER NEXUS Wuthering Waves Resonance DualShock theme">
 <div class="controller-art">
   <div class="shell"></div><div id="photo-skin" class="photo-skin" aria-hidden="true"><div class="photo-grip photo-left"><img id="photo-preview" alt=""></div><div class="photo-grip photo-right"><img id="photo-preview-right" alt=""></div></div><div class="touch-ice" aria-hidden="true"></div>
@@ -43,6 +43,7 @@
       <path class="rgb-core" d="M117 112 Q158 88 211 113 M595 113 Q648 88 689 112"/>
     </g>
   </svg>
+  <div id="button-fx-layer" class="button-fx-layer" aria-hidden="true"></div>
 </div><!-- WuWa V1 base: reuse V3 fixed controller geometry -->
 <svg class="brand" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CYBER NEXUS — WUTHERING WAVES" viewBox="0 0 640 280" style="position:absolute;left:403px;top:195px;width:255px;height:112px;transform:translate(-50%,-50%);pointer-events:none;z-index:5;filter:drop-shadow(0 1px 3px #000)">
 <defs>
@@ -142,6 +143,30 @@
 </div>
 <button id="rgb-reset" type="button">↺ Restaurar iluminación</button>
 </section>
+<section class="button-fx-editor" aria-label="Efectos al presionar botones">
+<h3>⚡ Efectos de pulsación — V2</h3>
+<p>Destellos al presionar botones, gatillos y sticks. Los efectos también se incluyen en el archivo HTML para OBS.</p>
+<label for="fx-enabled">Animaciones de botones</label>
+<select id="fx-enabled"><option value="on">Activadas</option><option value="off">Desactivadas</option></select>
+<label for="fx-style">Estilo de energía</label>
+<select id="fx-style"><option value="auto">Automático según el juego</option><option value="ice">❄️ Hielo · MK1</option><option value="resonance">🌊 Resonancia · WuWa</option><option value="electric">⚡ Electricidad · NTE</option><option value="fire">🔥 Fuego</option></select>
+<label for="fx-strength">Intensidad: <output id="fx-strength-value">65%</output></label>
+<input id="fx-strength" type="range" min="20" max="100" value="65" step="5">
+<label for="fx-duration">Duración: <output id="fx-duration-value">450 ms</output></label>
+<input id="fx-duration" type="range" min="250" max="950" value="450" step="50">
+<div class="fx-switches">
+<label><input type="checkbox" id="fx-face" checked> △ ○ × □</label>
+<label><input type="checkbox" id="fx-dpad" checked> Cruceta</label>
+<label><input type="checkbox" id="fx-shoulders" checked> Gatillos y hombros</label>
+<label><input type="checkbox" id="fx-sticks" checked> Palancas / L3 / R3</label>
+<label><input type="checkbox" id="fx-system"> Start / PS / touchpad</label>
+</div>
+<div class="fx-actions">
+<button type="button" id="fx-preview">✨ Probar efecto</button>
+<button type="button" id="fx-reset">↺ Restaurar</button>
+</div>
+<p id="fx-status" role="status" aria-live="polite"></p>
+</section>
 <section class="stream-export" aria-label="Guardar diseño para streaming">
   <h3>📺 Guardar para OBS / TikTok</h3>
   <p>Genera un archivo HTML con este mando, sus colores, iconos y fotos incorporadas. Se verá igual aunque OBS use otro navegador.</p>
@@ -152,4 +177,4 @@
   <button id="reset-customizer" type="button">↺ Restaurar este juego</button>
   <p class="help">En OBS usa <strong>?overlay=1</strong> para ocultar el panel. No se modifican los controles originales.</p>
 </aside>
-<script src="customizer.js?v=no-texture-satin-4"></script><script src="photo-skin.js?v=character-grips-2"></script><script src="stream-export.js?v=export-v1"></script><script src="rgb.js?v=rgb-edition-1"></script></body></html>
+<script src="customizer.js?v=no-texture-satin-4"></script><script src="photo-skin.js?v=character-grips-2"></script><script src="stream-export.js?v=export-v1"></script><script src="rgb.js?v=rgb-edition-1"></script><script src="button-effects.js?v=button-fx-v1"></script></body></html>
