@@ -8,7 +8,7 @@ A recolored **classic DS4/PS4 controller silhouette** based on the Dracula theme
 Press any button to activate your PS4/PS5 controller in Chrome or Edge. Test buttons 0–17, analog movement and trigger pressure. This is a **prototype awaiting live visual validation**, not a claim that all controls are calibrated.
 
 ## Dependencies
-CSS references the upstream Dracula `.svgz` (compressed SVG) files from `https://dracula.github.io/gamepad-viewer/ds4/`. These are SVG assets (not PNG). This dependency is deliberate to preserve the *exact* shape you requested. If remote assets change or are removed, copy them into this repository and change the asset URLs in style.css. Original SVG artwork is MIT licensed; retain attribution.
+The Dracula DS4 graphical assets are included **locally** as SVG files in `assets/`; there are no external image dependencies. They preserve the exact classic shape selected. See `DRACULA-LICENSE.txt` for the original MIT license and attribution.
 
 ## Files
 - `index.html` standalone viewer
