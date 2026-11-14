@@ -26,6 +26,23 @@ Las imágenes encontradas en Internet pueden tener derechos de autor; verifica q
 
 Elige **«Sin textura · acabado original»** en **Skin / textura del juego**. Se elimina el patrón decorativo sin dejar la carcasa plana: permanece el diseño original de cada juego y una luz satinada muy sutil. También puedes mantener tus fotografías de personaje en ambos grips. Esta selección se recuerda por juego.
 
+## 📺 Guardar TU diseño para OBS y TikTok LIVE
+
+Tus fotos están guardadas **en tu navegador**, no dentro del enlace público de GitHub. OBS y TikTok LIVE Studio usan navegadores independientes. Por eso, abrir `?overlay=1` en otro programa **no puede recuperar tus imágenes ni preferencias automáticamente**.
+
+Para conservar exactamente el diseño que ves:
+
+1. Personaliza el control (juego, fotos de ambos grips, colores, textura e iconos).
+2. Pulsa **💾 Guardar control para streaming (.html)** en el panel.
+3. Se descargará un archivo llamado, por ejemplo, `CYBER-NEXUS-MK1-STREAM.html`. **Las fotos van incrustadas** en ese archivo, junto con la apariencia actual; no necesitas cargar las imágenes de nuevo.
+4. **En OBS:** Fuentes → **Navegador** → activa **Archivo local** → elige el HTML descargado. Usa **806 × 598** como resolución inicial y ajusta el tamaño en la escena.
+5. **En TikTok LIVE Studio:** la fuente de enlace suele requerir una **URL HTTPS** y no puede abrir directamente este archivo como una página web. Puedes mostrar tu escena de OBS en TikTok mediante **captura de ventana/proyector de OBS** o **Cámara virtual de OBS**, según tu configuración.
+6. Cuando cambies de skin o personajes, **vuelve a exportar** el archivo y actualiza o refresca la fuente de OBS. No existe sincronización automática entre los programas.
+
+**Importante:** la detección de botones dentro de la fuente Navegador de OBS depende de los permisos y del acceso al mando en ese navegador; haz una prueba antes de transmitir. Si OBS no detecta tu mando, puedes capturar la ventana del visor en Chrome.
+
+La exportación funciona completamente en tu navegador. Las fotos no se suben a GitHub, aunque el HTML utiliza los recursos públicos de estilos e iconos por Internet.
+
 ## 🎨 Personalización existente
 
 - **Juegos:** WuWa, Neverness to Everness y Mortal Kombat 1.
