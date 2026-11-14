@@ -247,3 +247,34 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
 .stream-export #export-stream-html{display:block;width:100%;padding:12px 9px;border-radius:10px;border:1px solid #9cf9cc;background:linear-gradient(135deg,#2de8bc,#71e8e0);color:#05231f;font-weight:800;cursor:pointer}
 .stream-export #export-stream-html:disabled{opacity:.55;cursor:progress}
 .stream-export #stream-export-status{min-height:1.2em;overflow-wrap:anywhere}
+
+/* CYBER NEXUS — Gamepad Customize V2 RGB Edition.
+   SVG lighting follows existing 806x598 artwork, without moving input controls. */
+:root{--rgb-color:#00edff;--rgb-opacity:.65;--rgb-duration:3s}
+.rgb-layer{position:absolute;left:0;top:0;width:806px;height:598px;z-index:5;pointer-events:none;overflow:visible;color:var(--rgb-color);opacity:var(--rgb-opacity);will-change:filter,opacity}
+.rgb-layer .rgb-zone{fill:none;stroke-linejoin:round;stroke-linecap:round}
+.rgb-layer .rgb-halo{fill:none;stroke:var(--rgb-color);stroke-width:11;opacity:.68;filter:url(#rgb-soft-glow)}
+.rgb-layer .rgb-core{fill:none;stroke:var(--rgb-color);stroke-width:2.8;opacity:.96}
+.rgb-layer .rgb-outline .rgb-core{stroke-width:2}
+.rgb-layer .rgb-sticks .rgb-core{stroke-width:3.4}
+.rgb-layer .rgb-touchpad .rgb-core{stroke-width:2}
+.rgb-layer .rgb-shoulders .rgb-core{stroke-width:3.4}
+.rgb-layer.rgb-effect-breathing{animation:rgb-breathe var(--rgb-duration) ease-in-out infinite}
+.rgb-layer.rgb-effect-rainbow{animation:rgb-spectrum var(--rgb-duration) linear infinite}
+.rgb-layer.rgb-effect-pulse{animation:rgb-energy var(--rgb-duration) ease-in-out infinite}
+.rgb-layer.rgb-off{display:none !important}
+.rgb-layer.rgb-no-outline .rgb-outline,.rgb-layer.rgb-no-sticks .rgb-sticks,.rgb-layer.rgb-no-touchpad .rgb-touchpad,.rgb-layer.rgb-no-shoulders .rgb-shoulders{display:none}
+@keyframes rgb-breathe{0%,100%{opacity:calc(var(--rgb-opacity)*.30)}50%{opacity:var(--rgb-opacity)}}
+@keyframes rgb-spectrum{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}
+@keyframes rgb-energy{0%,100%{opacity:calc(var(--rgb-opacity)*.45);filter:brightness(.8)}50%{opacity:var(--rgb-opacity);filter:brightness(1.55) drop-shadow(0 0 3px var(--rgb-color))}}
+@media(prefers-reduced-motion:reduce){.rgb-layer{animation:none !important}}
+.rgb-editor{margin:14px 0;padding:14px 0;border-top:1px solid #3b867c;border-bottom:1px solid #3b867c}
+.rgb-editor h3{font-size:16px;color:#affff2;margin:0 0 6px}.rgb-editor p{font-size:12px;line-height:1.4;color:#bbded7}
+.rgb-editor label{display:block;font-size:13px;font-weight:700;margin:10px 0 4px}
+.rgb-editor select,.rgb-editor input[type=color]{width:100%;color:#e4fff5;background:#102d2d;border:1px solid #599a8b;border-radius:8px;padding:9px}
+.rgb-editor input[type=color]{height:43px;padding:3px;cursor:pointer}
+.rgb-editor input[type=range]{width:100%;accent-color:#4deacb;cursor:pointer}
+.rgb-switches{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:12px 0}
+.rgb-editor .rgb-switches label{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;margin:0;cursor:pointer}
+.rgb-switches input{accent-color:#4deacb}
+.rgb-editor #rgb-reset{width:100%;padding:10px;border-radius:8px;border:1px solid #6bcdbb;color:#e6fff8;background:#1b5148;cursor:pointer}
