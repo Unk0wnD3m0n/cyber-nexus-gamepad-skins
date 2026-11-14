@@ -9,6 +9,7 @@
 
 | Project | 🇺🇸 English | 🇪🇸 Español |
 |---|---|---|
+| 🎮 Gamepad Customize — Main | [English](gamepad-customize/README.md) | [Español](gamepad-customize/README_ES.md) |
 | 🌊 Wuthering Waves — WuWa V1 | [English](wuwa-v1/README.md) | [Español](wuwa-v1/README_ES.md) |
 | 🌆 Neverness to Everness — NTE V1 | [English](nte-v1/README.md) | [Español](nte-v1/README_ES.md) |
 | ❄️ Mortal Kombat 1 — CYBER NEXUS V3 | [English](V3/README.md) | [Español](V3/README_ES.md) |
@@ -18,24 +19,6 @@ Custom PlayStation-style controller overlays for **Wuthering Waves**, **Nevernes
 Each controller has its own visual identity, assets and calibration while sharing the same goal: **showing controller inputs live on stream without using a generic controller skin.**
 
 </div>
-
----
-
-## 🖼️ NEW — Gamepad Customize V2 (Photo Skins)
-
-**[🎮 TRY GAMEPAD CUSTOMIZE V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1)** · [README Español](gamepad-customize-v2/README_ES.md) · [README English](gamepad-customize-v2/README.md) · [Clean OBS view](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
-
-Upload a PNG/JPG/WebP image from your own device to apply it as a gamepad skin. Adjust scale, position, rotation and opacity. Images stay local to your browser (IndexedDB when available), not in GitHub. The existing Gamepad Customize edition and all stable game overlays remain unchanged.
-
----
-
-## 🎨 CYBER NEXUS — Gamepad Customize
-
-The original **[WuWa V1](wuwa-v1/)**, **[NTE V1](nte-v1/)** and **[MK1 V3](V3/)** are unchanged. The experimental **[Gamepad Customize](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1)** lets you select WuWa, NTE or MK1, with **five skins and six themed stick icons for each game** (15 skins and 18 icons total), as well as the existing color picker. Each game's preferences are saved separately.
-
-**[🎮 TRY / GAMEPAD CUSTOMIZE](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1)** · [README Español](gamepad-customize/README_ES.md) · [README English](gamepad-customize/README.md) · [Clean OBS overlay](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1)
-
-> Gamepad Customize: visual options can be changed by game; controller detection and button coordinates are preserved from V1.
 
 ---
 
@@ -54,6 +37,17 @@ Former folders: `mk1-v4 → V1`, `mk1-v5 → V2`, `mk1-v5.1 → V3`. Relative im
 ---
 
 ## 🎨 Controller Collection
+
+
+<div align="center">
+  <h3>🎮 GAMEPAD CUSTOMIZE — PERSONALIZADOR PRINCIPAL</h3>
+  <a href="gamepad-customize/README_ES.md"><img src="gamepad-customize/preview.svg" alt="Gamepad Customize — controlador personalizable CYBER NEXUS" width="68%"></a>
+  <p><strong>STATUS: ✅ WORKING — MAIN EDITION</strong></p>
+  <p>WuWa · NTE · MK1 · 15 texturas · 18 iconos · colores · fotos personalizadas en ambos grips · exportación para OBS</p>
+  <p><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-GAMEPAD_CUSTOMIZE-39D6C0?style=for-the-badge&labelColor=073E39" alt="TRY CONTROL — GAMEPAD CUSTOMIZE"></a></p>
+  <p><a href="gamepad-customize/README_ES.md">🇪🇸 README en español</a> · <a href="gamepad-customize/README.md">🇺🇸 English</a> · <a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1">🎥 OBS Overlay</a></p>
+</div>
+
 
 <table><tr>
 <td width="33%" align="center"><h3>🌊 Wuthering Waves — CYBER NEXUS V1</h3><a href="wuwa-v1/README_ES.md"><img src="wuwa-v1/preview.svg" alt="Cyber Nexus Wuthering Waves V1 jade resonance controller" width="100%"></a><br><br><strong>STATUS: 🛠️ V1 VISUAL PREVIEW</strong><br>Jade Resonance Edition · CYBER NEXUS<br><br><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v1/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-PROBAR_WUWA_V1-21BFA8?style=for-the-badge&labelColor=09352F" alt="TRY CONTROL — PROBAR WUWA V1"></a><br><br><a href="wuwa-v1/README_ES.md">🇪🇸 README en español</a> · <a href="wuwa-v1/README.md">🇺🇸 English</a></td>
@@ -76,19 +70,16 @@ Each skin is developed independently so its artwork and input positions can be c
 ```text
 cyber-nexus-gamepad-skins/
 │
-├── gamepad-customize-v2/              # 🖼️ Photo skins + multigame editor
-│   ├── index.html                     # Viewer and photo controls
-│   ├── photo-skin.js                  # Local upload and settings
-│   ├── customizer.js                  # Game selector, icons, colors
-│   ├── README_ES.md                   # Español
-│   └── assets/
-│
-├── gamepad-customize/                          # 🎮 Gamepad Customize (multigame skins and icon editor)
-│   ├── index.html                    # Editor + viewer
-│   ├── customizer.js                 # Skins, stick icons, color & saved settings
-│   ├── main.js                       # Unchanged input mapping
+├── gamepad-customize/                # 🎮 Main customizer: photos, skins, icons, colors
+│   ├── index.html                    # Game selector & visual editor
+│   ├── photo-skin.js                 # Local character artwork for both grips
+│   ├── stream-export.js              # Export personalized HTML for OBS
+│   ├── customizer.js                 # 15 skins, 18 icons & color picker
+│   ├── main.js                       # Working Gamepad API mapping
 │   ├── README_ES.md                  # Español
-│   └── assets/                       # 15 themed skins + 18 game-specific stick icons
+│   ├── README.md                     # English
+│   ├── DRACULA-LICENSE.txt           # MIT attribution
+│   └── assets/
 │
 ├── wuwa-v1/                          # 🌊 Wuthering Waves Jade Resonance V1
 │   ├── README.md                     # English
