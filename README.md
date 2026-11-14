@@ -11,7 +11,7 @@
 |---|---|---|
 | 🌊 Wuthering Waves | [English](wuwa/README.md) | [Español](wuwa/README_ES.md) |
 | 🌆 Neverness to Everness | [English](nte/README.md) | [Español](nte/README_ES.md) |
-| ❄️ Mortal Kombat 1 — Sub-Zero | [English](mk1/README.md) | [Español](mk1/README_ES.md) |
+| ❄️ Mortal Kombat 1 — CYBER NEXUS V3 | [V3 project](V3/README.md) | [Try V3](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V3/?bg=1) |
 
 Custom PlayStation-style controller overlays for **Wuthering Waves**, **Neverness to Everness (NTE)** and **Mortal Kombat 1**.
 
@@ -40,7 +40,7 @@ Former folders: `mk1-v4 → V1`, `mk1-v5 → V2`, `mk1-v5.1 → V3`. Relative im
 <table><tr>
 <td width="33%" align="center"><h3>🌊 Wuthering Waves</h3><img src="wuwa/assets/base.png" alt="Cyber Nexus Wuthering Waves Controller" width="100%"><br><br><strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>Main Cyber Nexus controller currently being calibrated for GamePad Viewer.<br><br><a href="wuwa/">Open Wuthering Waves Project</a></td>
 <td width="33%" align="center"><h3>🌆 Neverness to Everness</h3><img src="nte/assets/base.png" alt="Cyber Nexus Neverness to Everness Controller" width="100%"><br><br><strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>Main Cyber Nexus controller currently being calibrated for GamePad Viewer.<br><br><a href="nte/">Open NTE Project</a></td>
-<td width="33%" align="center"><h3>❄️ Mortal Kombat 1 — Sub-Zero</h3><img src="mk1/assets/base.png" alt="Cyber Nexus Mortal Kombat 1 Sub-Zero Controller" width="100%"><br><br><strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>Main Cyber Nexus controller currently being calibrated for GamePad Viewer.<br><br><a href="mk1/">Open MK1 Project</a></td>
+<td width="33%" align="center"><h3>❄️ Mortal Kombat 1 — CYBER NEXUS V3</h3><img src="V3/preview.svg" alt="Cyber Nexus Mortal Kombat 1 V3 Ice Dragon Controller" width="100%"><br><br><strong>STATUS: ✅ WORKING — V3</strong><br>Ice Dragon edition with animated controller inputs.<br><br><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V3/?bg=1">🎮 Open MK1 V3 Controller</a></td>
 </tr></table>
 
 ---
@@ -70,11 +70,16 @@ cyber-nexus-gamepad-skins/
 │   ├── nte-gamepad.css
 │   └── assets/
 │
-└── mk1/                              # ❄️ Mortal Kombat 1 — Sub-Zero
-    ├── README.md                     # English
-    ├── README_ES.md                  # Español
-    ├── mk1-gamepad.css
-    └── assets/
+├── V1/                               # ❄️ Mortal Kombat 1 — first working version
+├── V2/                               # ❄️ Mortal Kombat 1 — Ice Dragon
+├── V3/                               # ❄️ Mortal Kombat 1 — current featured version
+│   ├── index.html                    # Live controller
+│   ├── main.js                       # Gamepad input detection
+│   ├── style.css                     # Animated button styling
+│   ├── preview.svg                   # Homepage preview
+│   ├── DRACULA-LICENSE.txt           # Original third-party assets attribution
+│   └── assets/
+└── index.html                        # Main collection landing page
 ```
 
 ## 🎮 Input System
@@ -83,7 +88,7 @@ Each finished controller is intended to support real-time feedback for:
 
 **D-pad • Analog sticks • △ ○ × □ • Create/Options • L1/R1 • L2/R2 • Stick clicks**
 
-All three Cyber Nexus controllers use the **PS4 White / DS4 layout (`s=8`)** from GamePad Viewer with custom CSS loaded through `editcss` and hosted through GitHub Pages.
+The current Mortal Kombat 1 **V3** controller uses the Gamepad API to display live inputs in its own browser viewer. Older WuWa and NTE projects still use the classic custom CSS approach.
 
 ## 🚧 Development Roadmap
 
@@ -94,7 +99,7 @@ All three Cyber Nexus controllers use the **PS4 White / DS4 layout (`s=8`)** fro
 **Current:** controller base established → D-pad calibration → analog sticks → face buttons → shoulder buttons/triggers.
 
 ### ❄️ Mortal Kombat 1 — Sub-Zero
-**Current:** controller base established → D-pad calibration → analog sticks → face buttons → shoulder buttons/triggers.
+**Current:** V3 active and working, with ice-dragon design, touchpad branding and live button feedback.
 
 ---
 
@@ -102,7 +107,7 @@ All three Cyber Nexus controllers use the **PS4 White / DS4 layout (`s=8`)** fro
 
 Este repositorio contiene la **colección de controles personalizados de Cyber Nexus** para GamePad Viewer. Cada diseño reemplaza la apariencia estándar del control con una temática específica del juego, manteniendo la respuesta de los botones en tiempo real para streams y grabaciones.
 
-Los tres proyectos utilizan el diseño **PS4 White / DS4 (`s=8`)** de GamePad Viewer con CSS personalizado alojado mediante GitHub Pages.
+La versión principal de Mortal Kombat 1 es **V3**, con visor propio y detección de botones. WuWa y NTE conservan por ahora sus proyectos anteriores con CSS personalizado.
 
 ### 🎨 Colección
 
@@ -112,15 +117,15 @@ Cada carpeta incluye un `README.md` en inglés y un `README_ES.md` en español. 
 
 ### 🚧 Estado
 
-🛠️ **EN DESARROLLO** — Los controles de Cyber Nexus continúan en proceso de calibración para las entradas en vivo de GamePad Viewer.
+✅ **MK1 V3 FUNCIONAL** — WuWa y NTE continúan en desarrollo.
 
 ---
 
 ## © Copyright / Derechos de autor
 
-**🇺🇸 © 2026 Cyber Nexus. All rights reserved.** Original custom designs, graphical assets and skins created for this repository belong to **Cyber Nexus**. Unauthorized copying, redistribution, modification or commercial use is prohibited and may result in appropriate legal action to protect the creator's rights.
+**🇺🇸 © 2026 Cyber Nexus. All rights reserved.** Original CYBER NEXUS designs and assets belong to **Cyber Nexus**; third-party Dracula-derived graphics retain their MIT license and notices. Unauthorized copying, redistribution, modification or commercial use is prohibited and may result in appropriate legal action to protect the creator's rights.
 
-**🇪🇸 © 2026 Cyber Nexus. Todos los derechos reservados.** Los diseños personalizados originales, recursos gráficos y skins creados para este repositorio pertenecen a **Cyber Nexus**. Queda prohibida su copia, redistribución, modificación o uso comercial no autorizado. Cualquier uso no autorizado podrá dar lugar a las acciones legales correspondientes para proteger los derechos del autor.
+**🇪🇸 © 2026 Cyber Nexus. Todos los derechos reservados.** Los diseños y recursos originales de CYBER NEXUS pertenecen a **Cyber Nexus**; los gráficos derivados de Dracula conservan sus avisos y licencia MIT. Queda prohibida su copia, redistribución, modificación o uso comercial no autorizado. Cualquier uso no autorizado podrá dar lugar a las acciones legales correspondientes para proteger los derechos del autor.
 
 Game names, characters, logos and other third-party intellectual property remain the property of their respective owners.  
 Los nombres de juegos, personajes, logotipos y demás propiedad intelectual de terceros pertenecen a sus respectivos propietarios.
