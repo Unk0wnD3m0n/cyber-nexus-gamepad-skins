@@ -1,6 +1,6 @@
-# 🌊 CYBER NEXUS × Wuthering Waves — V2 Personalizable
+# 🎮 CYBER NEXUS — Personalizador multijuego V2
 
-Esta es la **versión experimental V2** del control de Wuthering Waves. Utiliza la misma silueta, las mismas posiciones y el mismo `main.js` de **WuWa V1**, pero incorpora un **panel interactivo de personalización**.
+Este es el **personalizador multijuego V2**: permite elegir **Wuthering Waves, Neverness to Everness o Mortal Kombat 1 — Sub-Zero**. Cambia la apariencia completa del control, sus iconos y las texturas disponibles en función del juego, conservando el mismo `main.js` y las posiciones de los botones.
 
 <p align="center"><img src="preview.svg" alt="Control CYBER NEXUS WuWa V2, versión jade" width="700"></p>
 
@@ -8,12 +8,24 @@ Esta es la **versión experimental V2** del control de Wuthering Waves. Utiliza 
 
 <p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?overlay=1">🎥 Vista limpia para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../wuwa-v1/">🌊 V1 original</a></p>
 
+## 🎮 Selector de juego
+
+Al cambiar **Juego**, el control aplica automáticamente la carcasa, botones, touchpad y detalles de ese título. Las opciones de cada juego son independientes; no aparecen símbolos ni skins de otros juegos.
+
+| Juego | Skins / texturas (5) | Iconos de palancas (6) |
+|---|---|---|
+| 🌊 WuWa | Jade Resonance, Abyssal Echo, Celestial Tide, Golden Frequency, Moonlit Sonic | Ondas, Eco, Diapasón, Pulso, Estrella, Luna |
+| 🌆 NTE | Neon City, Midnight Grid, Hologram City, Sunset Circuit, Electric Violet | N Neón, Ciudad, Circuito, Cristal, Portal, Rayo |
+| ❄️ MK1 / Sub-Zero | Frozen Armor, Glacial Veins, Dark Blizzard, Frost Relic, Arctic Pulse | Dragón, Copo, Fragmento, Máscara, Runa, Ventisca |
+
+Los iconos y patrones son **diseños originales inspirados en las temáticas**, no logotipos oficiales de esos juegos.
+
 ## 🎨 Personalización
-- **3 skins/texturas:** Jade Resonance, Dark Jade y Light Aqua.
-- **3 iconos de palancas:** ondas originales, pulso resonante y órbita futurista.
+- **15 skins/texturas:** cinco para cada juego, con miniaturas seleccionables.
+- **18 iconos de palancas:** seis por juego, con vista previa.
 - **Selector de color:** rueda de color nativa y cuatro colores rápidos.
-- **Guardar preferencias:** los cambios permanecen en el mismo navegador mediante `localStorage`.
-- **Restablecer:** botón para volver a Jade Resonance con los símbolos y colores originales.
+- **Guardar preferencias por juego:** cada juego recuerda su última skin, icono y color mediante `localStorage`.
+- **Restablecer:** botón para recuperar las opciones originales del juego que esté seleccionado.
 
 Los controles de personalización aparecen en el botón **🎨 Personalizar**. Se pueden ocultar sin afectar la transmisión.
 
@@ -34,11 +46,11 @@ Para no mostrar el panel ni su botón en el streaming, utiliza **[wuwa-v2/?overl
 - `main.js`: mapeo original del mando, sin modificaciones.
 - `customizer.js`: skins, iconos, colores y guardado local.
 - `style.css`: estilos del control y del panel.
-- `assets/skin-*.svg`: texturas intercambiables.
-- `assets/pulse.svg`, `assets/orbit.svg`, `assets/resonance-emblem.svg`: iconos de palancas.
+- `assets/skins/{wuwa,nte,mk1}/`: 15 texturas separadas por juego.
+- `assets/icons/{wuwa,nte,mk1}/`: 18 emblemas originales separados por juego.
 - `DRACULA-LICENSE.txt`: licencia MIT y atribución de la base gráfica.
 
-**WuWa V1 y los controles de MK1/NTE no fueron modificados.**
+**WuWa V1, NTE V1 y MK1 V1–V3 permanecen intactos.**
 
 ---
 
