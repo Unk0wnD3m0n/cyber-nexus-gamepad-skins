@@ -21,6 +21,14 @@ Each controller has its own visual identity, assets and calibration while sharin
 
 ---
 
+## 🖼️ NEW — Gamepad Customize V2 (Photo Skins)
+
+**[🎮 TRY GAMEPAD CUSTOMIZE V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1)** · [README Español](gamepad-customize-v2/README_ES.md) · [README English](gamepad-customize-v2/README.md) · [Clean OBS view](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
+
+Upload a PNG/JPG/WebP image from your own device to apply it as a gamepad skin. Adjust scale, position, rotation and opacity. Images stay local to your browser (IndexedDB when available), not in GitHub. The existing Gamepad Customize edition and all stable game overlays remain unchanged.
+
+---
+
 ## 🎨 CYBER NEXUS — Gamepad Customize
 
 The original **[WuWa V1](wuwa-v1/)**, **[NTE V1](nte-v1/)** and **[MK1 V3](V3/)** are unchanged. The experimental **[Gamepad Customize](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1)** lets you select WuWa, NTE or MK1, with **five skins and six themed stick icons for each game** (15 skins and 18 icons total), as well as the existing color picker. Each game's preferences are saved separately.
@@ -67,6 +75,13 @@ Each skin is developed independently so its artwork and input positions can be c
 
 ```text
 cyber-nexus-gamepad-skins/
+│
+├── gamepad-customize-v2/              # 🖼️ Photo skins + multigame editor
+│   ├── index.html                     # Viewer and photo controls
+│   ├── photo-skin.js                  # Local upload and settings
+│   ├── customizer.js                  # Game selector, icons, colors
+│   ├── README_ES.md                   # Español
+│   └── assets/
 │
 ├── gamepad-customize/                          # 🎮 Gamepad Customize (multigame skins and icon editor)
 │   ├── index.html                    # Editor + viewer
