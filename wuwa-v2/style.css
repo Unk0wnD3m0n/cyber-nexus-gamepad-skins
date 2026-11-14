@@ -147,3 +147,27 @@ body.debug-mode .status{bottom:27px}
 .customizer #reset-customizer{width:100%;border:1px solid #81c6b5;background:#163e38;color:#e7fff6;border-radius:8px;padding:10px;cursor:pointer}
 .customizer .help{margin-top:12px}
 @media(max-width:650px){#customizer-toggle{top:8px;right:8px}.customizer{top:48px;right:8px}}
+
+/* MULTIGAME V2 — only visual sprites change; preserves Gamepad API and geometry. */
+:root{--game-base:url("../wuwa-v1/assets/base.svg");--game-triggers:url("../wuwa-v1/assets/triggers.svg");--game-bumper:url("../wuwa-v1/assets/bumper.svg");--game-start:url("../wuwa-v1/assets/start.svg");--game-face:url("../wuwa-v1/assets/face.svg");--game-dpad:url("../wuwa-v1/assets/dpad.svg");--game-sticks:url("../wuwa-v1/assets/sticks.svg");--game-touch:url("../wuwa-v1/assets/touchpad-ice.svg");--game-touchpress:url("../wuwa-v1/assets/touchpad.svg");--logo-shift:0deg;--bg-light:#104e48;--bg-dark:#061917}
+body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(--bg-dark) 70%)}
+.shell,.shell[style]{background-image:var(--game-base) !important}
+.shell::after{-webkit-mask-image:var(--game-base);mask-image:var(--game-base)}
+.trigger{background-image:var(--game-triggers)}
+.bumper{background-image:var(--game-bumper)}
+.menu{background-image:var(--game-start)}
+.face{background-image:var(--game-face)}
+.direction{background-image:var(--game-dpad)}
+.stick{background-image:var(--game-sticks)}
+.touch-ice{background-image:var(--game-touch)}
+.pad{background-image:var(--game-touchpress)}
+.brand{filter:hue-rotate(var(--logo-shift)) drop-shadow(0 1px 3px #000) !important}
+.customizer{width:min(340px,calc(100vw - 32px))}
+.choice-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:8px 0 12px}
+.choice{min-height:79px;padding:5px 3px;background:#0b292b;color:#dcfff3;border:1px solid #2b817a;border-radius:8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;overflow:hidden}
+.choice img{width:44px;height:44px;object-fit:contain}
+.choice span{display:block;font-size:10px;line-height:1.15;text-align:center;overflow-wrap:anywhere}
+.skins-gallery .choice img{width:100%;height:42px;object-fit:cover;background:#09282e;border-radius:5px}
+.choice[aria-pressed=true]{border-color:#bcffdd;background:#1c5550;outline:1px solid #acffe1}
+.choice:hover{border-color:#e0fff3}
+@media(max-width:650px){.customizer{width:min(305px,calc(100vw - 16px))}.choice-gallery{grid-template-columns:repeat(3,1fr)}}
