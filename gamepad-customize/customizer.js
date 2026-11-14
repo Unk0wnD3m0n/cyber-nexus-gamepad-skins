@@ -1,4 +1,4 @@
-/* CYBER NEXUS — Experimental multigame skin editor.
+/* CYBER NEXUS — Gamepad Customize multigame skin editor.
  * Read-only artwork selection; gameplay stays in the original main.js. */
 (()=>{"use strict";
 const catalog={
@@ -75,7 +75,7 @@ function updateGameArt(cfg){
  }
  brand.setAttribute("aria-label","CYBER NEXUS — "+cfg.subtitle);
  title.textContent="🎮 CYBER NEXUS · "+cfg.title;
- document.title="CYBER NEXUS — "+cfg.title+" | Personalizador V2";
+ document.title="CYBER NEXUS — Gamepad Customize | "+cfg.title;
  root.style.setProperty("--bg-light",cfg.bg[0]);
  root.style.setProperty("--bg-dark",cfg.bg[1]);
 }
