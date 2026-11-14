@@ -105,3 +105,23 @@ body.debug-mode .status{bottom:27px}
 
 /* Cache verification: distinct V5 ice armor finish; never change geometry or JS. */
 .shell{background-image:url("assets/base.svg?v=subzero-20261113-3") !important}
+
+/* MK1 V5 — Frozen Touchpad & Ice Dragon cosmetics (no changes to control hit/mapping coordinates). */
+.touch-ice{
+  position:absolute;left:272px;top:122px;width:262px;height:151px;
+  background:url("assets/touchpad-ice.svg?v=detail-4") center/contain no-repeat;
+  z-index:1;pointer-events:none;
+}
+.stick{isolation:isolate}
+.stick::after{
+  content:"";position:absolute;width:43px;height:43px;left:25.5px;top:25.5px;
+  pointer-events:none;opacity:.86;
+  background:url("assets/dragon-crest.svg?v=detail-4") center/contain no-repeat;
+  filter:drop-shadow(0 0 2px rgba(120,235,255,.65));
+}
+.stick.pressed::after{opacity:1;filter:drop-shadow(0 0 5px #9aefff)}
+/* Keep the touchpad's original press response on top of the glass texture. */
+.pad{z-index:3}
+.pad.pressed{filter:brightness(1.35) drop-shadow(0 0 10px #66dbff)}
+/* Crystalline hardware highlights on already-established shoulder component locations. */
+.bumper.pressed,.trigger.pressed{filter:brightness(1.35) drop-shadow(0 0 8px #96efff)}
