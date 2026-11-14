@@ -1,4 +1,4 @@
-# 🌈 CYBER NEXUS — Gamepad Customize V2 · RGB Edition
+# 🌈 CYBER NEXUS — Gamepad Customize V2 · RGB + Press Effects
 
 La nueva **Gamepad Customize V2** permite aplicar **fotografías o imágenes locales** como skin **en ambos grips hasta la punta inferior** de los controles de **Wuthering Waves, NTE y Mortal Kombat 1 / Sub-Zero**, además de conservar las 15 texturas, 18 iconos y el selector de colores de la primera versión.
 
@@ -17,6 +17,18 @@ En **🌈 Iluminación RGB** puedes encender o apagar las luces, seleccionar **c
 La iluminación está hecha con SVG y CSS, de modo que el archivo exportado con **💾 Guardar control para streaming (.html)** conserva el efecto elegido incluso sin el panel de edición. El RGB es **visual en la transmisión**, no controla los LED físicos del mando.
 
 **Esta es una versión experimental.** La versión principal [Gamepad Customize](../gamepad-customize/) permanece intacta.
+
+## ⚡ Efectos animados al pulsar botones — V2
+
+La nueva sección **⚡ Efectos de pulsación** añade destellos de partículas cuando un botón **pasa de libre a presionado**. Funciona con los controles originales, sin tocar `main.js`.
+
+- **Automático según juego:** MK1 → hielo ❄️; WuWa → resonancia 🌊; NTE → electricidad ⚡. También se pueden elegir manualmente hielo, resonancia, electricidad o fuego 🔥.
+- **Grupos independientes:** △ ○ × □; cruceta; L1/R1/L2/R2; L3/R3; botones del sistema (Start, PS, touchpad).
+- **Ajustes:** activar/desactivar, intensidad (20–100 %), duración (250–950 ms), restaurar y un botón **✨ Probar efecto** sin mando conectado.
+- **En OBS:** el botón **💾 Guardar control para streaming (.html)** incluye la configuración y añade el script de animaciones al HTML exportado. El original `main.js` detecta pulsaciones; el script complementario observa los cambios de estado. Cuando cambies ajustes, vuelve a exportar.
+- **Rendimiento:** partículas breves en CSS, máximo 38 ráfagas simultáneas; sin sonido y sin modificar las pulsaciones reales.
+
+El RGB existente, las fotografías de los grips y la versión principal `gamepad-customize/` permanecen intactos. **Función experimental: prueba las animaciones y el archivo exportado en tu OBS antes del directo.**
 
 ## 🖼️ Skin estilo personaje en ambos grips
 Este modo sigue el ejemplo de las skins físicas: **el personaje se imprime únicamente en las dos empuñaduras**, llegando a los extremos inferiores del mando, sin atravesar los botones, las palancas ni el touchpad.
