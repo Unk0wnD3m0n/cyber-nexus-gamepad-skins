@@ -1,4 +1,4 @@
-# 🎮 CYBER NEXUS — Gamepad Customize V2
+# 🎮 CYBER NEXUS — Gamepad Customize V2.1 · Character Grips
 
 **Gamepad Customize V2** extends the existing three-game controller designer with **local photo skin uploads**. Users can choose **Wuthering Waves, Neverness to Everness or Mortal Kombat 1**, upload a PNG/JPG/WebP image, and apply it inside the controller silhouette without covering the controller inputs.
 
@@ -8,14 +8,15 @@
 
 <p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1">Clean OBS overlay</a> · <a href="README_ES.md">🇪🇸 Español</a> · <a href="../gamepad-customize/">Original customizer</a></p>
 
-## 🖼️ Photo skins
-1. Pick your game.
-2. In **Imagen personalizada**, select a local PNG, JPEG or WebP file under 15 MB.
-3. Select **Foto personalizada** (automatically selected after upload).
-4. Adjust **scale, horizontal position, vertical position, rotation and opacity**. The photo is masked to the controller shape behind the buttons.
-5. Switch back to preset skins without deleting the photo, reset its position or remove it.
+## 🖼️ Character art on both controller grips
+The photo is now clipped to **the two handles of the controller, right down to the bottom tips**, away from the D-pad, action buttons, analog sticks and touchpad.
 
-Photos **are not uploaded**: the browser stores image files locally using IndexedDB where available. Color, per-game preferences and image adjustments use localStorage. Photos may be lost in private browsing or when browser storage is cleared.
+1. Choose a game, then upload a PNG/JPG/WebP image under 15 MB to **Foto para ambos lados**.
+2. The same image automatically appears on both grips; optionally select a **different photo for the right grip**.
+3. Edit the left and right handles independently, with **cover** or **contain** framing, scale, X/Y positioning, rotation and opacity.
+4. Switch back to a preset skin without deleting the photos. Reset each grip's framing or remove photos entirely.
+
+Images never leave your browser. IndexedDB stores photos where available; localStorage remembers settings per game. Images with different aspect ratios may still need individual framing adjustments.
 
 ## 🎨 Everything else retained
 The original multigame selector, **15 game-specific skins**, **18 themed stick icons**, customizable color picker and quick swatches are retained.
