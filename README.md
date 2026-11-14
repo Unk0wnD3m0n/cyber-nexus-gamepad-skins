@@ -10,7 +10,7 @@
 | Project | 🇺🇸 English | 🇪🇸 Español |
 |---|---|---|
 | 🌊 Wuthering Waves | [English](wuwa/README.md) | [Español](wuwa/README_ES.md) |
-| 🌆 Neverness to Everness | [English](nte/README.md) | [Español](nte/README_ES.md) |
+| 🌆 Neverness to Everness — NTE V1 | [English](nte-v1/README.md) | [Español](nte-v1/README_ES.md) |
 | ❄️ Mortal Kombat 1 — CYBER NEXUS V3 | [English](V3/README.md) | [Español](V3/README_ES.md) |
 
 Custom PlayStation-style controller overlays for **Wuthering Waves**, **Neverness to Everness (NTE)** and **Mortal Kombat 1**.
@@ -39,7 +39,7 @@ Former folders: `mk1-v4 → V1`, `mk1-v5 → V2`, `mk1-v5.1 → V3`. Relative im
 
 <table><tr>
 <td width="33%" align="center"><h3>🌊 Wuthering Waves</h3><img src="wuwa/assets/base.png" alt="Cyber Nexus Wuthering Waves Controller" width="100%"><br><br><strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>Main Cyber Nexus controller currently being calibrated for GamePad Viewer.<br><br><a href="wuwa/">Open Wuthering Waves Project</a></td>
-<td width="33%" align="center"><h3>🌆 Neverness to Everness</h3><img src="nte/assets/base.png" alt="Cyber Nexus Neverness to Everness Controller" width="100%"><br><br><strong>STATUS: 🛠️ IN DEVELOPMENT</strong><br>Main Cyber Nexus controller currently being calibrated for GamePad Viewer.<br><br><a href="nte/">Open NTE Project</a></td>
+<td width="33%" align="center"><h3>🌆 Neverness to Everness — NTE V1</h3><a href="nte-v1/README_ES.md"><img src="nte-v1/preview.svg" alt="Cyber Nexus NTE V1 violet neon controller" width="100%"></a><br><br><strong>STATUS: 🛠️ V1 NEON PROTOTYPE</strong><br>Violet/magenta controller based on MK1 V3 mapping.<br><br><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-PROBAR_NTE_V1-AB52F5?style=for-the-badge&labelColor=251333" alt="TRY NTE V1"></a><br><a href="nte-v1/README_ES.md">README español</a></td>
 <td width="33%" align="center"><h3>❄️ Mortal Kombat 1 — CYBER NEXUS V3</h3><a href="V3/README_ES.md"><img src="V3/preview.svg" alt="Cyber Nexus Mortal Kombat 1 V3 Ice Dragon Controller" width="100%"></a><br><br><strong>STATUS: ✅ WORKING — V3</strong><br>Ice Dragon Edition · CYBER NEXUS<br><br><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V3/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-PROBAR_V3-1387D5?style=for-the-badge&labelColor=0C1E34" alt="TRY CONTROL — PROBAR V3"></a><br><br><a href="V3/README_ES.md">🇪🇸 README en español</a> · <a href="V3/README.md">🇺🇸 English</a></td>
 </tr></table>
 
@@ -64,7 +64,15 @@ cyber-nexus-gamepad-skins/
 │   ├── wuwa-gamepad.css
 │   └── assets/
 │
-├── nte/                              # 🌆 Neverness to Everness
+├── nte-v1/                           # 🌆 NTE neon controller V1 (new)
+│   ├── index.html                    # Interactive viewer
+│   ├── README.md                     # English
+│   ├── README_ES.md                  # Español
+│   ├── main.js                       # V3 Gamepad API mapping
+│   ├── preview.svg                   # Controller artwork
+│   └── assets/
+│
+├── nte/                              # 🌆 Neverness to Everness (original backup)
 │   ├── README.md                     # English
 │   ├── README_ES.md                  # Español
 │   ├── nte-gamepad.css
@@ -88,7 +96,7 @@ Each finished controller is intended to support real-time feedback for:
 
 **D-pad • Analog sticks • △ ○ × □ • Create/Options • L1/R1 • L2/R2 • Stick clicks**
 
-The current Mortal Kombat 1 **V3** controller uses the Gamepad API to display live inputs in its own browser viewer. Older WuWa and NTE projects still use the classic custom CSS approach.
+The current Mortal Kombat 1 **V3** controller uses the Gamepad API to display live inputs in its own browser viewer. NTE V1 also uses the Gamepad API and inherits MK1 V3 input mapping. The older NTE folder and the WuWa project keep their original CSS approach.
 
 ## 🚧 Development Roadmap
 
@@ -96,7 +104,7 @@ The current Mortal Kombat 1 **V3** controller uses the Gamepad API to display li
 **Current:** controller base established → D-pad calibration → analog sticks → face buttons → shoulder buttons/triggers.
 
 ### 🌆 NTE
-**Current:** controller base established → D-pad calibration → analog sticks → face buttons → shoulder buttons/triggers.
+**Current:** NTE V1 neon controller copied from MK1 V3. Awaiting hands-on testing. The original `nte/` project is preserved.
 
 ### ❄️ Mortal Kombat 1 — Sub-Zero
 **Current:** V3 active and working, with ice-dragon design, touchpad branding and live button feedback.
@@ -107,7 +115,7 @@ The current Mortal Kombat 1 **V3** controller uses the Gamepad API to display li
 
 Este repositorio contiene la **colección de controles personalizados de Cyber Nexus** para GamePad Viewer. Cada diseño reemplaza la apariencia estándar del control con una temática específica del juego, manteniendo la respuesta de los botones en tiempo real para streams y grabaciones.
 
-La versión principal de Mortal Kombat 1 es **V3**, con visor propio y detección de botones. WuWa y NTE conservan por ahora sus proyectos anteriores con CSS personalizado.
+La versión principal de Mortal Kombat 1 es **V3**, con visor propio y detección de botones. NTE tiene también una nueva versión `nte-v1/` en violeta neón, basada en MK1 V3. El NTE anterior y WuWa siguen conservados.
 
 ### 🎨 Colección
 
