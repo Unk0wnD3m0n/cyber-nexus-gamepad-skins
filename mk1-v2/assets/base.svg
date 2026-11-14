@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="806" height="598" viewBox="0 0 806 598"><defs><linearGradient id="shell" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7edff"/><stop offset=".35" stop-color="#81b6e3"/><stop offset=".7" stop-color="#172f52"/><stop offset="1" stop-color="#071020"/></linearGradient><linearGradient id="ice" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#88faff"/><stop offset=".48" stop-color="#0c70f5"/><stop offset="1" stop-color="#06183d"/></linearGradient><radialGradient id="dark"><stop stop-color="#203f65"/><stop offset="1" stop-color="#050e1e"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="4"/></filter></defs>
+<path d="M106 89 Q65 92 55 138 L15 332 Q-4 430 42 522 Q71 579 119 546 L218 444 Q247 419 296 426 L510 426 Q559 419 588 444 L687 546 Q735 579 764 522 Q810 430 791 332 L751 138 Q741 92 700 89 Q646 61 575 93 Q527 112 476 115 L330 115 Q279 112 231 93 Q160 61 106 89Z" fill="url(#shell)" stroke="#70cbff" stroke-width="5"/>
+<path d="M102 128 Q68 190 65 318 Q64 390 94 469 L199 373 Q221 350 270 347 L536 347 Q585 350 607 373 L712 469 Q742 390 741 318 Q738 190 704 128 Q654 100 582 137 Q527 167 472 167 L334 167 Q279 167 224 137 Q152 100 102 128Z" fill="#08182a" stroke="#377db9" stroke-width="2"/>
+<path d="M109 126 Q73 213 78 329 M697 126 Q733 213 728 329" fill="none" stroke="#73eeff" stroke-width="7" opacity=".75" stroke-linecap="round"/>
+<path d="M200 405 Q260 381 319 402 L488 402 Q548 381 606 405" fill="none" stroke="#298bff" stroke-width="5" opacity=".7"/>
+<path d="M275 144 L531 144 L548 246 Q403 292 258 246Z" fill="#06101e" stroke="#37aaff" stroke-width="3"/>
+<path d="M294 155 L512 155 L525 234 Q403 265 281 234Z" fill="#102d4b"/>
+<path d="M403 170 L430 202 L403 234 L376 202Z" fill="url(#ice)" opacity=".65"/>
+<text x="403" y="314" font-family="Arial,sans-serif" text-anchor="middle" fill="#92efff" font-weight="bold" font-size="23" letter-spacing="7">CYBER NEXUS</text>
+<text x="403" y="340" font-family="Arial,sans-serif" text-anchor="middle" fill="#3aa5ff" font-size="12" letter-spacing="5">SUB-ZERO • MK1</text>
+<path d="M36 391 L153 473 L91 543" fill="none" stroke="#10a9ff" opacity=".3" stroke-width="3"/>
+<path d="M770 391 L653 473 L715 543" fill="none" stroke="#10a9ff" opacity=".3" stroke-width="3"/></svg>
