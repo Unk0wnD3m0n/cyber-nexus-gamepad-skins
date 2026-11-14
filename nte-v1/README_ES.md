@@ -47,7 +47,7 @@ Para comprobar los números de botones detectados, utiliza el [modo diagnóstico
 
 ## 📂 Recursos
 
-Los archivos están separados de los proyectos MK1 V3, WuWa y del antiguo NTE:
+Los archivos están separados de los proyectos MK1 V3 y WuWa:
 
 - `index.html` — visor interactivo.
 - `main.js` — detección y respuesta del mando basada en MK1 V3.
@@ -61,7 +61,7 @@ Los archivos están separados de los proyectos MK1 V3, WuWa y del antiguo NTE:
 
 Para mostrar el control en un stream, abre la [vista transparente](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/) en tu navegador y comprueba las entradas. Si la fuente **Browser Source** de OBS no detecta el mando, utiliza **Captura de ventana** del navegador.
 
-El antiguo skin [NTE](../nte/) permanece guardado como respaldo, y [MK1 V3](../V3/) sigue independiente.
+La carpeta antigua de NTE fue retirada. [MK1 V3](../V3/) sigue independiente.
 
 ---
 
