@@ -103,10 +103,10 @@ body.debug-mode .status{bottom:27px}
 .trigger{filter:drop-shadow(0 0 calc(2px + var(--pressure,0)*9px) #bc27ff)}
 .bumper.pressed{filter:drop-shadow(0 0 8px #b940ff)}
 
-/* Cache verification: distinct V5 ice armor finish; never change geometry or JS. */
+/* NTE neon armor finish; controller geometry and Gamepad API unchanged. */
 .shell{background-image:url("assets/base.svg?v=nte-neon-v1-1") !important}
 
-/* NTE V1 — Frozen Touchpad & Ice Dragon cosmetics (no changes to control hit/mapping coordinates). */
+/* NTE V1 — Neon City touchpad and original cyber monograms; control geometry unchanged. */
 .touch-ice{
   position:absolute;left:272px;top:122px;width:262px;height:151px;
   background:url("assets/touchpad-ice.svg?v=nte-neon-v1-1") center/contain no-repeat;
@@ -116,12 +116,12 @@ body.debug-mode .status{bottom:27px}
 .stick::after{
   content:"";position:absolute;width:43px;height:43px;left:25.5px;top:25.5px;
   pointer-events:none;opacity:.86;
-  background:url("assets/dragon-crest.svg?v=nte-neon-v1-1") center/contain no-repeat;
-  filter:drop-shadow(0 0 2px rgba(120,235,255,.65));
+  background:url("assets/neon-monogram.svg?v=nte-city-glyph-2") center/contain no-repeat;
+  filter:drop-shadow(0 0 3px rgba(221,115,255,.85));
 }
 .stick.pressed::after{opacity:1;filter:drop-shadow(0 0 5px #cf9aff)}
 /* Keep the touchpad's original press response on top of the glass texture. */
 .pad{z-index:3}
 .pad.pressed{filter:brightness(1.35) drop-shadow(0 0 10px #c266ff)}
-/* Crystalline hardware highlights on already-established shoulder component locations. */
+/* Neon highlights on established shoulder component locations. */
 .bumper.pressed,.trigger.pressed{filter:brightness(1.35) drop-shadow(0 0 8px #cc96ff)}
