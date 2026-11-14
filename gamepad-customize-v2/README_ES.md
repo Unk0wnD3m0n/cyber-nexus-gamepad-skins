@@ -1,58 +1,55 @@
-# 🎮 CYBER NEXUS — Gamepad Customize
+# 🎮 CYBER NEXUS — Gamepad Customize V2
 
-Este es **Gamepad Customize**, el personalizador multijuego de CYBER NEXUS: permite elegir **Wuthering Waves, Neverness to Everness o Mortal Kombat 1 — Sub-Zero**. Cambia la apariencia completa del control, sus iconos y las texturas disponibles en función del juego, conservando el mismo `main.js` y las posiciones de los botones.
+La nueva **Gamepad Customize V2** permite aplicar **fotografías o imágenes locales** como skin sobre la carcasa de los controles de **Wuthering Waves, NTE y Mortal Kombat 1 / Sub-Zero**, además de conservar las 15 texturas, 18 iconos y el selector de colores de la primera versión.
 
-<p align="center"><img src="preview.svg" alt="Gamepad Customize, diseño inicial jade" width="700"></p>
+<p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize V2, base jade"></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-PERSONALIZAR_V2-16BFA6?style=for-the-badge&labelColor=092D28" alt="TRY CONTROL — GAMEPAD CUSTOMIZE"></a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-SUBIR_FOTO_Y_PERSONALIZAR-16BFA6?style=for-the-badge&labelColor=092D28" alt="Probar Gamepad Customize V2"></a></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1">🎥 Vista limpia para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../wuwa-v1/">🌊 V1 original</a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1">🎥 Vista transparente sin panel para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../gamepad-customize/">Versión anterior</a></p>
 
-## 🎮 Selector de juego
+## 🖼️ Nueva función: subir una foto como skin
 
-Al cambiar **Juego**, el control aplica automáticamente la carcasa, botones, touchpad y detalles de ese título. Las opciones de cada juego son independientes; no aparecen símbolos ni skins de otros juegos.
+1. Abre el botón **🎨 Personalizar** y selecciona el juego deseado.
+2. En **Imagen personalizada**, pulsa **Seleccionar imagen** y elige un archivo PNG, JPG o WebP de tu computadora (máximo 15 MB).
+3. El selector cambia automáticamente a **Foto personalizada**. La imagen se recorta a la silueta del mando y se dibuja por debajo de los botones.
+4. Ajusta **tamaño, posición horizontal, posición vertical, rotación y opacidad** con los deslizadores.
+5. Vuelve a **Skin del juego** para usar las texturas originales, sin borrar tu fotografía. También puedes eliminarla o restablecer sus ajustes.
 
-| Juego | Skins / texturas (5) | Iconos de palancas (6) |
-|---|---|---|
-| 🌊 WuWa | Jade Resonance, Abyssal Echo, Celestial Tide, Golden Frequency, Moonlit Sonic | Ondas, Eco, Diapasón, Pulso, Estrella, Luna |
-| 🌆 NTE | Neon City, Midnight Grid, Hologram City, Sunset Circuit, Electric Violet | N Neón, Ciudad, Circuito, Cristal, Portal, Rayo |
-| ❄️ MK1 / Sub-Zero | Frozen Armor, Glacial Veins, Dark Blizzard, Frost Relic, Arctic Pulse | Dragón, Copo, Fragmento, Máscara, Runa, Ventisca |
+La imagen **no se envía a GitHub ni a ningún servidor**: se almacena en el navegador con IndexedDB cuando está disponible. Los ajustes por juego se guardan mediante localStorage. Si el almacenamiento privado está bloqueado, la imagen funciona durante la sesión, pero puede desaparecer al recargar.
 
-Los iconos y patrones son **diseños originales inspirados en las temáticas**, no logotipos oficiales de esos juegos.
+Puedes descargar una imagen legalmente utilizable de Internet para cargarla; comprueba siempre las licencias antes de compartir públicamente una skin.
 
-## 🎨 Personalización
-- **15 skins/texturas:** cinco para cada juego, con miniaturas seleccionables.
-- **18 iconos de palancas:** seis por juego, con vista previa.
-- **Selector de color:** rueda de color nativa y cuatro colores rápidos.
-- **Guardar preferencias por juego:** cada juego recuerda su última skin, icono y color mediante `localStorage`.
-- **Restablecer:** botón para recuperar las opciones originales del juego que esté seleccionado.
+## 🎨 Personalización existente
 
-Los controles de personalización aparecen en el botón **🎨 Personalizar**. Se pueden ocultar sin afectar la transmisión.
+- **Juegos:** WuWa, Neverness to Everness y Mortal Kombat 1.
+- **15 skins / texturas:** cinco por juego.
+- **18 emblemas de sticks:** seis por juego.
+- **Selector de color:** personalizado y cuatro botones rápidos.
+- **Memoria por juego** para iconos, texturas, color y ajuste de foto.
 
-## 🎮 Cómo probar
-Abre [TRY CONTROL — PERSONALIZAR V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1), conecta tu mando por USB o Bluetooth y presiona cualquier botón en Chrome o Edge. El botón de personalización controla exclusivamente los gráficos.
+## 🎮 Probar y usar en OBS
 
-**Cruceta • △ ○ × □ • L1/R1 • L2/R2 • Sticks/L3/R3 • Create/Options • PS • Touchpad**
+[**Abrir Gamepad Customize V2**](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1)
 
-[Modo diagnóstico](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1&debug=1).
+[Modo diagnóstico](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1&debug=1) · [Overlay sin panel](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
 
-> 🧪 **Estado: PERSONALIZADOR MULTIJUEGO.** La V2 reutiliza el código de detección de WuWa V1 sin alterarlo; aún es necesaria una prueba directa del selector y las entradas en un navegador con mando.
+El archivo `main.js` conserva el mismo mapeo Gamepad API probado en las versiones anteriores. Si OBS Browser Source no recibe las pulsaciones del mando, captura la ventana del navegador.
 
-## 📺 OBS / vista sin controles
-Para no mostrar el panel ni su botón en el streaming, utiliza **[gamepad-customize/?overlay=1](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1)**. Para revisar el control con fondo oscuro, usa `?bg=1` y para ver los botones detectados `?debug=1`.
+> 🧪 **V2 experimental:** los archivos y las rutas se han verificado en GitHub. Aún falta comprobar el recorte de imagen y la persistencia con un mando y un navegador reales.
 
-## 📁 Archivos
-- `index.html`: visor y panel de personalización.
-- `main.js`: mapeo original del mando, sin modificaciones.
-- `customizer.js`: skins, iconos, colores y guardado local.
-- `style.css`: estilos del control y del panel.
-- `assets/skins/{wuwa,nte,mk1}/`: 15 texturas separadas por juego.
-- `assets/icons/{wuwa,nte,mk1}/`: 18 emblemas originales separados por juego.
-- `DRACULA-LICENSE.txt`: licencia MIT y atribución de la base gráfica.
+## 📁 Archivos principales
 
-**WuWa V1, NTE V1 y MK1 V1–V3 permanecen intactos.**
+- `index.html`: visor y controles de personalización.
+- `style.css`: máscaras, capas y opciones.
+- `customizer.js`: selección multijuego, skins, iconos y colores.
+- `photo-skin.js`: subida local, recorte y ajustes de imagen con IndexedDB.
+- `main.js`: mapeo original de controles, **sin modificaciones**.
+- `assets/`: texturas y emblemas.
+- `DRACULA-LICENSE.txt`: licencia y atribución de los gráficos derivados de Dracula.
+
+**Gamepad Customize original, WuWa V1, NTE V1 y MK1 V1–V3 permanecen intactos.**
 
 ---
 
-## © Créditos
-© 2026 CYBER NEXUS por los recursos originales. El arte base del mando incorpora componentes derivados de [Dracula Gamepad Viewer](https://github.com/dracula/gamepad-viewer), conservando su [licencia MIT](DRACULA-LICENSE.txt). Wuthering Waves pertenece a sus titulares.
+© 2026 CYBER NEXUS por sus recursos originales. Algunos gráficos base se derivan de [Dracula Gamepad Viewer](https://github.com/dracula/gamepad-viewer), bajo la [licencia MIT](DRACULA-LICENSE.txt). Los nombres y marcas de los juegos pertenecen a sus respectivos propietarios.
