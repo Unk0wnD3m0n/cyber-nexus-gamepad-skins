@@ -23,7 +23,7 @@ const data={game:catalog[stored.game]?stored.game:"wuwa",prefs:{}};
 for(const g of Object.keys(catalog)){
  const raw=stored.prefs?.[g]||{},def=baseDefault(g);
  data.prefs[g]={
-  skin:catalog[g].skins.some(x=>x[0]===raw.skin)?raw.skin:def.skin,
+  skin:(raw.skin==="none"||catalog[g].skins.some(x=>x[0]===raw.skin))?raw.skin:def.skin,
   icon:catalog[g].icons.some(x=>x[0]===raw.icon)?raw.icon:def.icon,
   color:hex(raw.color)?raw.color:def.color
  };
@@ -50,10 +50,12 @@ function buildGallery(host,items,folder,kind){
   const b=document.createElement("button");
   b.type="button";b.className="choice";b.dataset.choice=id;
   b.title=name;b.setAttribute("aria-label",name);
-  const image=document.createElement("img");
-  image.alt="";image.loading="lazy";
-  image.src=folder+id+".svg";
-  b.append(image);
+  if(kind==="skin"&&id==="none"){
+   const tile=document.createElement("span");tile.className="plain-skin-preview";tile.setAttribute("aria-hidden","true");b.append(tile);
+  }else{
+   const image=document.createElement("img");
+   image.alt="";image.loading="lazy";image.src=folder+id+".svg";b.append(image);
+  }
   const caption=document.createElement("span");caption.textContent=name;b.append(caption);
   b.addEventListener("click",()=>{data.prefs[data.game][kind]=id;apply()});
   host.append(b);
@@ -88,7 +90,9 @@ function apply(syncColorPicker=true){
  const originalJadeHue=hue(catalog.wuwa.base);
  root.style.setProperty("--hue-shift",delta+"deg");
  root.style.setProperty("--logo-shift",Math.round(hue(current.color)-originalJadeHue)+"deg");
- setVar("--skin-image","assets/skins/"+data.game+"/"+current.skin+".svg");
+ root.classList.toggle("no-texture",current.skin==="none");
+ if(current.skin==="none")root.style.setProperty("--skin-image","none");
+ else setVar("--skin-image","assets/skins/"+data.game+"/"+current.skin+".svg");
  setVar("--stick-icon","assets/icons/"+data.game+"/"+current.icon+".svg");
  game.value=data.game;skins.value=current.skin;icons.value=current.icon;if(syncColorPicker)color.value=current.color;
  value.textContent=current.color.toUpperCase();
@@ -100,8 +104,9 @@ function chooseGame(id){
  if(!catalog[id])return;
  data.game=id;
  const cfg=catalog[id];
- makeOptions(skins,cfg.skins);makeOptions(icons,cfg.icons);
- buildGallery(skinGallery,cfg.skins,"assets/skins/"+id+"/","skin");
+ const skinChoices=[["none","Sin textura · acabado original"],...cfg.skins];
+ makeOptions(skins,skinChoices);makeOptions(icons,cfg.icons);
+ buildGallery(skinGallery,skinChoices,"assets/skins/"+id+"/","skin");
  buildGallery(iconGallery,cfg.icons,"assets/icons/"+id+"/","icon");
  updateGameArt(cfg);apply();
 }

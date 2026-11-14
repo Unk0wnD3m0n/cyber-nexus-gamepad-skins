@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#051f1c"><title>CYBER NEXUS — Gamepad Customize</title><link rel="stylesheet" href="style.css?v=multigame-3"></head>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#051f1c"><title>CYBER NEXUS — Gamepad Customize V2</title><link rel="stylesheet" href="style.css?v=stream-export-5"></head>
 <body><main class="stage" aria-label="CYBER NEXUS Wuthering Waves Resonance DualShock theme">
 <div class="controller-art">
-  <div class="shell"></div><div class="touch-ice" aria-hidden="true"></div>
+  <div class="shell"></div><div id="photo-skin" class="photo-skin" aria-hidden="true"><div class="photo-grip photo-left"><img id="photo-preview" alt=""></div><div class="photo-grip photo-right"><img id="photo-preview-right" alt=""></div></div><div class="touch-ice" aria-hidden="true"></div>
   <div class="part trigger lt" data-button="6"></div><div class="part trigger rt" data-button="7"></div>
   <div class="part bumper lb" data-button="4"></div><div class="part bumper rb" data-button="5"></div>
   <div class="part menu create" data-button="8"></div><div class="part menu options" data-button="9"></div>
@@ -35,7 +35,7 @@
 <div class="status">PRESS A BUTTON TO CONNECT</div><div class="debug" aria-live="off"></div></main>
 <script src="main.js"></script><button id="customizer-toggle" type="button" aria-controls="customizer" aria-expanded="true">🎨 Personalizar</button>
 <aside id="customizer" class="customizer" aria-label="Personalización del control">
-  <h2 id="customizer-title">🎮 CYBER NEXUS · Gamepad Customize</h2>
+  <h2 id="customizer-title">🎮 CYBER NEXUS · Gamepad Customize V2</h2>
   <p>Elige el juego: sus skins e iconos cambiarán automáticamente. Las preferencias se guardan por juego.</p>
   <label for="game-select">🎮 Juego</label>
   <select id="game-select">
@@ -57,7 +57,45 @@
     <button type="button" style="background:#bd69ef" data-preset-color="#bd69ef" aria-label="Violeta"></button>
     <button type="button" style="background:#eb7c64" data-preset-color="#eb7c64" aria-label="Coral"></button>
   </div>
+  <section class="photo-editor" aria-label="Skin mediante imagen">
+<h3>🖼️ Skin de personaje · ambos grips</h3>
+<p>La imagen se imprime sobre las dos empuñaduras hasta sus extremos inferiores, como una skin real. Los botones, palancas y touchpad quedan libres.</p>
+<label for="photo-mode">Tipo de skin</label>
+<select id="photo-mode"><option value="preset">Skin del juego</option><option value="photo">Personaje en ambos grips</option></select>
+<label for="photo-upload">Foto para ambos lados (PNG, JPG, WebP)</label>
+<input id="photo-upload" type="file" accept="image/png,image/jpeg,image/webp">
+<label for="photo-right-upload">Opcional: foto diferente para el grip derecho</label>
+<input id="photo-right-upload" type="file" accept="image/png,image/jpeg,image/webp">
+<label for="photo-side">Ajustar imagen de</label>
+<select id="photo-side"><option value="left">Grip izquierdo</option><option value="right">Grip derecho</option></select>
+<div class="photo-controls">
+<label for="photo-fit">Encuadre</label>
+<select id="photo-fit"><option value="cover">Llenar grip (recorte)</option><option value="contain">Mostrar imagen completa</option></select>
+<label for="photo-scale">Tamaño: <output id="photo-scale-value">100%</output></label>
+<input id="photo-scale" type="range" min="50" max="250" value="100" step="1">
+<label for="photo-x">Mover horizontal: <output id="photo-x-value">0 px</output></label>
+<input id="photo-x" type="range" min="-200" max="200" value="0" step="1">
+<label for="photo-y">Mover vertical: <output id="photo-y-value">0 px</output></label>
+<input id="photo-y" type="range" min="-220" max="220" value="0" step="1">
+<label for="photo-rotation">Rotación: <output id="photo-rotation-value">0°</output></label>
+<input id="photo-rotation" type="range" min="-180" max="180" value="0" step="1">
+<label for="photo-opacity">Opacidad: <output id="photo-opacity-value">100%</output></label>
+<input id="photo-opacity" type="range" min="15" max="100" value="100" step="1">
+</div>
+<div class="photo-actions">
+<button type="button" id="photo-reset">↺ Centrar este lado</button>
+<button type="button" id="photo-remove">Eliminar fotos</button>
+</div>
+<p id="photo-status" role="status" aria-live="polite"></p>
+</section>
+  <section class="stream-export" aria-label="Guardar diseño para streaming">
+  <h3>📺 Guardar para OBS / TikTok</h3>
+  <p>Genera un archivo HTML con este mando, sus colores, iconos y fotos incorporadas. Se verá igual aunque OBS use otro navegador.</p>
+  <button id="export-stream-html" type="button">💾 Guardar control para streaming (.html)</button>
+  <p id="stream-export-status" role="status" aria-live="polite"></p>
+  <small>En OBS: Fuente de navegador → Archivo local → selecciona el HTML. Para TikTok LIVE Studio, puedes capturar la escena de OBS con el mando personalizado. El enlace público de GitHub no comparte fotos guardadas en tu navegador.</small>
+</section>
   <button id="reset-customizer" type="button">↺ Restaurar este juego</button>
   <p class="help">En OBS usa <strong>?overlay=1</strong> para ocultar el panel. No se modifican los controles originales.</p>
 </aside>
-<script src="customizer.js?v=color-picker-fixed-4"></script></body></html>
+<script src="customizer.js?v=no-texture-satin-4"></script><script src="photo-skin.js?v=character-grips-2"></script><script src="stream-export.js?v=export-v1"></script></body></html>

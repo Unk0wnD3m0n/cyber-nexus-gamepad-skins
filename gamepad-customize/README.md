@@ -1,41 +1,53 @@
-# 🎮 CYBER NEXUS — Gamepad Customize
+# 🎮 CYBER NEXUS — Gamepad Customize V2.1 · Character Grips
 
-This separate experimental controller can switch between **Wuthering Waves, Neverness to Everness and Mortal Kombat 1 / Sub-Zero**, using each game's existing controller artwork with the **unchanged Gamepad API mapping**. All original releases remain untouched.
+**Gamepad Customize V2** extends the existing three-game controller designer with **local photo skin uploads**. Users can choose **Wuthering Waves, Neverness to Everness or Mortal Kombat 1**, upload a PNG/JPG/WebP image, and apply it inside the controller silhouette without covering the controller inputs.
 
-<p align="center"><img src="preview.svg" alt="CYBER NEXUS Gamepad Customize jade starter preview" width="700"></p>
+<p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize V2 jade controller"></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-CUSTOMIZE_V2-16BFA6?style=for-the-badge&labelColor=092D28" alt="TRY CONTROL — CUSTOMIZE V2"></a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-UPLOAD_A_PHOTO-16BFA6?style=for-the-badge&labelColor=092D28" alt="Try Gamepad Customize V2"></a></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1">Clean OBS overlay</a> · <a href="README_ES.md">🇪🇸 Leer en español</a> · <a href="../wuwa-v1/">Original V1</a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1">Clean OBS overlay</a> · <a href="README_ES.md">🇪🇸 Español</a> · <a href="../gamepad-customize/">Original customizer</a></p>
 
-## 🎮 Game-specific customization
+## 🖼️ Character art on both controller grips
+The photo is now clipped to **the two handles of the controller, right down to the bottom tips**, away from the D-pad, action buttons, analog sticks and touchpad.
 
-Selecting a game updates the controller's artwork, logo subtitle, available skins and analog stick icons. **Only that game's options appear**.
+1. Choose a game, then upload a PNG/JPG/WebP image under 15 MB to **Foto para ambos lados**.
+2. The same image automatically appears on both grips; optionally select a **different photo for the right grip**.
+3. Edit the left and right handles independently, with **cover** or **contain** framing, scale, X/Y positioning, rotation and opacity.
+4. Switch back to a preset skin without deleting the photos. Reset each grip's framing or remove photos entirely.
 
-| Game | Five skins | Six analog stick icons |
-|---|---|---|
-| WuWa | Jade Resonance, Abyssal Echo, Celestial Tide, Golden Frequency, Moonlit Sonic | Wave, Echo, Tuning Fork, Pulse, Astral Star, Crescent |
-| NTE | Neon City, Midnight Grid, Hologram City, Sunset Circuit, Electric Violet | Neon N, Skyline, Circuit, Diamond, Portal, Cyber Bolt |
-| MK1 / Sub-Zero | Frozen Armor, Glacial Veins, Dark Blizzard, Frost Relic, Arctic Pulse | Ice Dragon, Snowflake, Shard, Mask, Rune, Blizzard |
+Images never leave your browser. IndexedDB stores photos where available; localStorage remembers settings per game. Images with different aspect ratios may still need individual framing adjustments.
 
-There are **15 themed textures and 18 original, game-inspired icon designs** total. A color picker and quick color swatches are available for every game. Settings persist per game with `localStorage`. Reset restores only the currently selected game. Open or hide the settings panel with **🎨 Personalizar**.
+## ✨ No texture — original finish
 
-## 🎮 Try the controller
-Use the TRY link above. Connect a compatible controller through USB/Bluetooth and press a button in Chrome/Edge. The mapping remains identical to WuWa V1: **D-pad, face buttons, shoulders/triggers, analog sticks, L3/R3, Create/Options, PS and touchpad**.
+Choose **“Sin textura · acabado original”** under the game skin selector to remove the patterned overlay while retaining the controller's original detailed artwork and a subtle satin sheen. Character photos on both grips remain available. The selection is saved per game.
 
-[Button diagnostics](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1&debug=1).
+## 📺 Save your exact controller for OBS / TikTok
 
-> 🧪 **MULTIGAME CUSTOMIZER:** Customizer and new skin graphics still require hands-on testing. Input JavaScript is unchanged.
+Custom photos are stored in **your Chrome browser**, not in the public GitHub link. OBS and TikTok LIVE Studio use separate browser storage, so opening `?overlay=1` alone **cannot** automatically show your photos and custom settings.
 
-## 📺 OBS
-Use [the clean overlay](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1) to hide the editor, or add `?bg=1` for a dark background.
+After designing your controller:
+1. In the editor, click **💾 Guardar control para streaming (.html)**.
+2. A file called `CYBER-NEXUS-WUWA-STREAM.html` (or NTE / MK1) downloads. It embeds your current left and right grip photos, game, texture, icon and color.
+3. **OBS:** Add **Browser Source** → enable **Local file** → select the downloaded HTML. Set the source to **806 × 598** for the full controller, then resize it in the scene. The exported viewer loads the original Gamepad API input script.
+4. **TikTok LIVE Studio:** its browser/link source typically expects an HTTPS URL rather than a local HTML file; use an **OBS projector/window capture or OBS Virtual Camera** to pass the customized controller scene into TikTok. Live controller input inside the OBS browser source depends on controller access in OBS; test it before going live.
+5. If you edit your design later, **download again** and replace/refresh your overlay file. Saving does not live-sync across browsers.
 
-## 📁 Files
-`index.html`, `main.js` (unchanged), `customizer.js`, `style.css`, `preview.svg`, `assets/`, and `DRACULA-LICENSE.txt`.
+This export keeps images embedded locally and does not upload photos to GitHub. The HTML may still load the public controller CSS, icons and input code over the internet.
 
-**WuWa V1, MK1 V1–V3 and NTE V1 stay untouched.**
+## 🎨 Everything else retained
+The original multigame selector, **15 game-specific skins**, **18 themed stick icons**, customizable color picker and quick swatches are retained.
+
+## 🎮 Test / OBS
+[Open V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1) · [Button diagnostics](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1&debug=1) · [Clean OBS view](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
+
+The Gamepad API input mapping in `main.js` is unchanged. **Experimental:** please validate image clipping and persistence in your own browser.
+
+## Files
+`index.html`, `style.css`, `customizer.js`, `photo-skin.js`, `main.js`, `assets/`, and `DRACULA-LICENSE.txt`.
+
+**Original Gamepad Customize, WuWa V1, NTE V1 and MK1 V1–V3 are unchanged.**
 
 ---
 
-## © Credits
-© 2026 CYBER NEXUS for original designs. Base artwork derives in part from [Dracula Gamepad Viewer](https://github.com/dracula/gamepad-viewer), MIT attribution retained in [DRACULA-LICENSE.txt](DRACULA-LICENSE.txt).
+© 2026 CYBER NEXUS for original creations. Derived Dracula artwork retains its [MIT license](DRACULA-LICENSE.txt). Game names and trademarks belong to their respective owners.

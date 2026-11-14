@@ -1,58 +1,78 @@
-# 🎮 CYBER NEXUS — Gamepad Customize
+# 🎮 CYBER NEXUS — Gamepad Customize V2.1 · Character Grips
 
-Este es **Gamepad Customize**, el personalizador multijuego de CYBER NEXUS: permite elegir **Wuthering Waves, Neverness to Everness o Mortal Kombat 1 — Sub-Zero**. Cambia la apariencia completa del control, sus iconos y las texturas disponibles en función del juego, conservando el mismo `main.js` y las posiciones de los botones.
+La nueva **Gamepad Customize V2** permite aplicar **fotografías o imágenes locales** como skin **en ambos grips hasta la punta inferior** de los controles de **Wuthering Waves, NTE y Mortal Kombat 1 / Sub-Zero**, además de conservar las 15 texturas, 18 iconos y el selector de colores de la primera versión.
 
-<p align="center"><img src="preview.svg" alt="Gamepad Customize, diseño inicial jade" width="700"></p>
+<p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize V2, base jade"></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-PERSONALIZAR_V2-16BFA6?style=for-the-badge&labelColor=092D28" alt="TRY CONTROL — GAMEPAD CUSTOMIZE"></a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-SUBIR_FOTO_Y_PERSONALIZAR-16BFA6?style=for-the-badge&labelColor=092D28" alt="Probar Gamepad Customize V2"></a></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1">🎥 Vista limpia para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../wuwa-v1/">🌊 V1 original</a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1">🎥 Vista transparente sin panel para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../gamepad-customize/">Versión anterior</a></p>
 
-## 🎮 Selector de juego
+## 🖼️ Skin estilo personaje en ambos grips
+Este modo sigue el ejemplo de las skins físicas: **el personaje se imprime únicamente en las dos empuñaduras**, llegando a los extremos inferiores del mando, sin atravesar los botones, las palancas ni el touchpad.
 
-Al cambiar **Juego**, el control aplica automáticamente la carcasa, botones, touchpad y detalles de ese título. Las opciones de cada juego son independientes; no aparecen símbolos ni skins de otros juegos.
+1. Abre el botón **🎨 Personalizar** y selecciona WuWa, NTE o MK1.
+2. En **Imagen personalizada**, sube un archivo PNG, JPG o WebP de hasta **15 MB** mediante **Foto para ambos lados**. La misma imagen aparecerá en los grips izquierdo y derecho.
+3. Opcionalmente, sube otra imagen con **Foto diferente para el grip derecho**.
+4. Escoge **Grip izquierdo** o **Grip derecho** para ajustar su encuadre independientemente.
+5. Cambia entre **Llenar grip (recorte)** o **Mostrar imagen completa**, y ajusta tamaño, posición X/Y, rotación y opacidad.
+6. Para volver a las texturas originales, elige **Skin del juego**. Puedes restablecer cada encuadre o borrar las fotos.
 
-| Juego | Skins / texturas (5) | Iconos de palancas (6) |
-|---|---|---|
-| 🌊 WuWa | Jade Resonance, Abyssal Echo, Celestial Tide, Golden Frequency, Moonlit Sonic | Ondas, Eco, Diapasón, Pulso, Estrella, Luna |
-| 🌆 NTE | Neon City, Midnight Grid, Hologram City, Sunset Circuit, Electric Violet | N Neón, Ciudad, Circuito, Cristal, Portal, Rayo |
-| ❄️ MK1 / Sub-Zero | Frozen Armor, Glacial Veins, Dark Blizzard, Frost Relic, Arctic Pulse | Dragón, Copo, Fragmento, Máscara, Runa, Ventisca |
+Las imágenes permanecen locales a este navegador: se guardan con IndexedDB si está permitido, mientras los ajustes se guardan con localStorage. No se suben a GitHub. Las proporciones de las fotografías varían, por lo que **algunas requerirán ajustes de encuadre** para que el personaje salga entero y con su cara visible.
 
-Los iconos y patrones son **diseños originales inspirados en las temáticas**, no logotipos oficiales de esos juegos.
+Las imágenes encontradas en Internet pueden tener derechos de autor; verifica que puedas compartir el resultado si planeas publicarlo.
 
-## 🎨 Personalización
-- **15 skins/texturas:** cinco para cada juego, con miniaturas seleccionables.
-- **18 iconos de palancas:** seis por juego, con vista previa.
-- **Selector de color:** rueda de color nativa y cuatro colores rápidos.
-- **Guardar preferencias por juego:** cada juego recuerda su última skin, icono y color mediante `localStorage`.
-- **Restablecer:** botón para recuperar las opciones originales del juego que esté seleccionado.
+## ✨ Sin textura, pero con acabado
 
-Los controles de personalización aparecen en el botón **🎨 Personalizar**. Se pueden ocultar sin afectar la transmisión.
+Elige **«Sin textura · acabado original»** en **Skin / textura del juego**. Se elimina el patrón decorativo sin dejar la carcasa plana: permanece el diseño original de cada juego y una luz satinada muy sutil. También puedes mantener tus fotografías de personaje en ambos grips. Esta selección se recuerda por juego.
 
-## 🎮 Cómo probar
-Abre [TRY CONTROL — PERSONALIZAR V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1), conecta tu mando por USB o Bluetooth y presiona cualquier botón en Chrome o Edge. El botón de personalización controla exclusivamente los gráficos.
+## 📺 Guardar TU diseño para OBS y TikTok LIVE
 
-**Cruceta • △ ○ × □ • L1/R1 • L2/R2 • Sticks/L3/R3 • Create/Options • PS • Touchpad**
+Tus fotos están guardadas **en tu navegador**, no dentro del enlace público de GitHub. OBS y TikTok LIVE Studio usan navegadores independientes. Por eso, abrir `?overlay=1` en otro programa **no puede recuperar tus imágenes ni preferencias automáticamente**.
 
-[Modo diagnóstico](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1&debug=1).
+Para conservar exactamente el diseño que ves:
 
-> 🧪 **Estado: PERSONALIZADOR MULTIJUEGO.** La V2 reutiliza el código de detección de WuWa V1 sin alterarlo; aún es necesaria una prueba directa del selector y las entradas en un navegador con mando.
+1. Personaliza el control (juego, fotos de ambos grips, colores, textura e iconos).
+2. Pulsa **💾 Guardar control para streaming (.html)** en el panel.
+3. Se descargará un archivo llamado, por ejemplo, `CYBER-NEXUS-MK1-STREAM.html`. **Las fotos van incrustadas** en ese archivo, junto con la apariencia actual; no necesitas cargar las imágenes de nuevo.
+4. **En OBS:** Fuentes → **Navegador** → activa **Archivo local** → elige el HTML descargado. Usa **806 × 598** como resolución inicial y ajusta el tamaño en la escena.
+5. **En TikTok LIVE Studio:** la fuente de enlace suele requerir una **URL HTTPS** y no puede abrir directamente este archivo como una página web. Puedes mostrar tu escena de OBS en TikTok mediante **captura de ventana/proyector de OBS** o **Cámara virtual de OBS**, según tu configuración.
+6. Cuando cambies de skin o personajes, **vuelve a exportar** el archivo y actualiza o refresca la fuente de OBS. No existe sincronización automática entre los programas.
 
-## 📺 OBS / vista sin controles
-Para no mostrar el panel ni su botón en el streaming, utiliza **[gamepad-customize/?overlay=1](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1)**. Para revisar el control con fondo oscuro, usa `?bg=1` y para ver los botones detectados `?debug=1`.
+**Importante:** la detección de botones dentro de la fuente Navegador de OBS depende de los permisos y del acceso al mando en ese navegador; haz una prueba antes de transmitir. Si OBS no detecta tu mando, puedes capturar la ventana del visor en Chrome.
 
-## 📁 Archivos
-- `index.html`: visor y panel de personalización.
-- `main.js`: mapeo original del mando, sin modificaciones.
-- `customizer.js`: skins, iconos, colores y guardado local.
-- `style.css`: estilos del control y del panel.
-- `assets/skins/{wuwa,nte,mk1}/`: 15 texturas separadas por juego.
-- `assets/icons/{wuwa,nte,mk1}/`: 18 emblemas originales separados por juego.
-- `DRACULA-LICENSE.txt`: licencia MIT y atribución de la base gráfica.
+La exportación funciona completamente en tu navegador. Las fotos no se suben a GitHub, aunque el HTML utiliza los recursos públicos de estilos e iconos por Internet.
 
-**WuWa V1, NTE V1 y MK1 V1–V3 permanecen intactos.**
+## 🎨 Personalización existente
+
+- **Juegos:** WuWa, Neverness to Everness y Mortal Kombat 1.
+- **15 skins / texturas:** cinco por juego.
+- **18 emblemas de sticks:** seis por juego.
+- **Selector de color:** personalizado y cuatro botones rápidos.
+- **Memoria por juego** para iconos, texturas, color y ajuste de foto.
+
+## 🎮 Probar y usar en OBS
+
+[**Abrir Gamepad Customize V2**](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1)
+
+[Modo diagnóstico](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1&debug=1) · [Overlay sin panel](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
+
+El archivo `main.js` conserva el mismo mapeo Gamepad API probado en las versiones anteriores. Si OBS Browser Source no recibe las pulsaciones del mando, captura la ventana del navegador.
+
+> 🧪 **V2 experimental:** los archivos y las rutas se han verificado en GitHub. Aún falta comprobar el recorte de imagen y la persistencia con un mando y un navegador reales.
+
+## 📁 Archivos principales
+
+- `index.html`: visor y controles de personalización.
+- `style.css`: máscaras, capas y opciones.
+- `customizer.js`: selección multijuego, skins, iconos y colores.
+- `photo-skin.js`: subida local, recorte y ajustes de imagen con IndexedDB.
+- `main.js`: mapeo original de controles, **sin modificaciones**.
+- `assets/`: texturas y emblemas.
+- `DRACULA-LICENSE.txt`: licencia y atribución de los gráficos derivados de Dracula.
+
+**Gamepad Customize original, WuWa V1, NTE V1 y MK1 V1–V3 permanecen intactos.**
 
 ---
 
-## © Créditos
-© 2026 CYBER NEXUS por los recursos originales. El arte base del mando incorpora componentes derivados de [Dracula Gamepad Viewer](https://github.com/dracula/gamepad-viewer), conservando su [licencia MIT](DRACULA-LICENSE.txt). Wuthering Waves pertenece a sus titulares.
+© 2026 CYBER NEXUS por sus recursos originales. Algunos gráficos base se derivan de [Dracula Gamepad Viewer](https://github.com/dracula/gamepad-viewer), bajo la [licencia MIT](DRACULA-LICENSE.txt). Los nombres y marcas de los juegos pertenecen a sus respectivos propietarios.
