@@ -187,7 +187,10 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
 .photo-skin img{display:block;position:absolute;left:0;top:0;width:806px;height:598px;object-fit:cover;max-width:none;
  transform:translate(var(--photo-x,0px),var(--photo-y,0px)) rotate(var(--photo-rotation,0deg)) scale(var(--photo-scale,1));
  transform-origin:center;opacity:var(--photo-opacity,.75)}
-.using-photo .shell::after{opacity:0 !important}
+/* Photo grips and game textures can coexist: the textured shell is the base
+   and character photos decorate only the two handles. Never hide the texture. */
+.using-photo .shell::after{opacity:.8 !important;mix-blend-mode:screen}
+.shell::after{opacity:.8;mix-blend-mode:screen}
 .photo-editor{margin:14px 0;border-top:1px solid #326c61;padding-top:12px}
 .photo-editor h3{margin:0 0 5px;font-size:15px;color:#caffed}
 .photo-editor input[type=file]{display:block;width:100%;font-size:12px;padding:8px;background:#102e2e;border:1px solid #508e84;border-radius:8px}
