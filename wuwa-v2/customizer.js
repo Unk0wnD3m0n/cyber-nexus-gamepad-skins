@@ -82,7 +82,7 @@ function updateGameArt(cfg){
 function gallerySelected(host,id){
  for(const b of host.querySelectorAll(".choice"))b.setAttribute("aria-pressed",String(b.dataset.choice===id));
 }
-function apply(){
+function apply(syncColorPicker=true){
  const cfg=catalog[data.game], current=data.prefs[data.game];
  const delta=Math.round(hue(current.color)-hue(cfg.base));
  const originalJadeHue=hue(catalog.wuwa.base);
@@ -90,7 +90,7 @@ function apply(){
  root.style.setProperty("--logo-shift",Math.round(hue(current.color)-originalJadeHue)+"deg");
  setVar("--skin-image","assets/skins/"+data.game+"/"+current.skin+".svg");
  setVar("--stick-icon","assets/icons/"+data.game+"/"+current.icon+".svg");
- game.value=data.game;skins.value=current.skin;icons.value=current.icon;color.value=current.color;
+ game.value=data.game;skins.value=current.skin;icons.value=current.icon;if(syncColorPicker)color.value=current.color;
  value.textContent=current.color.toUpperCase();
  gallerySelected(skinGallery,current.skin);gallerySelected(iconGallery,current.icon);
  for(const button of swatches)button.setAttribute("aria-pressed",String(button.dataset.presetColor.toLowerCase()===current.color.toLowerCase()));
@@ -108,7 +108,15 @@ function chooseGame(id){
 game.addEventListener("change",()=>chooseGame(game.value));
 skins.addEventListener("change",()=>{data.prefs[data.game].skin=skins.value;apply()});
 icons.addEventListener("change",()=>{data.prefs[data.game].icon=icons.value;apply()});
-color.addEventListener("input",()=>{data.prefs[data.game].color=color.value;apply()});
+// Native color dialogs vary: live preview via input, final commit via change.
+function commitColor(syncPicker){
+ const chosen=color.value;
+ if(!hex(chosen))return;
+ data.prefs[data.game].color=chosen;
+ apply(syncPicker);
+}
+color.addEventListener("input",()=>commitColor(false));
+color.addEventListener("change",()=>commitColor(true));
 for(const button of swatches)button.addEventListener("click",()=>{data.prefs[data.game].color=button.dataset.presetColor;apply()});
 reset.addEventListener("click",()=>{data.prefs[data.game]=baseDefault(data.game);apply()});
 toggle.addEventListener("click",()=>{panel.classList.toggle("hidden");toggle.setAttribute("aria-expanded",String(!panel.classList.contains("hidden")))});
