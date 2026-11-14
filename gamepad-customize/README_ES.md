@@ -1,12 +1,12 @@
-# 🎮 CYBER NEXUS — Personalizador multijuego V2
+# 🎮 CYBER NEXUS — Gamepad Customize
 
-Este es el **personalizador multijuego V2**: permite elegir **Wuthering Waves, Neverness to Everness o Mortal Kombat 1 — Sub-Zero**. Cambia la apariencia completa del control, sus iconos y las texturas disponibles en función del juego, conservando el mismo `main.js` y las posiciones de los botones.
+Este es **Gamepad Customize**, el personalizador multijuego de CYBER NEXUS: permite elegir **Wuthering Waves, Neverness to Everness o Mortal Kombat 1 — Sub-Zero**. Cambia la apariencia completa del control, sus iconos y las texturas disponibles en función del juego, conservando el mismo `main.js` y las posiciones de los botones.
 
-<p align="center"><img src="preview.svg" alt="Control CYBER NEXUS WuWa V2, versión jade" width="700"></p>
+<p align="center"><img src="preview.svg" alt="Gamepad Customize, diseño inicial jade" width="700"></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-PERSONALIZAR_V2-16BFA6?style=for-the-badge&labelColor=092D28" alt="TRY CONTROL — PERSONALIZAR V2"></a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-PERSONALIZAR_V2-16BFA6?style=for-the-badge&labelColor=092D28" alt="TRY CONTROL — GAMEPAD CUSTOMIZE"></a></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?overlay=1">🎥 Vista limpia para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../wuwa-v1/">🌊 V1 original</a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1">🎥 Vista limpia para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../wuwa-v1/">🌊 V1 original</a></p>
 
 ## 🎮 Selector de juego
 
@@ -30,16 +30,16 @@ Los iconos y patrones son **diseños originales inspirados en las temáticas**, 
 Los controles de personalización aparecen en el botón **🎨 Personalizar**. Se pueden ocultar sin afectar la transmisión.
 
 ## 🎮 Cómo probar
-Abre [TRY CONTROL — PERSONALIZAR V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?bg=1), conecta tu mando por USB o Bluetooth y presiona cualquier botón en Chrome o Edge. El botón de personalización controla exclusivamente los gráficos.
+Abre [TRY CONTROL — PERSONALIZAR V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1), conecta tu mando por USB o Bluetooth y presiona cualquier botón en Chrome o Edge. El botón de personalización controla exclusivamente los gráficos.
 
 **Cruceta • △ ○ × □ • L1/R1 • L2/R2 • Sticks/L3/R3 • Create/Options • PS • Touchpad**
 
-[Modo diagnóstico](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?bg=1&debug=1).
+[Modo diagnóstico](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1&debug=1).
 
-> 🧪 **Estado: EXPERIMENTAL.** La V2 reutiliza el código de detección de WuWa V1 sin alterarlo; aún es necesaria una prueba directa del selector y las entradas en un navegador con mando.
+> 🧪 **Estado: PERSONALIZADOR MULTIJUEGO.** La V2 reutiliza el código de detección de WuWa V1 sin alterarlo; aún es necesaria una prueba directa del selector y las entradas en un navegador con mando.
 
 ## 📺 OBS / vista sin controles
-Para no mostrar el panel ni su botón en el streaming, utiliza **[wuwa-v2/?overlay=1](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?overlay=1)**. Para revisar el control con fondo oscuro, usa `?bg=1` y para ver los botones detectados `?debug=1`.
+Para no mostrar el panel ni su botón en el streaming, utiliza **[gamepad-customize/?overlay=1](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1)**. Para revisar el control con fondo oscuro, usa `?bg=1` y para ver los botones detectados `?debug=1`.
 
 ## 📁 Archivos
 - `index.html`: visor y panel de personalización.
