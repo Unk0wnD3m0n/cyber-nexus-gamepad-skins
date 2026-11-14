@@ -1,10 +1,10 @@
 /* MK1 V4 — retain Dracula DS4 artwork and exact established geometry; recolor only to Sub-Zero.
    Dracula source art © contributors, MIT: github.com/dracula/gamepad-viewer */
-:root{color-scheme:dark;--ice-filter:hue-rotate(285deg) saturate(1.25) brightness(1.07)}
+:root{color-scheme:dark;--ice-filter:none}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent;font-family:Arial,sans-serif}
 body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)}
 .stage{position:absolute;left:50%;top:50%;height:598px;width:806px;transform:translate(-50%,-50%) scale(var(--zoom,1));transform-origin:center;isolation:isolate}
-.controller-art{position:absolute;inset:0;filter:var(--ice-filter)}
+.controller-art{position:absolute;inset:0;filter:none}
 .shell{position:absolute;inset:0;background:url("assets/base.svg") no-repeat center/806px 598px}
 .part{position:absolute;z-index:2;background-repeat:no-repeat;transition:filter .055s,opacity .055s;pointer-events:none}
 .part.pressed{filter:drop-shadow(0 0 4px #54cfff) drop-shadow(0 0 9px #167fff)}
@@ -41,8 +41,8 @@ body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)
 .pad.pressed{opacity:1}
 .ps{left:382px;top:357px;width:42px;height:42px;border-radius:50%;opacity:0;background:radial-gradient(circle,#b8f8ff 0,#1a87e9 52%,transparent 68%)}
 .ps.pressed{opacity:.85}
-.brand{position:absolute;left:50%;top:38%;width:190px;max-height:45px;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 3px #000)}
-.frost{position:absolute;inset:0;width:806px;height:598px;z-index:4;pointer-events:none;opacity:.73}
+.brand{position:absolute;left:50%;top:39%;width:180px;max-height:44px;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 3px #000)}
+.frost{position:absolute;inset:0;width:806px;height:598px;z-index:4;pointer-events:none;opacity:.85}
 .status{position:absolute;bottom:2px;left:0;width:100%;text-align:center;color:#c8eaff;letter-spacing:2px;font-size:13px;text-shadow:0 0 8px #2692ff;z-index:5}
 .stage.connected .status{display:none}.stage:not(.connected) .part{opacity:.2}.stage:not(.connected) .trigger,.stage:not(.connected) .bumper,.stage:not(.connected) .menu,.stage:not(.connected) .pad,.stage:not(.connected) .ps{opacity:0}
 
@@ -90,3 +90,15 @@ body.debug-mode .status{bottom:27px}
   transition:opacity .04s linear;
 }
 .menu.options.pressed::after{opacity:1}
+
+/* MK1 V5 design improvements: preserving V4 geometry and proven input mapping */
+.controller-art{filter:none}
+.part.pressed{filter:brightness(1.85) drop-shadow(0 0 5px #d8ffff) drop-shadow(0 0 12px #19aafa)}
+.face.pressed,.direction.pressed{filter:brightness(1.95) saturate(1.25) drop-shadow(0 0 7px #c9faff) drop-shadow(0 0 15px #028eff) !important}
+.face::after{border-color:#e0ffff;background:radial-gradient(circle,rgba(150,243,255,.42),rgba(2,121,234,.15) 65%,transparent 85%);box-shadow:0 0 8px #d5ffff,inset 0 0 8px #7be9ff,0 0 17px #087de9}
+.direction::after{background:rgba(111,221,255,.65);box-shadow:inset 0 0 10px #e3fbff,0 0 13px #169fff}
+.menu.options.pressed::after{background:linear-gradient(160deg,rgba(210,250,255,.86),rgba(6,127,225,.75))}
+.pad.pressed{filter:drop-shadow(0 0 9px #4bc7fa)}
+.stick.pressed{filter:brightness(1.6) drop-shadow(0 0 8px #9eeeff)}
+.trigger{filter:drop-shadow(0 0 calc(2px + var(--pressure,0)*9px) #27b9ff)}
+.bumper.pressed{filter:drop-shadow(0 0 8px #45cafa)}
