@@ -41,7 +41,7 @@ body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)
 .pad.pressed{opacity:1}
 .ps{left:382px;top:357px;width:42px;height:42px;border-radius:50%;opacity:0;background:radial-gradient(circle,#b8f8ff 0,#1a87e9 52%,transparent 68%)}
 .ps.pressed{opacity:.85}
-.brand{position:absolute;left:50%;top:39%;width:180px;max-height:44px;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 3px #000)}
+.brand{position:absolute;left:50%;top:35%;width:255px;max-height:120px;height:auto;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 3px #000)}
 .frost{position:absolute;inset:0;width:806px;height:598px;z-index:4;pointer-events:none;opacity:.85}
 .status{position:absolute;bottom:2px;left:0;width:100%;text-align:center;color:#c8eaff;letter-spacing:2px;font-size:13px;text-shadow:0 0 8px #2692ff;z-index:5}
 .stage.connected .status{display:none}.stage:not(.connected) .part{opacity:.2}.stage:not(.connected) .trigger,.stage:not(.connected) .bumper,.stage:not(.connected) .menu,.stage:not(.connected) .pad,.stage:not(.connected) .ps{opacity:0}
