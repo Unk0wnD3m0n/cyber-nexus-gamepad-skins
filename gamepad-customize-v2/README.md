@@ -22,6 +22,19 @@ Images never leave your browser. IndexedDB stores photos where available; localS
 
 Choose **“Sin textura · acabado original”** under the game skin selector to remove the patterned overlay while retaining the controller's original detailed artwork and a subtle satin sheen. Character photos on both grips remain available. The selection is saved per game.
 
+## 📺 Save your exact controller for OBS / TikTok
+
+Custom photos are stored in **your Chrome browser**, not in the public GitHub link. OBS and TikTok LIVE Studio use separate browser storage, so opening `?overlay=1` alone **cannot** automatically show your photos and custom settings.
+
+After designing your controller:
+1. In the editor, click **💾 Guardar control para streaming (.html)**.
+2. A file called `CYBER-NEXUS-WUWA-STREAM.html` (or NTE / MK1) downloads. It embeds your current left and right grip photos, game, texture, icon and color.
+3. **OBS:** Add **Browser Source** → enable **Local file** → select the downloaded HTML. Set the source to **806 × 598** for the full controller, then resize it in the scene. The exported viewer loads the original Gamepad API input script.
+4. **TikTok LIVE Studio:** its browser/link source typically expects an HTTPS URL rather than a local HTML file; use an **OBS projector/window capture or OBS Virtual Camera** to pass the customized controller scene into TikTok. Live controller input inside the OBS browser source depends on controller access in OBS; test it before going live.
+5. If you edit your design later, **download again** and replace/refresh your overlay file. Saving does not live-sync across browsers.
+
+This export keeps images embedded locally and does not upload photos to GitHub. The HTML may still load the public controller CSS, icons and input code over the internet.
+
 ## 🎨 Everything else retained
 The original multigame selector, **15 game-specific skins**, **18 themed stick icons**, customizable color picker and quick swatches are retained.
 
