@@ -130,7 +130,7 @@ body.debug-mode .status{bottom:27px}
 :root{--hue-shift:0deg;--skin-image:url("assets/skin-jade.svg");--stick-icon:url("assets/resonance-emblem.svg")}
 .controller-art,.frost{filter:hue-rotate(var(--hue-shift))}
 .brand{filter:hue-rotate(var(--hue-shift)) drop-shadow(0 1px 3px #000) !important}
-.shell::after{content:"";position:absolute;inset:0;pointer-events:none;background:var(--skin-image) center/806px 598px no-repeat;opacity:.9;z-index:1;mix-blend-mode:screen}
+.shell::after{content:"";position:absolute;inset:0;pointer-events:none;background:var(--skin-image) center/806px 598px no-repeat;opacity:.52;z-index:1;mix-blend-mode:soft-light;-webkit-mask-image:url("assets/base.svg?v=wuwa-v2-body-mask-1");mask-image:url("assets/base.svg?v=wuwa-v2-body-mask-1");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:806px 598px;mask-size:806px 598px}
 .shell{isolation:isolate}
 .stick::after{background-image:var(--stick-icon);filter:drop-shadow(0 0 3px rgba(90,255,215,.85))}
 #customizer-toggle{position:fixed;top:14px;right:16px;z-index:105;background:#103d37;color:#e1fff7;border:1px solid #65e0c9;border-radius:12px;padding:9px 15px;font-weight:700;cursor:pointer;box-shadow:0 6px 20px #0017}
