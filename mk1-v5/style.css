@@ -5,39 +5,39 @@
 body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)}
 .stage{position:absolute;left:50%;top:50%;height:598px;width:806px;transform:translate(-50%,-50%) scale(var(--zoom,1));transform-origin:center;isolation:isolate}
 .controller-art{position:absolute;inset:0;filter:none}
-.shell{position:absolute;inset:0;background:url("assets/base.svg") no-repeat center/806px 598px}
+.shell{position:absolute;inset:0;background:url("assets/base.svg?v=subzero-20261113-3") no-repeat center/806px 598px}
 .part{position:absolute;z-index:2;background-repeat:no-repeat;transition:filter .055s,opacity .055s;pointer-events:none}
 .part.pressed{filter:drop-shadow(0 0 4px #54cfff) drop-shadow(0 0 9px #167fff)}
 /* Official Dracula sizes and positions used for the DS4 */
-.trigger{top:0;width:99px;height:90px;background-image:url("assets/triggers.svg");opacity:var(--pressure,0)}
+.trigger{top:0;width:99px;height:90px;background-image:url("assets/triggers.svg?v=subzero-20261113-3");opacity:var(--pressure,0)}
 .trigger.lt{left:109px;background-position:0 0}
 .trigger.rt{left:598px;background-position:-99px 0}
-.bumper{top:94px;width:99px;height:23px;background-image:url("assets/bumper.svg");opacity:0}
+.bumper{top:94px;width:99px;height:23px;background-image:url("assets/bumper.svg?v=subzero-20261113-3");opacity:0}
 .bumper.lb{left:109px}.bumper.rb{left:598px;transform:scaleX(-1)}
 .bumper.pressed{opacity:1}
-.menu{top:142px;width:28px;height:46px;background-image:url("assets/start.svg");opacity:0}
+.menu{top:142px;width:28px;height:46px;background-image:url("assets/start.svg?v=subzero-20261113-3");opacity:0}
 .menu.create{left:227px;background-position:0 0}
 .menu.options{left:551px;background-position:-28px 0}
 .menu.pressed{opacity:1}
-.face{width:55px;height:55px;background-image:url("assets/face.svg")}
+.face{width:55px;height:55px;background-image:url("assets/face.svg?v=subzero-20261113-3")}
 .face.pressed{background-position-y:55px}
 .cross{left:625px;top:275px;background-position:0 0}
 .circle{left:682px;top:217px;background-position:-57px 0}
 .square{left:567px;top:217px;background-position:-113px 0}
 .triangle{left:625px;top:159px;background-position:55px 0}
-.direction{background-image:url("assets/dpad.svg")}
+.direction{background-image:url("assets/dpad.svg?v=subzero-20261113-3")}
 .up,.down{width:36px;height:52px}.left,.right{width:52px;height:36px}
 .up{left:136px;top:181px;background-position:-37px 0}
 .down{left:136px;top:255px;background-position:0 0}
 .left{left:92px;top:226px;background-position:104px 0}
 .right{left:165px;top:226px;background-position:52px 0}
 .direction.pressed{background-position-y:52px}
-.stick{width:94px;height:94px;background-image:url("assets/sticks.svg");transform:translate(var(--x,0px),var(--y,0px));}
+.stick{width:94px;height:94px;background-image:url("assets/sticks.svg?v=subzero-20261113-3");transform:translate(var(--x,0px),var(--y,0px));}
 .stick.ls{left:228px;top:308px;background-position:0 0}
 .stick.rs{left:484px;top:308px;background-position:0 0}
 .stick.ls.pressed{background-position:-96px 0}
 .stick.rs.pressed{background-position:-192px 0}
-.pad{top:122px;left:272px;width:262px;height:151px;opacity:0;background:url("assets/touchpad.svg") center no-repeat}
+.pad{top:122px;left:272px;width:262px;height:151px;opacity:0;background:url("assets/touchpad.svg?v=subzero-20261113-3") center no-repeat}
 .pad.pressed{opacity:1}
 .ps{left:382px;top:357px;width:42px;height:42px;border-radius:50%;opacity:0;background:radial-gradient(circle,#b8f8ff 0,#1a87e9 52%,transparent 68%)}
 .ps.pressed{opacity:.85}
@@ -102,3 +102,6 @@ body.debug-mode .status{bottom:27px}
 .stick.pressed{filter:brightness(1.6) drop-shadow(0 0 8px #9eeeff)}
 .trigger{filter:drop-shadow(0 0 calc(2px + var(--pressure,0)*9px) #27b9ff)}
 .bumper.pressed{filter:drop-shadow(0 0 8px #45cafa)}
+
+/* Cache verification: distinct V5 ice armor finish; never change geometry or JS. */
+.shell{background-image:url("assets/base.svg?v=subzero-20261113-3") !important}
