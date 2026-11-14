@@ -1,12 +1,20 @@
-# 🎮 CYBER NEXUS — Gamepad Customize
+# 🌈 CYBER NEXUS — Gamepad Customize V2 · RGB Edition
 
-**Gamepad Customize** extends the existing three-game controller designer with **local photo skin uploads**. Users can choose **Wuthering Waves, Neverness to Everness or Mortal Kombat 1**, upload a PNG/JPG/WebP image, and apply it inside the controller silhouette without covering the controller inputs.
+**Gamepad Customize V2** extends the existing three-game controller designer with **local photo skin uploads**. Users can choose **Wuthering Waves, Neverness to Everness or Mortal Kombat 1**, upload a PNG/JPG/WebP image, and apply it inside the controller silhouette without covering the controller inputs.
 
 <p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize jade controller"></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-UPLOAD_A_PHOTO-16BFA6?style=for-the-badge&labelColor=092D28" alt="Try Gamepad Customize"></a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-UPLOAD_A_PHOTO-16BFA6?style=for-the-badge&labelColor=092D28" alt="Try Gamepad Customize"></a></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1">Clean OBS overlay</a> · <a href="README_ES.md">🇪🇸 Español</a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1">Clean OBS overlay</a> · <a href="README_ES.md">🇪🇸 Español</a></p>
+
+## 🌈 Experimental RGB lighting
+
+**Gamepad Customize V2** adds a visual RGB lighting layer to the proven main editor. Choose among **controller outline, analog stick rings, touchpad and L1/R1 shoulder accents**, with individual on/off switches.
+
+Select **static, breathing, rainbow or energy pulse**, set your lighting color, intensity and animation speed, or turn lighting off. Settings persist in your browser. RGB modes use SVG/CSS and remain in the exported **Save for streaming (.html)** file for OBS without needing the editing script.
+
+This controls **on-screen visual lighting only**, not the physical controller LEDs. The stable [Gamepad Customize main edition](../gamepad-customize/) remains unchanged. This version is experimental and awaits live browser/OBS testing.
 
 ## 🖼️ Character art on both controller grips
 The photo is now clipped to **the two handles of the controller, right down to the bottom tips**, away from the D-pad, action buttons, analog sticks and touchpad.
@@ -39,7 +47,7 @@ This export keeps images embedded locally and does not upload photos to GitHub. 
 The original multigame selector, **15 game-specific skins**, **18 themed stick icons**, customizable color picker and quick swatches are retained.
 
 ## 🎮 Test / OBS
-[Open V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1) · [Button diagnostics](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1&debug=1) · [Clean OBS view](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1)
+[Open V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1) · [Button diagnostics](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1&debug=1) · [Clean OBS view](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
 
 The Gamepad API input mapping in `main.js` is unchanged. The main version has been tested by its creator with OBS and live controller input.
 
