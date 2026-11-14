@@ -1,4 +1,4 @@
-# CYBER NEXUS — MK1 V5 Sub-Zero Edition (visual prototype)
+# CYBER NEXUS — MK1 V2 (formerly mk1-v5) Sub-Zero Edition (visual prototype)
 
 V5 is a separate visual development copy of the fully working V4 controller. It retains **the exact Dracula DS4 silhouette**, component coordinates, Gamepad API button mapping, and controller functionality that the owner tested successfully.
 
@@ -10,8 +10,14 @@ V5 is a separate visual development copy of the fully working V4 controller. It 
 - Input JS unchanged from V4.
 
 ## Try it
-- [V5 dark preview](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v5/?bg=1)
-- [V5 diagnostic](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v5/?bg=1&debug=1)
-- [V4 stable — unchanged](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v4/?bg=1)
+- [V2 dark preview](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V2/?bg=1)
+- [V2 diagnostic](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V2/?bg=1&debug=1)
+- [V1 stable — unchanged](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/V1/?bg=1)
 
 **V5 has not yet been tested with a physical DualSense after its visual changes.** Inspect it before considering it final. The Dracula SVG originals and license are included in this folder; the derivative recolors retain MIT attribution. Previous V2/V3 folders were removed from the main branch at the owner's request; they remain recoverable from Git history.
+
+
+## Version folder mapping
+- `V1`: formerly `mk1-v4` (first stable controller)
+- `V2`: formerly `mk1-v5` (ice-dragon design)
+- `V3`: formerly `mk1-v5.1` (larger CYBER NEXUS touchpad branding)
