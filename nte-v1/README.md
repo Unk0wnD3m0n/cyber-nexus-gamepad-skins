@@ -1,22 +1,53 @@
-# 🌆 CYBER NEXUS × Neverness to Everness — NTE V1
+# 🌆 CYBER NEXUS × Neverness to Everness — V1 Controller
 
-First experimental version of the **Neverness to Everness (NTE)** controller using the **MK1 V3** controller geometry and working Gamepad API mapping, with a new **violet and magenta neon** look.
+This folder contains **Neverness to Everness — CYBER NEXUS NTE V1**, an experimental PlayStation-style controller overlay for CYBER NEXUS streams.
 
-<p align="center"><img src="preview.svg" alt="CYBER NEXUS NTE V1 violet neon gamepad" width="700"></p>
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-OPEN_NTE_V1-AB52F5?style=for-the-badge&labelColor=251333" alt="TRY NTE V1"></a></p>
+The V1 uses the same proven geometry and Gamepad API code as MK1 V3, with a new **violet and magenta futuristic city** identity.
 
-## Design
-Original DualShock 4-shaped controller artwork adapted with violet/magenta neon colors, **CYBER NEXUS** touchpad branding and **NEVERNESS TO EVERNESS** subtitle. The V3 ornamental emblems have been recolored for this prototype and can be replaced with more NTE-specific art later.
+<p align="center">
+  <img src="preview.svg" alt="CYBER NEXUS Neverness to Everness V1 controller" width="700">
+</p>
 
-## Test
-Connect a controller through USB/Bluetooth and press any button in Chrome/Edge to activate the Gamepad API.
+<p align="center">
+  <a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/?bg=1">
+    <img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-PLAY_NTE_V1-AB52F5?style=for-the-badge&labelColor=251333" alt="TRY CONTROL — PLAY NTE V1">
+  </a>
+</p>
 
-[Debug inputs](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/?bg=1&debug=1) · [Transparent OBS overlay](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/)
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/">Transparent overlay</a> · <a href="README_ES.md">🇪🇸 Leer en español</a></p>
 
-> 🛠️ **Visual prototype:** Mapping is copied unchanged from the proven MK1 V3 implementation; this new NTE copy awaits hands-on testing.
+## 🎨 Design
 
-## Files
-`index.html`, `style.css`, `main.js`, `preview.svg`, `assets/`, and `DRACULA-LICENSE.txt`. The older `nte/` folder and `V3/` are preserved.
+NTE V1 retains the **classic DualShock 4 (PS4) silhouette** with vivid purple and magenta cyber-city styling, a large **CYBER NEXUS / NEVERNESS TO EVERNESS** touchpad logo, new **neon N hexagon symbols on both analog sticks** instead of the previous dragon/shark-like designs, decorative illuminated details and button-press highlights.
 
-## Credits
-© 2026 CYBER NEXUS for original edits and artwork. Controller graphics derive from [Dracula Gamepad Viewer](https://github.com/dracula/gamepad-viewer), under [MIT license](DRACULA-LICENSE.txt). NTE third-party names and marks belong to their respective owners.
+## 🎮 Try the controller
+
+Choose **TRY CONTROL** above. Connect a compatible controller over USB or Bluetooth, open the viewer in Chrome or Edge, then press a button to activate Gamepad API tracking.
+
+**D-pad • △ ○ × □ • L1/R1 • L2/R2 • Analog sticks and L3/R3 • Create/Options • PS button • Touchpad**
+
+Use the [input diagnostic mode](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/?bg=1&debug=1) to view browser button indices.
+
+> 🛠️ **Status: V1 PROTOTYPE.** Input mapping matches MK1 V3, but the new NTE styling still needs hands-on validation. Other controller and OBS Browser Source compatibility may vary.
+
+## 📂 Project files
+
+- `index.html` — interactive viewer
+- `main.js` — Gamepad API input handling, unchanged from MK1 V3
+- `style.css` — controller layout and neon button effects
+- `preview.svg` — homepage preview showing the new icons
+- `assets/` — controller and decorative SVG artwork
+- `assets/neon-monogram.svg` — original neon N stick emblem
+- `DRACULA-LICENSE.txt` — MIT license and attribution for original third-party controller artwork
+
+## 📺 OBS
+
+Try the [transparent overlay](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/). If OBS Browser Source doesn't expose the connected gamepad, capture the Chrome/Edge window instead.
+
+The earlier [NTE skin](../nte/) remains preserved, and [MK1 V3](../V3/) stays unchanged.
+
+---
+
+## © Credits and license
+
+**© 2026 CYBER NEXUS** for original CYBER NEXUS designs. Some underlying controller artwork is derived from [Dracula Gamepad Viewer](https://github.com/dracula/gamepad-viewer), distributed under the MIT license with attribution preserved in [DRACULA-LICENSE.txt](DRACULA-LICENSE.txt). Neverness to Everness names and marks belong to their respective owners.
