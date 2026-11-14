@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+<defs><linearGradient id="jade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcfff4"/><stop offset=".48" stop-color="#6bf7d7"/><stop offset="1" stop-color="#1baaa6"/></linearGradient></defs>
+<!-- Original resonant-wave emblem inspired by sound waves; not copied from Wuthering Waves official logos -->
+<circle cx="50" cy="50" r="43" fill="#061c23" fill-opacity=".4" stroke="#bcead3" stroke-width="2.6"/>
+<circle cx="50" cy="50" r="36" fill="none" stroke="#38d7c0" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M19 51 Q30 21 42 50 Q50 70 58 49 Q70 23 81 50" fill="none" stroke="url(#jade)" stroke-width="9" stroke-linecap="round"/>
+<path d="M21 51 Q31 31 42 50 Q50 63 58 49 Q69 32 79 50" fill="none" stroke="#e4ffeb" stroke-width="1.5" stroke-linecap="round" opacity=".85"/>
+<path d="M50 15V22M50 78V85M15 50H22M78 50H85" stroke="#d4ba78" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="50" cy="13" r="2.6" fill="#d4ba78"/><circle cx="50" cy="87" r="2.6" fill="#d4ba78"/>
+</svg>

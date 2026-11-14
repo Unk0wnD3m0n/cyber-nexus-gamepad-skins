@@ -1,0 +1,173 @@
+/* WuWa V1 — retain Dracula DS4 artwork and exact established geometry; recolor only to WuWa Resonance.
+   Dracula source art © contributors, MIT: github.com/dracula/gamepad-viewer */
+:root{color-scheme:dark;--ice-filter:none}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent;font-family:Arial,sans-serif}
+body.show-bg{background:radial-gradient(ellipse at center,#104e48 0,#061917 70%)}
+.stage{position:absolute;left:50%;top:50%;height:598px;width:806px;transform:translate(-50%,-50%) scale(var(--zoom,1));transform-origin:center;isolation:isolate}
+.controller-art{position:absolute;inset:0;filter:none}
+.shell{position:absolute;inset:0;background:url("assets/base.svg?v=wuwa-jade-v1-1") no-repeat center/806px 598px}
+.part{position:absolute;z-index:2;background-repeat:no-repeat;transition:filter .055s,opacity .055s;pointer-events:none}
+.part.pressed{filter:drop-shadow(0 0 4px #54ffe7) drop-shadow(0 0 9px #16ffe8)}
+/* Official Dracula sizes and positions used for the DS4 */
+.trigger{top:0;width:99px;height:90px;background-image:url("assets/triggers.svg?v=wuwa-jade-v1-1");opacity:var(--pressure,0)}
+.trigger.lt{left:109px;background-position:0 0}
+.trigger.rt{left:598px;background-position:-99px 0}
+.bumper{top:94px;width:99px;height:23px;background-image:url("assets/bumper.svg?v=wuwa-jade-v1-1");opacity:0}
+.bumper.lb{left:109px}.bumper.rb{left:598px;transform:scaleX(-1)}
+.bumper.pressed{opacity:1}
+.menu{top:142px;width:28px;height:46px;background-image:url("assets/start.svg?v=wuwa-jade-v1-1");opacity:0}
+.menu.create{left:227px;background-position:0 0}
+.menu.options{left:551px;background-position:-28px 0}
+.menu.pressed{opacity:1}
+.face{width:55px;height:55px;background-image:url("assets/face.svg?v=wuwa-jade-v1-1")}
+.face.pressed{background-position-y:55px}
+.cross{left:625px;top:275px;background-position:0 0}
+.circle{left:682px;top:217px;background-position:-57px 0}
+.square{left:567px;top:217px;background-position:-113px 0}
+.triangle{left:625px;top:159px;background-position:55px 0}
+.direction{background-image:url("assets/dpad.svg?v=wuwa-jade-v1-1")}
+.up,.down{width:36px;height:52px}.left,.right{width:52px;height:36px}
+.up{left:136px;top:181px;background-position:-37px 0}
+.down{left:136px;top:255px;background-position:0 0}
+.left{left:92px;top:226px;background-position:104px 0}
+.right{left:165px;top:226px;background-position:52px 0}
+.direction.pressed{background-position-y:52px}
+.stick{width:94px;height:94px;background-image:url("assets/sticks.svg?v=wuwa-jade-v1-1");transform:translate(var(--x,0px),var(--y,0px));}
+.stick.ls{left:228px;top:308px;background-position:0 0}
+.stick.rs{left:484px;top:308px;background-position:0 0}
+.stick.ls.pressed{background-position:-96px 0}
+.stick.rs.pressed{background-position:-192px 0}
+.pad{top:122px;left:272px;width:262px;height:151px;opacity:0;background:url("assets/touchpad.svg?v=wuwa-jade-v1-1") center no-repeat}
+.pad.pressed{opacity:1}
+.ps{left:382px;top:357px;width:42px;height:42px;border-radius:50%;opacity:0;background:radial-gradient(circle,#b8fff3 0,#12f1d8 52%,transparent 68%)}
+.ps.pressed{opacity:.85}
+.brand{position:absolute;left:50%;top:35%;width:255px;max-height:120px;height:auto;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 3px #000)}
+.frost{position:absolute;inset:0;width:806px;height:598px;z-index:4;pointer-events:none;opacity:.85}
+.status{position:absolute;bottom:2px;left:0;width:100%;text-align:center;color:#c8fff9;letter-spacing:2px;font-size:13px;text-shadow:0 0 8px #26ffe8;z-index:5}
+.stage.connected .status{display:none}.stage:not(.connected) .part{opacity:.2}.stage:not(.connected) .trigger,.stage:not(.connected) .bumper,.stage:not(.connected) .menu,.stage:not(.connected) .pad,.stage:not(.connected) .ps{opacity:0}
+
+/* V4.1 — unambiguous feedback for face buttons and D-pad.
+   The Dracula sprite's pressed variant can be subtle after recoloring:
+   use independent resonance-glow layers without moving or reshaping the original buttons. */
+.face,.direction{isolation:isolate}
+.face.pressed,.direction.pressed{
+  filter:brightness(1.65) saturate(1.45) drop-shadow(0 0 6px #d1fffa) drop-shadow(0 0 13px #19ffe2) !important;
+}
+.face::after,.direction::after{
+  content:"";position:absolute;pointer-events:none;opacity:0;
+  transition:opacity 45ms linear;background:transparent;
+}
+.face::after{
+  inset:6px;border-radius:50%;
+  border:3px solid rgba(216,253,255,.95);
+  background:radial-gradient(circle,rgba(127,237,255,.4),rgba(7,127,255,.10) 65%,transparent 85%);
+  box-shadow:0 0 5px #e0fffc,inset 0 0 9px #71ffe9,0 0 15px #16ffe6;
+}
+.direction::after{
+  inset:3px;border-radius:7px;
+  background:rgba(111,231,255,.58);
+  box-shadow:inset 0 0 10px #e6fffc,0 0 11px #38ffe5;
+}
+.face.pressed::after,.direction.pressed::after{opacity:1}
+.debug{display:none;position:absolute;left:0;right:0;bottom:0;z-index:20;padding:6px 10px;background:rgba(0,8,20,.88);color:#a9fff2;font:12px/1.4 monospace;white-space:nowrap;text-align:center;pointer-events:none}
+body.debug-mode .debug{display:block}
+body.debug-mode .status{bottom:27px}
+
+/* V4.2 — OPTIONS (Gamepad API button 9) visible activation.
+   Keep Dracula placement, but overlay a clear ice signal rather than relying
+   on the barely visible start.svg sprite after recoloring. */
+.menu.options.pressed{
+  opacity:1 !important;
+  filter:brightness(2.1) drop-shadow(0 0 7px #bffff4) drop-shadow(0 0 12px #16ffe6) !important;
+}
+.menu.options::after{
+  content:"";position:absolute;left:3px;top:5px;width:22px;height:34px;
+  box-sizing:border-box;border-radius:8px;
+  opacity:0;pointer-events:none;
+  border:2px solid #d3fffa;
+  background:linear-gradient(160deg,rgba(188,250,255,.84),rgba(5,124,241,.72));
+  box-shadow:0 0 9px #8affed,inset 0 0 8px #defffb,0 0 17px #24ffe8;
+  transition:opacity .04s linear;
+}
+.menu.options.pressed::after{opacity:1}
+
+/* WuWa V1 design improvements: preserving V4 geometry and proven input mapping */
+.controller-art{filter:none}
+.part.pressed{filter:brightness(1.85) drop-shadow(0 0 5px #d8fffb) drop-shadow(0 0 12px #14ffe1)}
+.face.pressed,.direction.pressed{filter:brightness(1.95) saturate(1.25) drop-shadow(0 0 7px #c9fff9) drop-shadow(0 0 15px #02ffe2) !important}
+.face::after{border-color:#e0fffc;background:radial-gradient(circle,rgba(150,243,255,.42),rgba(2,121,234,.15) 65%,transparent 85%);box-shadow:0 0 8px #d5fffa,inset 0 0 8px #7bffea,0 0 17px #00f1d6}
+.direction::after{background:rgba(111,221,255,.65);box-shadow:inset 0 0 10px #e3fffc,0 0 13px #16ffe3}
+.menu.options.pressed::after{background:linear-gradient(160deg,rgba(210,250,255,.86),rgba(6,127,225,.75))}
+.pad.pressed{filter:drop-shadow(0 0 9px #46ffe5)}
+.stick.pressed{filter:brightness(1.6) drop-shadow(0 0 8px #9efff0)}
+.trigger{filter:drop-shadow(0 0 calc(2px + var(--pressure,0)*9px) #27ffe2)}
+.bumper.pressed{filter:drop-shadow(0 0 8px #40ffe4)}
+
+/* WuWa jade armor finish; controller geometry and Gamepad API unchanged. */
+.shell{background-image:url("assets/base.svg?v=wuwa-jade-v1-1") !important}
+
+/* WuWa V1 — Jade resonance touchpad and original waveform emblems; control geometry unchanged. */
+.touch-ice{
+  position:absolute;left:272px;top:122px;width:262px;height:151px;
+  background:url("assets/touchpad-ice.svg?v=wuwa-jade-v1-1") center/contain no-repeat;
+  z-index:1;pointer-events:none;
+}
+.stick{isolation:isolate}
+.stick::after{
+  content:"";position:absolute;width:43px;height:43px;left:25.5px;top:25.5px;
+  pointer-events:none;opacity:.86;
+  background:url("assets/resonance-emblem.svg?v=wuwa-resonance-v1") center/contain no-repeat;
+  filter:drop-shadow(0 0 3px rgba(221,115,255,.85));
+}
+.stick.pressed::after{opacity:1;filter:drop-shadow(0 0 5px #9affef)}
+/* Keep the touchpad's original press response on top of the glass texture. */
+.pad{z-index:3}
+.pad.pressed{filter:brightness(1.35) drop-shadow(0 0 10px #66ffe8)}
+/* Neon highlights on established shoulder component locations. */
+.bumper.pressed,.trigger.pressed{filter:brightness(1.35) drop-shadow(0 0 8px #96ffee)}
+
+/* WuWa V2: isolated visual customization; Gamepad API and geometry untouched. */
+:root{--hue-shift:0deg;--skin-image:url("assets/skin-jade.svg");--stick-icon:url("assets/resonance-emblem.svg")}
+.controller-art,.frost{filter:hue-rotate(var(--hue-shift))}
+.brand{filter:hue-rotate(var(--hue-shift)) drop-shadow(0 1px 3px #000) !important}
+.shell::after{content:"";position:absolute;inset:0;pointer-events:none;background:var(--skin-image) center/806px 598px no-repeat;opacity:.52;z-index:1;mix-blend-mode:soft-light;-webkit-mask-image:url("assets/base.svg?v=wuwa-v2-body-mask-1");mask-image:url("assets/base.svg?v=wuwa-v2-body-mask-1");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:806px 598px;mask-size:806px 598px}
+.shell{isolation:isolate}
+.stick::after{background-image:var(--stick-icon);filter:drop-shadow(0 0 3px rgba(90,255,215,.85))}
+#customizer-toggle{position:fixed;top:14px;right:16px;z-index:105;background:#103d37;color:#e1fff7;border:1px solid #65e0c9;border-radius:12px;padding:9px 15px;font-weight:700;cursor:pointer;box-shadow:0 6px 20px #0017}
+#customizer-toggle[hidden]{display:none}
+.customizer{position:fixed;top:56px;right:16px;width:min(292px,calc(100vw - 32px));max-height:calc(100vh - 72px);overflow:auto;z-index:100;background:rgba(6,27,29,.96);border:1px solid #4fbca6;border-radius:16px;padding:17px;color:#e6fff8;box-shadow:0 12px 36px #001b;backdrop-filter:blur(9px);font:14px/1.4 Arial,sans-serif}
+.customizer.hidden{display:none}
+.customizer h2{font-size:17px;margin:0 0 6px}.customizer p{font-size:12px;color:#a3d7ca;margin:0 0 15px}
+.customizer label{display:block;font-size:13px;font-weight:bold;margin:12px 0 5px}
+.customizer select,.customizer input[type=color]{width:100%;background:#102e2e;color:#edfff9;border:1px solid #508e84;border-radius:8px;padding:9px;cursor:pointer}
+.customizer input[type=color]{height:44px;padding:3px}
+.customizer .swatches{display:flex;gap:8px;margin:10px 0 13px}
+.customizer .swatches button{flex:1;height:30px;border:2px solid #d2f7ed;border-radius:7px;cursor:pointer}
+.customizer .swatches button[aria-pressed=true]{outline:2px solid #fff;outline-offset:2px}
+.customizer #reset-customizer{width:100%;border:1px solid #81c6b5;background:#163e38;color:#e7fff6;border-radius:8px;padding:10px;cursor:pointer}
+.customizer .help{margin-top:12px}
+@media(max-width:650px){#customizer-toggle{top:8px;right:8px}.customizer{top:48px;right:8px}}
+
+/* MULTIGAME V2 — only visual sprites change; preserves Gamepad API and geometry. */
+:root{--game-base:url("../wuwa-v1/assets/base.svg");--game-triggers:url("../wuwa-v1/assets/triggers.svg");--game-bumper:url("../wuwa-v1/assets/bumper.svg");--game-start:url("../wuwa-v1/assets/start.svg");--game-face:url("../wuwa-v1/assets/face.svg");--game-dpad:url("../wuwa-v1/assets/dpad.svg");--game-sticks:url("../wuwa-v1/assets/sticks.svg");--game-touch:url("../wuwa-v1/assets/touchpad-ice.svg");--game-touchpress:url("../wuwa-v1/assets/touchpad.svg");--logo-shift:0deg;--bg-light:#104e48;--bg-dark:#061917}
+body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(--bg-dark) 70%)}
+.shell,.shell[style]{background-image:var(--game-base) !important}
+.shell::after{-webkit-mask-image:var(--game-base);mask-image:var(--game-base)}
+.trigger{background-image:var(--game-triggers)}
+.bumper{background-image:var(--game-bumper)}
+.menu{background-image:var(--game-start)}
+.face{background-image:var(--game-face)}
+.direction{background-image:var(--game-dpad)}
+.stick{background-image:var(--game-sticks)}
+.touch-ice{background-image:var(--game-touch)}
+.pad{background-image:var(--game-touchpress)}
+.brand{filter:hue-rotate(var(--logo-shift)) drop-shadow(0 1px 3px #000) !important}
+.customizer{width:min(340px,calc(100vw - 32px))}
+.choice-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:8px 0 12px}
+.choice{min-height:79px;padding:5px 3px;background:#0b292b;color:#dcfff3;border:1px solid #2b817a;border-radius:8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;overflow:hidden}
+.choice img{width:44px;height:44px;object-fit:contain}
+.choice span{display:block;font-size:10px;line-height:1.15;text-align:center;overflow-wrap:anywhere}
+.skins-gallery .choice img{width:100%;height:42px;object-fit:cover;background:#09282e;border-radius:5px}
+.choice[aria-pressed=true]{border-color:#bcffdd;background:#1c5550;outline:1px solid #acffe1}
+.choice:hover{border-color:#e0fff3}
+@media(max-width:650px){.customizer{width:min(305px,calc(100vw - 16px))}.choice-gallery{grid-template-columns:repeat(3,1fr)}}
