@@ -72,3 +72,21 @@ body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)
 .debug{display:none;position:absolute;left:0;right:0;bottom:0;z-index:20;padding:6px 10px;background:rgba(0,8,20,.88);color:#a9eeff;font:12px/1.4 monospace;white-space:nowrap;text-align:center;pointer-events:none}
 body.debug-mode .debug{display:block}
 body.debug-mode .status{bottom:27px}
+
+/* V4.2 — OPTIONS (Gamepad API button 9) visible activation.
+   Keep Dracula placement, but overlay a clear ice signal rather than relying
+   on the barely visible start.svg sprite after recoloring. */
+.menu.options.pressed{
+  opacity:1 !important;
+  filter:brightness(2.1) drop-shadow(0 0 7px #bffbff) drop-shadow(0 0 12px #168aff) !important;
+}
+.menu.options::after{
+  content:"";position:absolute;left:3px;top:5px;width:22px;height:34px;
+  box-sizing:border-box;border-radius:8px;
+  opacity:0;pointer-events:none;
+  border:2px solid #d3fcff;
+  background:linear-gradient(160deg,rgba(188,250,255,.84),rgba(5,124,241,.72));
+  box-shadow:0 0 9px #8aeaff,inset 0 0 8px #defdff,0 0 17px #248bff;
+  transition:opacity .04s linear;
+}
+.menu.options.pressed::after{opacity:1}
