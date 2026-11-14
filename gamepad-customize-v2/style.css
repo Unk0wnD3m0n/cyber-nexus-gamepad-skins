@@ -287,3 +287,48 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
 
 /* Exact original shell path clipping/fade is applied via the SVG's mask
    attribute, using original 806x598 controller coordinates. */
+
+/* V2 PRESS EFFECTS — visual-only overlay, unaffected by controller hues/RGB.
+   All particle geometry lives in fixed 806×598 controller art coordinates. */
+.button-fx-layer{position:absolute;inset:0;z-index:7;pointer-events:none;overflow:visible;isolation:isolate}
+.button-fx-burst{--fx-primary:#a7ecff;--fx-secondary:#e7fcff;--fx-duration:450ms;--fx-intensity:.65;--fx-scale:1;
+ position:absolute;width:0;height:0;pointer-events:none;filter:drop-shadow(0 0 6px var(--fx-primary));
+ opacity:var(--fx-intensity)}
+.button-fx-burst.fx-ice{--fx-primary:#72c9ff;--fx-secondary:#fff}
+.button-fx-burst.fx-resonance{--fx-primary:#44ffcf;--fx-secondary:#c7fff4}
+.button-fx-burst.fx-electric{--fx-primary:#b866ff;--fx-secondary:#fff17d}
+.button-fx-burst.fx-fire{--fx-primary:#ff7339;--fx-secondary:#ffde6b}
+.button-fx-ring{position:absolute;left:-24px;top:-24px;width:48px;height:48px;
+ border:3px solid var(--fx-primary);border-radius:50%;box-shadow:0 0 13px var(--fx-primary),inset 0 0 9px var(--fx-primary);
+ animation:button-fx-wave var(--fx-duration) cubic-bezier(.18,.62,.16,1) both;transform-origin:center}
+.button-fx-burst.fx-electric .button-fx-ring{border-style:dashed;box-shadow:0 0 14px var(--fx-primary)}
+.button-fx-burst.fx-fire .button-fx-ring{border-color:var(--fx-secondary)}
+.button-fx-core{position:absolute;left:-13px;top:-13px;width:26px;height:26px;
+ border-radius:50%;background:radial-gradient(circle,var(--fx-secondary) 0%,var(--fx-primary) 30%,transparent 76%);
+ animation:button-fx-flash var(--fx-duration) ease-out both}
+.button-fx-particle{position:absolute;left:-3px;top:-9px;width:6px;height:18px;border-radius:4px;
+ background:linear-gradient(to bottom,var(--fx-secondary),var(--fx-primary) 55%,transparent);
+ box-shadow:0 0 8px var(--fx-primary);transform-origin:center center;
+ animation:button-fx-spark var(--fx-duration) ease-out var(--delay,0ms) both}
+.button-fx-burst.fx-ice .button-fx-particle{width:5px;height:15px;border-radius:1px;clip-path:polygon(50% 0%,100% 35%,70% 100%,30% 100%,0 35%)}
+.button-fx-burst.fx-resonance .button-fx-particle{height:11px;border-radius:50%;width:8px}
+.button-fx-burst.fx-electric .button-fx-particle{width:7px;height:19px;border-radius:0;clip-path:polygon(50% 0,100% 42%,64% 46%,80% 100%,0 48%,39% 42%)}
+.button-fx-burst.fx-fire .button-fx-particle{height:21px;border-radius:75% 0 75% 40%;transform-origin:center bottom}
+@keyframes button-fx-wave{0%{transform:scale(.28);opacity:1}55%{opacity:.9}100%{transform:scale(calc(1.7*var(--fx-scale)));opacity:0}}
+@keyframes button-fx-flash{0%{transform:scale(.35);opacity:1}50%{opacity:.65}100%{transform:scale(2.6);opacity:0}}
+@keyframes button-fx-spark{0%{transform:translate(0,0) scale(.5) rotate(0);opacity:0}15%{opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(.18) rotate(var(--twist));opacity:0}}
+@media(prefers-reduced-motion:reduce){.button-fx-burst{display:none}}
+.button-fx-editor{margin:14px 0;padding:14px 0;border-top:1px solid #438878;border-bottom:1px solid #438878}
+.button-fx-editor h3{color:#d5ffef;font-size:15px;margin:0 0 6px}
+.button-fx-editor p{font-size:12px;color:#b7dcd1;line-height:1.4}
+.button-fx-editor label{display:block;font-size:12px;font-weight:700;margin:11px 0 5px}
+.button-fx-editor select{width:100%;padding:9px;border:1px solid #599a8b;border-radius:8px;background:#102e2e;color:#edfff9}
+.button-fx-editor input[type=range]{width:100%;accent-color:#56e0b9}
+.button-fx-switches{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.button-fx-editor .fx-switches{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:12px 0}
+.button-fx-editor .fx-switches label{display:flex;align-items:center;gap:6px;margin:0;font-weight:500;cursor:pointer}
+.button-fx-editor .fx-switches input{accent-color:#56e0b9}
+.button-fx-editor .fx-actions{display:flex;gap:7px;margin-top:12px}
+.button-fx-editor .fx-actions button{flex:1;min-width:0;border:1px solid #68bba5;border-radius:8px;padding:9px 5px;color:#e3fff5;background:#1e5145;cursor:pointer}
+.button-fx-editor .fx-actions button:hover{background:#28695a}
+.button-fx-editor #fx-status{min-height:1.2em;margin-top:10px}
