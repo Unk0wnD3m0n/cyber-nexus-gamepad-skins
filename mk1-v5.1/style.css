@@ -1,0 +1,127 @@
+/* MK1 V4 — retain Dracula DS4 artwork and exact established geometry; recolor only to Sub-Zero.
+   Dracula source art © contributors, MIT: github.com/dracula/gamepad-viewer */
+:root{color-scheme:dark;--ice-filter:none}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent;font-family:Arial,sans-serif}
+body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)}
+.stage{position:absolute;left:50%;top:50%;height:598px;width:806px;transform:translate(-50%,-50%) scale(var(--zoom,1));transform-origin:center;isolation:isolate}
+.controller-art{position:absolute;inset:0;filter:none}
+.shell{position:absolute;inset:0;background:url("assets/base.svg?v=subzero-20261113-3") no-repeat center/806px 598px}
+.part{position:absolute;z-index:2;background-repeat:no-repeat;transition:filter .055s,opacity .055s;pointer-events:none}
+.part.pressed{filter:drop-shadow(0 0 4px #54cfff) drop-shadow(0 0 9px #167fff)}
+/* Official Dracula sizes and positions used for the DS4 */
+.trigger{top:0;width:99px;height:90px;background-image:url("assets/triggers.svg?v=subzero-20261113-3");opacity:var(--pressure,0)}
+.trigger.lt{left:109px;background-position:0 0}
+.trigger.rt{left:598px;background-position:-99px 0}
+.bumper{top:94px;width:99px;height:23px;background-image:url("assets/bumper.svg?v=subzero-20261113-3");opacity:0}
+.bumper.lb{left:109px}.bumper.rb{left:598px;transform:scaleX(-1)}
+.bumper.pressed{opacity:1}
+.menu{top:142px;width:28px;height:46px;background-image:url("assets/start.svg?v=subzero-20261113-3");opacity:0}
+.menu.create{left:227px;background-position:0 0}
+.menu.options{left:551px;background-position:-28px 0}
+.menu.pressed{opacity:1}
+.face{width:55px;height:55px;background-image:url("assets/face.svg?v=subzero-20261113-3")}
+.face.pressed{background-position-y:55px}
+.cross{left:625px;top:275px;background-position:0 0}
+.circle{left:682px;top:217px;background-position:-57px 0}
+.square{left:567px;top:217px;background-position:-113px 0}
+.triangle{left:625px;top:159px;background-position:55px 0}
+.direction{background-image:url("assets/dpad.svg?v=subzero-20261113-3")}
+.up,.down{width:36px;height:52px}.left,.right{width:52px;height:36px}
+.up{left:136px;top:181px;background-position:-37px 0}
+.down{left:136px;top:255px;background-position:0 0}
+.left{left:92px;top:226px;background-position:104px 0}
+.right{left:165px;top:226px;background-position:52px 0}
+.direction.pressed{background-position-y:52px}
+.stick{width:94px;height:94px;background-image:url("assets/sticks.svg?v=subzero-20261113-3");transform:translate(var(--x,0px),var(--y,0px));}
+.stick.ls{left:228px;top:308px;background-position:0 0}
+.stick.rs{left:484px;top:308px;background-position:0 0}
+.stick.ls.pressed{background-position:-96px 0}
+.stick.rs.pressed{background-position:-192px 0}
+.pad{top:122px;left:272px;width:262px;height:151px;opacity:0;background:url("assets/touchpad.svg?v=subzero-20261113-3") center no-repeat}
+.pad.pressed{opacity:1}
+.ps{left:382px;top:357px;width:42px;height:42px;border-radius:50%;opacity:0;background:radial-gradient(circle,#b8f8ff 0,#1a87e9 52%,transparent 68%)}
+.ps.pressed{opacity:.85}
+.brand{position:absolute;left:50%;top:39%;width:180px;max-height:44px;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 3px #000)}
+.frost{position:absolute;inset:0;width:806px;height:598px;z-index:4;pointer-events:none;opacity:.85}
+.status{position:absolute;bottom:2px;left:0;width:100%;text-align:center;color:#c8eaff;letter-spacing:2px;font-size:13px;text-shadow:0 0 8px #2692ff;z-index:5}
+.stage.connected .status{display:none}.stage:not(.connected) .part{opacity:.2}.stage:not(.connected) .trigger,.stage:not(.connected) .bumper,.stage:not(.connected) .menu,.stage:not(.connected) .pad,.stage:not(.connected) .ps{opacity:0}
+
+/* V4.1 — unambiguous feedback for face buttons and D-pad.
+   The Dracula sprite's pressed variant can be subtle after recoloring:
+   use independent ice-glow layers without moving or reshaping the original buttons. */
+.face,.direction{isolation:isolate}
+.face.pressed,.direction.pressed{
+  filter:brightness(1.65) saturate(1.45) drop-shadow(0 0 6px #d1faff) drop-shadow(0 0 13px #19aaff) !important;
+}
+.face::after,.direction::after{
+  content:"";position:absolute;pointer-events:none;opacity:0;
+  transition:opacity 45ms linear;background:transparent;
+}
+.face::after{
+  inset:6px;border-radius:50%;
+  border:3px solid rgba(216,253,255,.95);
+  background:radial-gradient(circle,rgba(127,237,255,.4),rgba(7,127,255,.10) 65%,transparent 85%);
+  box-shadow:0 0 5px #e0ffff,inset 0 0 9px #71e6ff,0 0 15px #168aff;
+}
+.direction::after{
+  inset:3px;border-radius:7px;
+  background:rgba(111,231,255,.58);
+  box-shadow:inset 0 0 10px #e6ffff,0 0 11px #38b9ff;
+}
+.face.pressed::after,.direction.pressed::after{opacity:1}
+.debug{display:none;position:absolute;left:0;right:0;bottom:0;z-index:20;padding:6px 10px;background:rgba(0,8,20,.88);color:#a9eeff;font:12px/1.4 monospace;white-space:nowrap;text-align:center;pointer-events:none}
+body.debug-mode .debug{display:block}
+body.debug-mode .status{bottom:27px}
+
+/* V4.2 — OPTIONS (Gamepad API button 9) visible activation.
+   Keep Dracula placement, but overlay a clear ice signal rather than relying
+   on the barely visible start.svg sprite after recoloring. */
+.menu.options.pressed{
+  opacity:1 !important;
+  filter:brightness(2.1) drop-shadow(0 0 7px #bffbff) drop-shadow(0 0 12px #168aff) !important;
+}
+.menu.options::after{
+  content:"";position:absolute;left:3px;top:5px;width:22px;height:34px;
+  box-sizing:border-box;border-radius:8px;
+  opacity:0;pointer-events:none;
+  border:2px solid #d3fcff;
+  background:linear-gradient(160deg,rgba(188,250,255,.84),rgba(5,124,241,.72));
+  box-shadow:0 0 9px #8aeaff,inset 0 0 8px #defdff,0 0 17px #248bff;
+  transition:opacity .04s linear;
+}
+.menu.options.pressed::after{opacity:1}
+
+/* MK1 V5 design improvements: preserving V4 geometry and proven input mapping */
+.controller-art{filter:none}
+.part.pressed{filter:brightness(1.85) drop-shadow(0 0 5px #d8ffff) drop-shadow(0 0 12px #19aafa)}
+.face.pressed,.direction.pressed{filter:brightness(1.95) saturate(1.25) drop-shadow(0 0 7px #c9faff) drop-shadow(0 0 15px #028eff) !important}
+.face::after{border-color:#e0ffff;background:radial-gradient(circle,rgba(150,243,255,.42),rgba(2,121,234,.15) 65%,transparent 85%);box-shadow:0 0 8px #d5ffff,inset 0 0 8px #7be9ff,0 0 17px #087de9}
+.direction::after{background:rgba(111,221,255,.65);box-shadow:inset 0 0 10px #e3fbff,0 0 13px #169fff}
+.menu.options.pressed::after{background:linear-gradient(160deg,rgba(210,250,255,.86),rgba(6,127,225,.75))}
+.pad.pressed{filter:drop-shadow(0 0 9px #4bc7fa)}
+.stick.pressed{filter:brightness(1.6) drop-shadow(0 0 8px #9eeeff)}
+.trigger{filter:drop-shadow(0 0 calc(2px + var(--pressure,0)*9px) #27b9ff)}
+.bumper.pressed{filter:drop-shadow(0 0 8px #45cafa)}
+
+/* Cache verification: distinct V5 ice armor finish; never change geometry or JS. */
+.shell{background-image:url("assets/base.svg?v=subzero-20261113-3") !important}
+
+/* MK1 V5 — Frozen Touchpad & Ice Dragon cosmetics (no changes to control hit/mapping coordinates). */
+.touch-ice{
+  position:absolute;left:272px;top:122px;width:262px;height:151px;
+  background:url("assets/touchpad-ice.svg?v=detail-4") center/contain no-repeat;
+  z-index:1;pointer-events:none;
+}
+.stick{isolation:isolate}
+.stick::after{
+  content:"";position:absolute;width:43px;height:43px;left:25.5px;top:25.5px;
+  pointer-events:none;opacity:.86;
+  background:url("assets/dragon-crest.svg?v=detail-4") center/contain no-repeat;
+  filter:drop-shadow(0 0 2px rgba(120,235,255,.65));
+}
+.stick.pressed::after{opacity:1;filter:drop-shadow(0 0 5px #9aefff)}
+/* Keep the touchpad's original press response on top of the glass texture. */
+.pad{z-index:3}
+.pad.pressed{filter:brightness(1.35) drop-shadow(0 0 10px #66dbff)}
+/* Crystalline hardware highlights on already-established shoulder component locations. */
+.bumper.pressed,.trigger.pressed{filter:brightness(1.35) drop-shadow(0 0 8px #96efff)}
