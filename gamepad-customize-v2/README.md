@@ -18,6 +18,10 @@ The photo is now clipped to **the two handles of the controller, right down to t
 
 Images never leave your browser. IndexedDB stores photos where available; localStorage remembers settings per game. Images with different aspect ratios may still need individual framing adjustments.
 
+## ✨ No texture — original finish
+
+Choose **“Sin textura · acabado original”** under the game skin selector to remove the patterned overlay while retaining the controller's original detailed artwork and a subtle satin sheen. Character photos on both grips remain available. The selection is saved per game.
+
 ## 🎨 Everything else retained
 The original multigame selector, **15 game-specific skins**, **18 themed stick icons**, customizable color picker and quick swatches are retained.
 
