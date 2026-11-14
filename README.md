@@ -36,6 +36,14 @@ Former folders: `mk1-v4 → V1`, `mk1-v5 → V2`, `mk1-v5.1 → V3`. Relative im
 
 ---
 
+## 🌈 Gamepad Customize V2 — RGB Edition (Experimental)
+
+**[🎮 PROBAR RGB V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1)** · [README Español](gamepad-customize-v2/README_ES.md) · [English README](gamepad-customize-v2/README.md) · [OBS Overlay](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
+
+A copy of the stable editor with animated RGB lighting for the controller outline, analog sticks, touchpad and shoulder buttons, with static/breathing/rainbow/pulse effects and per-zone settings. **The main Gamepad Customize remains untouched.**
+
+---
+
 ## 🎨 Controller Collection
 
 
@@ -69,6 +77,12 @@ Each skin is developed independently so its artwork and input positions can be c
 
 ```text
 cyber-nexus-gamepad-skins/
+│
+├── gamepad-customize-v2/             # 🌈 Experimental RGB Edition
+│   ├── index.html                    # Customizer plus lighting layer
+│   ├── rgb.js                        # RGB effects and local preferences
+│   ├── style.css                     # RGB lighting and controller styles
+│   └── README_ES.md                  # Spanish instructions
 │
 ├── gamepad-customize/                # 🎮 Main customizer: photos, skins, icons, colors
 │   ├── index.html                    # Game selector & visual editor
