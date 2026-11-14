@@ -239,3 +239,11 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
  background:linear-gradient(135deg,#244e53 0%,#3b7f83 32%,#102b35 70%,#608789 100%);
  border:1px solid rgba(211,255,252,.35);box-shadow:inset 0 1px 6px rgba(255,255,255,.17);
 }
+
+/* Portable overlay export controls; editor-only, excluded from the saved HTML. */
+.stream-export{margin:14px 0;padding:13px 0;border-top:1px solid #326c61;border-bottom:1px solid #326c61}
+.stream-export h3{margin:0 0 5px;color:#d5fff1;font-size:15px}
+.stream-export p,.stream-export small{font-size:12px;line-height:1.4;color:#b7e4d9}
+.stream-export #export-stream-html{display:block;width:100%;padding:12px 9px;border-radius:10px;border:1px solid #9cf9cc;background:linear-gradient(135deg,#2de8bc,#71e8e0);color:#05231f;font-weight:800;cursor:pointer}
+.stream-export #export-stream-html:disabled{opacity:.55;cursor:progress}
+.stream-export #stream-export-status{min-height:1.2em;overflow-wrap:anywhere}
