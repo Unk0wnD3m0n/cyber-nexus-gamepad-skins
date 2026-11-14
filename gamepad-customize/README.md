@@ -1,12 +1,12 @@
-# 🎮 CYBER NEXUS — Gamepad Customize V2.1 · Character Grips
+# 🎮 CYBER NEXUS — Gamepad Customize
 
-**Gamepad Customize V2** extends the existing three-game controller designer with **local photo skin uploads**. Users can choose **Wuthering Waves, Neverness to Everness or Mortal Kombat 1**, upload a PNG/JPG/WebP image, and apply it inside the controller silhouette without covering the controller inputs.
+**Gamepad Customize** extends the existing three-game controller designer with **local photo skin uploads**. Users can choose **Wuthering Waves, Neverness to Everness or Mortal Kombat 1**, upload a PNG/JPG/WebP image, and apply it inside the controller silhouette without covering the controller inputs.
 
-<p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize V2 jade controller"></p>
+<p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize jade controller"></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-UPLOAD_A_PHOTO-16BFA6?style=for-the-badge&labelColor=092D28" alt="Try Gamepad Customize V2"></a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-UPLOAD_A_PHOTO-16BFA6?style=for-the-badge&labelColor=092D28" alt="Try Gamepad Customize"></a></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1">Clean OBS overlay</a> · <a href="README_ES.md">🇪🇸 Español</a> · <a href="../gamepad-customize/">Original customizer</a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1">Clean OBS overlay</a> · <a href="README_ES.md">🇪🇸 Español</a></p>
 
 ## 🖼️ Character art on both controller grips
 The photo is now clipped to **the two handles of the controller, right down to the bottom tips**, away from the D-pad, action buttons, analog sticks and touchpad.
@@ -39,14 +39,14 @@ This export keeps images embedded locally and does not upload photos to GitHub. 
 The original multigame selector, **15 game-specific skins**, **18 themed stick icons**, customizable color picker and quick swatches are retained.
 
 ## 🎮 Test / OBS
-[Open V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1) · [Button diagnostics](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1&debug=1) · [Clean OBS view](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
+[Open V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1) · [Button diagnostics](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1&debug=1) · [Clean OBS view](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1)
 
-The Gamepad API input mapping in `main.js` is unchanged. **Experimental:** please validate image clipping and persistence in your own browser.
+The Gamepad API input mapping in `main.js` is unchanged. The main version has been tested by its creator with OBS and live controller input.
 
 ## Files
 `index.html`, `style.css`, `customizer.js`, `photo-skin.js`, `main.js`, `assets/`, and `DRACULA-LICENSE.txt`.
 
-**Original Gamepad Customize, WuWa V1, NTE V1 and MK1 V1–V3 are unchanged.**
+**WuWa V1, NTE V1 and MK1 V1–V3 remain unchanged.**
 
 ---
 
