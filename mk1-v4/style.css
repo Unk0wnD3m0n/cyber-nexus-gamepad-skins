@@ -9,13 +9,13 @@ body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)
 .part{position:absolute;z-index:2;background-repeat:no-repeat;transition:filter .055s,opacity .055s;pointer-events:none}
 .part.pressed{filter:drop-shadow(0 0 4px #54cfff) drop-shadow(0 0 9px #167fff)}
 /* Official Dracula sizes and positions used for the DS4 */
-.trigger{top:0;width:99px;height:90px;background-image:url("assets/triggers.svg");opacity:calc(.10 + .90*var(--pressure,0))}
+.trigger{top:0;width:99px;height:90px;background-image:url("assets/triggers.svg");opacity:var(--pressure,0)}
 .trigger.lt{left:109px;background-position:0 0}
 .trigger.rt{left:598px;background-position:-99px 0}
-.bumper{top:94px;width:99px;height:23px;background-image:url("assets/bumper.svg");opacity:.12}
+.bumper{top:94px;width:99px;height:23px;background-image:url("assets/bumper.svg");opacity:0}
 .bumper.lb{left:109px}.bumper.rb{left:598px;transform:scaleX(-1)}
 .bumper.pressed{opacity:1}
-.menu{top:142px;width:28px;height:46px;background-image:url("assets/start.svg");opacity:.12}
+.menu{top:142px;width:28px;height:46px;background-image:url("assets/start.svg");opacity:0}
 .menu.create{left:227px;background-position:0 0}
 .menu.options{left:551px;background-position:-28px 0}
 .menu.pressed{opacity:1}
@@ -34,14 +34,14 @@ body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)
 .direction.pressed{background-position-y:52px}
 .stick{width:94px;height:94px;background-image:url("assets/sticks.svg");transform:translate(var(--x,0px),var(--y,0px));}
 .stick.ls{left:228px;top:308px;background-position:0 0}
-.stick.rs{left:495px;top:308px;background-position:0 0}
+.stick.rs{left:484px;top:308px;background-position:0 0}
 .stick.ls.pressed{background-position:-96px 0}
 .stick.rs.pressed{background-position:-192px 0}
 .pad{top:122px;left:272px;width:262px;height:151px;opacity:0;background:url("assets/touchpad.svg") center no-repeat}
 .pad.pressed{opacity:1}
 .ps{left:382px;top:357px;width:42px;height:42px;border-radius:50%;opacity:0;background:radial-gradient(circle,#b8f8ff 0,#1a87e9 52%,transparent 68%)}
 .ps.pressed{opacity:.85}
-.brand{position:absolute;left:50%;top:46%;width:240px;max-height:60px;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 4px #000)}
+.brand{position:absolute;left:50%;top:38%;width:190px;max-height:45px;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 3px #000)}
 .frost{position:absolute;inset:0;width:806px;height:598px;z-index:4;pointer-events:none;opacity:.73}
 .status{position:absolute;bottom:2px;left:0;width:100%;text-align:center;color:#c8eaff;letter-spacing:2px;font-size:13px;text-shadow:0 0 8px #2692ff;z-index:5}
-.stage.connected .status{display:none}.stage:not(.connected) .part{opacity:.35}
+.stage.connected .status{display:none}.stage:not(.connected) .part{opacity:.2}.stage:not(.connected) .trigger,.stage:not(.connected) .bumper,.stage:not(.connected) .menu,.stage:not(.connected) .pad,.stage:not(.connected) .ps{opacity:0}
