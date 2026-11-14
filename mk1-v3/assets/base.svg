@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="806" height="598" viewBox="0 0 806 598"><defs>
+<linearGradient id="white" x1=".13" y1=".02" x2=".92" y2=".98"><stop stop-color="#edf4fa"/><stop offset=".27" stop-color="#b4c5d6"/><stop offset=".52" stop-color="#f2f7fb"/><stop offset=".78" stop-color="#7993ad"/><stop offset="1" stop-color="#4b627b"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#182a43"/><stop offset=".4" stop-color="#050b15"/><stop offset=".76" stop-color="#1c2f49"/><stop offset="1" stop-color="#060c16"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9efaff"/><stop offset=".3" stop-color="#31b9ed"/><stop offset=".65" stop-color="#175fe1"/><stop offset="1" stop-color="#06183d"/></linearGradient>
+<radialGradient id="black"><stop stop-color="#2a3852"/><stop offset=".55" stop-color="#101c30"/><stop offset="1" stop-color="#04080f"/></radialGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".8"/><stop offset=".17" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
+<filter id="blueglow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<path d="M151 140 C106 128 82 149 70 196 L29 350 C10 416 18 478 49 510 C77 541 110 529 140 493 L229 392 C245 374 263 365 304 366 L502 366 C543 365 561 374 577 392 L666 493 C696 529 729 541 757 510 C788 478 796 416 777 350 L736 196 C724 149 700 128 655 140 C605 150 556 174 503 178 L303 178 C250 174 201 150 151 140Z" transform="translate(0 11)" fill="#000" opacity=".5" filter="url(#shadow)"/>
+<path d="M151 140 C106 128 82 149 70 196 L29 350 C10 416 18 478 49 510 C77 541 110 529 140 493 L229 392 C245 374 263 365 304 366 L502 366 C543 365 561 374 577 392 L666 493 C696 529 729 541 757 510 C788 478 796 416 777 350 L736 196 C724 149 700 128 655 140 C605 150 556 174 503 178 L303 178 C250 174 201 150 151 140Z" fill="url(#white)" stroke="#17263b" stroke-width="4"/>
+<path d="M132 174 C99 169 92 201 86 226 L63 351 C47 435 53 468 75 491 Q92 508 113 484 L214 367 Q242 338 292 340 L514 340 Q564 338 592 367 L693 484 Q714 508 731 491 C753 468 759 435 743 351 L720 226 C714 201 707 169 674 174 Q639 171 584 209 L532 226 Q510 235 494 233 L312 233 Q296 235 274 226 L222 209 Q167 171 132 174Z" fill="url(#metal)" stroke="#314e6e" stroke-width="2"/>
+<path d="M151 148 Q209 156 249 182 Q282 206 326 208 H480 Q524 206 557 182 Q597 156 655 148" fill="none" stroke="#e8fbff" stroke-width="7" opacity=".7"/>
+<path d="M140 166 Q105 198 96 253 L67 382 M666 166 Q701 198 710 253 L739 382" fill="none" stroke="#8eb7d7" opacity=".35" stroke-width="3"/>
+<path d="M229 231 Q263 261 309 264 L497 264 Q543 261 577 231" fill="none" stroke="#1f9add" stroke-width="3" opacity=".8"/>
+<path d="M261 213 Q403 222 545 213" fill="none" stroke="#42bafa" stroke-width="2" opacity=".5"/>
+<path d="M309 186 L497 186 Q511 190 511 204 L529 258 Q529 274 511 279 Q403 297 295 279 Q277 274 277 258 L295 204 Q295 190 309 186Z" fill="#030914" stroke="#6c8aab" stroke-width="3"/>
+<path d="M305 196 L501 196 L517 260 Q403 284 289 260Z" fill="#13283d" stroke="#253b51"/>
+<path d="M325 207 Q403 226 481 207" stroke="#6094bc" fill="none" opacity=".28"/>
+<path d="M403 232 L410 242 L403 253 L396 242Z" fill="#70dfff" opacity=".45"/>
+<path d="M270 294 Q403 307 536 294" stroke="#4380a7" stroke-width="2" opacity=".35" fill="none"/>
+<circle cx="263" cy="364" r="57" fill="#030812" stroke="#3b536a" stroke-width="5"/>
+<circle cx="543" cy="364" r="57" fill="#030812" stroke="#3b536a" stroke-width="5"/>
+<circle cx="263" cy="364" r="51" fill="none" stroke="#1762a8" opacity=".55" stroke-width="2"/>
+<circle cx="543" cy="364" r="51" fill="none" stroke="#1762a8" opacity=".55" stroke-width="2"/>
+<path d="M143 319 Q131 367 123 405" fill="none" stroke="#7bdcff" stroke-width="3" opacity=".4"/>
+<path d="M663 319 Q675 367 683 405" fill="none" stroke="#7bdcff" stroke-width="3" opacity=".4"/>
+<path d="M289 410 Q403 434 517 410" fill="none" stroke="#56b4ec" opacity=".45" stroke-width="3"/>
+<text x="403" y="328" fill="#a9dfff" opacity=".9" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="12" letter-spacing="3.5">CYBER NEXUS</text>
+<text x="403" y="348" fill="#489dd7" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" letter-spacing="2.5">MORTAL KOMBAT 1</text>
+<path d="M83 441 Q96 413 124 398 M723 441 Q710 413 682 398" fill="none" stroke="#e3faff" stroke-width="2" opacity=".4"/>
+</svg>
