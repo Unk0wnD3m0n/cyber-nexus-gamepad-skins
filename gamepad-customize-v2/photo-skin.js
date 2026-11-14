@@ -1,104 +1,151 @@
-/* CYBER NEXUS — Gamepad Customize V2 image skins.
-   Images stay in this browser (IndexedDB); no uploads to the server. */
+/* CYBER NEXUS — gamepad character grip skins v2.1.
+   Images are local-only. Reuses previous IndexedDB and localStorage keys. */
 (()=>{"use strict";
-const key="cybernexus-photo-skins-v2", dbName="cybernexus-gamepad-images-v2", store="photos";
-const $=id=>document.getElementById(id);
-const game=$("game-select"),layer=$("photo-skin"),img=$("photo-preview"),mode=$("photo-mode"),upload=$("photo-upload"),
- status=$("photo-status"),remove=$("photo-remove"),reset=$("photo-reset"),originalReset=$("reset-customizer");
-if(!game||!layer||!img||!mode||!upload)return;
-const defaults=()=>({mode:"preset",scale:100,x:0,y:0,rotation:0,opacity:75});
+const key="cybernexus-photo-skins-v2",dbName="cybernexus-gamepad-images-v2",store="photos";
+const $=id=>document.getElementById(id),game=$("game-select"),layer=$("photo-skin"),
+images={left:$("photo-preview"),right:$("photo-preview-right")},
+mode=$("photo-mode"),upload=$("photo-upload"),rightUpload=$("photo-right-upload"),
+sideSelect=$("photo-side"),fit=$("photo-fit"),status=$("photo-status"),
+remove=$("photo-remove"),reset=$("photo-reset"),originalReset=$("reset-customizer");
+if(!game||!layer||!images.left||!images.right||!mode||!upload||!rightUpload)return;
+const defaults=()=>({scale:100,x:0,y:0,rotation:0,opacity:100,fit:"cover"});
+const fields=[["scale",50,250,"%"],["x",-200,200," px"],["y",-220,220," px"],["rotation",-180,180,"°"],["opacity",15,100,"%"]];
 const allowed=new Set(["wuwa","nte","mk1"]);
-const fields=[["scale",50,250,"%"],["x",-360,360," px"],["y",-260,260," px"],["rotation",-180,180,"°"],["opacity",10,100,"%"]];
-let cache={},dbPromise=null,blobUrls={},requestToken=0,active=game.value;
-try{const v=JSON.parse(localStorage.getItem(key)||"{}");if(v&&typeof v==="object")cache=v}catch(_){}
+let cache={},dbPromise,urls={},loaded=new Set(),requestToken=0,active=game.value,editSide="left";
+try{const stored=JSON.parse(localStorage.getItem(key)||"{}");if(stored&&typeof stored==="object")cache=stored}catch(_){}
 function stateFor(g){
  if(!allowed.has(g))g="wuwa";
- if(!cache[g]||typeof cache[g]!=="object")cache[g]=defaults();
- const st=cache[g];if(st.mode!=="photo"&&st.mode!=="preset")st.mode="preset";
- for(const [name,min,max] of fields){let n=Number(st[name]);st[name]=Number.isFinite(n)?Math.max(min,Math.min(max,n)):defaults()[name]}
+ if(!cache[g]||typeof cache[g]!=="object")cache[g]={};
+ const st=cache[g];
+ if(!["preset","photo"].includes(st.mode))st.mode="preset";
+ if(!st.sides||typeof st.sides!=="object"){
+  const previous=Object.fromEntries(fields.map(([name])=>[name,st[name]]));
+  // Preserve old placement where possible; convert initial full-body settings to grip defaults.
+  st.sides={left:{...defaults(),scale:typeof previous.scale==="number"?previous.scale:100,opacity:100},right:defaults()};
+ }
+ for(const side of ["left","right"]){
+  if(!st.sides[side]||typeof st.sides[side]!=="object")st.sides[side]=defaults();
+  const entry=st.sides[side];
+  for(const [field,min,max] of fields){
+   const n=Number(entry[field]);entry[field]=Number.isFinite(n)?Math.min(max,Math.max(min,n)):defaults()[field];
+  }
+  if(!["cover","contain"].includes(entry.fit))entry.fit="cover";
+ }
  return st;
 }
 function save(){try{localStorage.setItem(key,JSON.stringify(cache))}catch(_){}}
-function message(s){status.textContent=s}
+function message(text){if(status)status.textContent=text}
 function db(){
  if(!("indexedDB" in window))return Promise.reject(new Error("IndexedDB no disponible"));
  if(!dbPromise)dbPromise=new Promise((resolve,reject)=>{
   const req=indexedDB.open(dbName,1);
-  req.onupgradeneeded=()=>{const database=req.result;if(!database.objectStoreNames.contains(store))database.createObjectStore(store)};
-  req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error||new Error("Error de almacenamiento"));
+  req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(store))req.result.createObjectStore(store)};
+  req.onsuccess=()=>resolve(req.result);
+  req.onerror=()=>reject(req.error||new Error("No se pudo abrir IndexedDB"));
  });
  return dbPromise;
 }
-async function writePhoto(g,blob){
+async function transact(kind,method,id,blob){
  const database=await db();
- return new Promise((resolve,reject)=>{const tx=database.transaction(store,"readwrite");
- tx.objectStore(store).put(blob,g);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)});
+ return new Promise((resolve,reject)=>{
+  const tx=database.transaction(store,kind),object=tx.objectStore(store);
+  const request=method==="put"?object.put(blob,id):method==="delete"?object.delete(id):object.get(id);
+  if(method==="get")request.onsuccess=()=>resolve(request.result||null);
+  else tx.oncomplete=()=>resolve();
+  request.onerror=()=>reject(request.error);
+  tx.onerror=()=>reject(tx.error);
+ });
 }
-async function readPhoto(g){
- const database=await db();
- return new Promise((resolve,reject)=>{const tx=database.transaction(store,"readonly"),req=tx.objectStore(store).get(g);
- req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error)});
+const slot=(g,side)=>side==="left"?g:g+":right";
+function addUrl(id,blob){
+ if(urls[id])URL.revokeObjectURL(urls[id]);
+ urls[id]=URL.createObjectURL(blob);
+ loaded.add(id);
 }
-async function deletePhoto(g){
- const database=await db();
- return new Promise((resolve,reject)=>{const tx=database.transaction(store,"readwrite");
- tx.objectStore(store).delete(g);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)});
-}
-function assignUrl(g,blob){
- if(blobUrls[g])URL.revokeObjectURL(blobUrls[g]);
- blobUrls[g]=URL.createObjectURL(blob);
+async function restore(g,side){
+ const id=slot(g,side);
+ if(loaded.has(id))return;
+ const blob=await transact("readonly","get",id);
+ loaded.add(id);
+ if(blob)addUrl(id,blob);
 }
 function render(){
- const st=stateFor(active),has=Boolean(blobUrls[active]);
+ const st=stateFor(active),left=urls[slot(active,"left")],right=urls[slot(active,"right")]||left;
+ const visible=st.mode==="photo"&&(Boolean(left)||Boolean(right));
  mode.value=st.mode;
- for(const [name,,,suffix] of fields){$( "photo-"+name).value=String(st[name]);$("photo-"+name+"-value").textContent=st[name]+suffix}
- img.src=has?blobUrls[active]:"";
- layer.classList.toggle("visible",st.mode==="photo"&&has);
- document.documentElement.classList.toggle("using-photo",st.mode==="photo"&&has);
- layer.style.setProperty("--photo-scale",String(st.scale/100));
- layer.style.setProperty("--photo-x",st.x+"px");
- layer.style.setProperty("--photo-y",st.y+"px");
- layer.style.setProperty("--photo-rotation",st.rotation+"deg");
- layer.style.setProperty("--photo-opacity",String(st.opacity/100));
+ for(const side of ["left","right"]){
+  const image=images[side],url=side==="left"?left:right,container=image.parentElement,settings=st.sides[side];
+  if(image.getAttribute("src")!==(url||""))image.setAttribute("src",url||"");
+  container.style.setProperty("--side-scale",String(settings.scale/100));
+  container.style.setProperty("--side-x",settings.x+"px");
+  container.style.setProperty("--side-y",settings.y+"px");
+  container.style.setProperty("--side-rotation",settings.rotation+"deg");
+  container.style.setProperty("--side-opacity",String(settings.opacity/100));
+  image.style.objectFit=settings.fit;
+ }
+ layer.classList.toggle("visible",visible);
+ document.documentElement.classList.toggle("using-photo",visible);
+ sideSelect.value=editSide;
+ const current=st.sides[editSide];
+ fit.value=current.fit;
+ for(const [field,,,unit] of fields){
+  $("photo-"+field).value=String(current[field]);
+  $("photo-"+field+"-value").textContent=current[field]+unit;
+ }
  document.querySelector(".photo-controls")?.classList.toggle("disabled",st.mode!=="photo");
 }
 async function switchGame(){
  active=allowed.has(game.value)?game.value:"wuwa";
  const token=++requestToken;
- render();upload.value="";
- if(!blobUrls[active]){
-  try{const photo=await readPhoto(active);if(token!==requestToken)return;
-   if(photo)assignUrl(active,photo);
-  }catch(_){if(token===requestToken)message("El navegador no permite recuperar fotos guardadas en este contexto.")}
+ editSide="left";
+ upload.value="";rightUpload.value="";
+ for(const side of ["left","right"]){
+  try{await restore(active,side)}catch(_){if(token===requestToken)message("Las fotos no pudieron recuperarse; puedes cargar otras imágenes.")}
+  if(token!==requestToken)return;
  }
- if(token===requestToken){render();if(blobUrls[active])message("Imagen lista para "+active.toUpperCase());else message("Selecciona una imagen para crear una skin.")}
+ render();
+ message(urls[slot(active,"left")]?"Personaje en ambos grips. Puedes editar cada lado.":"Selecciona una foto para decorar ambos grips.");
+}
+async function uploadImage(file,side){
+ if(!file)return;
+ if(!["image/png","image/jpeg","image/webp"].includes(file.type)){message("Usa PNG, JPG o WebP.");return}
+ if(file.size>15*1024*1024){message("Máximo 15 MB por imagen.");return}
+ try{const check=await createImageBitmap(file);check.close()}catch(_){message("La imagen no pudo abrirse.");return}
+ const g=active,id=slot(g,side);
+ addUrl(id,file);
+ stateFor(g).mode="photo";editSide=side;
+ render();
+ message(side==="right"?"Grip derecho actualizado.":"Foto colocada en ambos grips. Ajusta el encuadre de cada lado.");
+ try{await transact("readwrite","put",id,file);message("Imagen guardada localmente en el navegador.")}
+ catch(_){message("Imagen aplicada; el navegador no permitió guardarla permanentemente.")}
 }
 game.addEventListener("change",switchGame);
 mode.addEventListener("change",()=>{stateFor(active).mode=mode.value;save();render()});
-for(const [name] of fields){
- $("photo-"+name).addEventListener("input",e=>{stateFor(active)[name]=Number(e.target.value);save();render()});
+sideSelect.addEventListener("change",()=>{editSide=sideSelect.value;render()});
+fit.addEventListener("change",()=>{stateFor(active).sides[editSide].fit=fit.value;save();render()});
+for(const [field] of fields){
+ $("photo-"+field).addEventListener("input",event=>{
+  stateFor(active).sides[editSide][field]=Number(event.target.value);save();render();
+ });
 }
-upload.addEventListener("change",async()=>{
- const file=upload.files?.[0];if(!file)return;
- if(!["image/png","image/jpeg","image/webp"].includes(file.type)){message("Usa PNG, JPG o WebP.");return}
- if(file.size>15*1024*1024){message("La imagen debe ocupar menos de 15 MB.");return}
- const currentGame=active;
- try{
-  const image=await createImageBitmap(file);image.close();
- }catch(_){message("No se pudo abrir la imagen seleccionada.");return}
- assignUrl(currentGame,file);
- stateFor(currentGame).mode="photo";save();render();
- message("Imagen aplicada. Puedes moverla y ajustar su tamaño.");
- try{await writePhoto(currentGame,file);message("Imagen guardada en este navegador (no en GitHub).")}
- catch(_){message("Imagen aplicada, pero el navegador no permitió guardarla; se perderá al cerrar o recargar.")}
+upload.addEventListener("change",()=>uploadImage(upload.files?.[0],"left"));
+rightUpload.addEventListener("change",()=>uploadImage(rightUpload.files?.[0],"right"));
+reset.addEventListener("click",()=>{
+ stateFor(active).sides[editSide]=defaults();save();render();message("Encuadre del grip "+(editSide==="left"?"izquierdo":"derecho")+" restaurado.");
 });
-reset.addEventListener("click",()=>{const old=stateFor(active);Object.assign(old,defaults(),{mode:old.mode});save();render();message("Posición y tamaño restablecidos.")});
 remove.addEventListener("click",async()=>{
- const g=active;if(blobUrls[g]){URL.revokeObjectURL(blobUrls[g]);delete blobUrls[g]}
- const st=stateFor(g);st.mode="preset";save();upload.value="";render();message("Imagen eliminada de "+g.toUpperCase()+".");
- try{await deletePhoto(g)}catch(_){message("Imagen quitada de la vista; no fue posible borrar la copia almacenada.")}
+ const g=active;
+ for(const side of ["left","right"]){
+  const id=slot(g,side);
+  if(urls[id]){URL.revokeObjectURL(urls[id]);delete urls[id]}
+  loaded.add(id);
+ }
+ stateFor(g).mode="preset";upload.value="";rightUpload.value="";save();render();message("Fotos eliminadas de ambos grips.");
+ for(const side of ["left","right"]){
+  try{await transact("readwrite","delete",slot(g,side))}catch(_){message("El navegador no permitió eliminar la copia guardada.")}
+ }
 });
-originalReset?.addEventListener("click",()=>{const st=stateFor(active);st.mode="preset";save();render()});
-window.addEventListener("pagehide",()=>{for(const u of Object.values(blobUrls))URL.revokeObjectURL(u)});
+originalReset?.addEventListener("click",()=>{stateFor(active).mode="preset";save();render()});
+window.addEventListener("pagehide",()=>{for(const url of Object.values(urls))URL.revokeObjectURL(url)});
 switchGame();
 })();
