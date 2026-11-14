@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="806" height="598" viewBox="0 0 806 598">
+<defs>
+<linearGradient id="frost" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fdf3ff" stop-opacity=".87"/><stop offset=".5" stop-color="#c63cff" stop-opacity=".64"/><stop offset="1" stop-color="#a200bc" stop-opacity=".22"/></linearGradient>
+<linearGradient id="shadow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c169ff" stop-opacity=".28"/><stop offset="1" stop-color="#d325dd" stop-opacity="0"/></linearGradient>
+</defs>
+<!-- Sub-Zero armor-like frosted accents; all pieces remain in the original DS4 geometry -->
+<path d="M50 343 L101 301 L120 314 L88 362 L115 398 L76 477 L50 441Z" fill="url(#shadow)"/>
+<path d="M756 343 L705 301 L686 314 L718 362 L691 398 L730 477 L756 441Z" fill="url(#shadow)"/>
+<g fill="none" stroke="url(#frost)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M57 406 L83 358 L100 341 L97 320 M83 358 L118 369 L132 347 M83 358 L67 343"/>
+<path d="M749 406 L723 358 L706 341 L709 320 M723 358 L688 369 L674 347 M723 358 L739 343"/>
+<path d="M98 466 L119 440 L136 438 M708 466 L687 440 L670 438"/>
+<path d="M264 170 L290 159 L316 170 M542 170 L516 159 L490 170"/>
+</g>
+<g stroke="#f8d5ff" fill="none" stroke-width="1.1" opacity=".68">
+<path d="M65 422 L92 381 L115 389 M741 422 L714 381 L691 389"/>
+<path d="M80 455 L102 429 M726 455 L704 429"/>
+</g>
+</svg>
