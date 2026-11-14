@@ -197,3 +197,26 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
 .photo-editor .photo-actions button{flex:1;min-width:0;background:#19443c;color:#e5fff5;border:1px solid #619d89;border-radius:8px;padding:8px 5px;font-size:12px;cursor:pointer}
 .photo-editor .photo-actions button:hover{background:#266458}
 .photo-editor #photo-status{font-size:12px;line-height:1.35;min-height:1.4em}
+
+/* Character grip skins v2.1 — artwork only on the two separate physical grips.
+   Exact controller sprite remains untouched. All coordinates within 806x598 stage. */
+.photo-skin{z-index:1;opacity:1;overflow:hidden}
+.photo-grip{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+/* Slender ergonomic shells, avoiding button and analog input regions. */
+.photo-grip.photo-left{
+ clip-path:polygon(7.5% 52%,18% 50%,24% 54%,27% 59%,28% 69%,25% 79%,21% 90%,18% 98%,11% 99%,6.5% 94%,3.5% 83%,3.5% 72%,5% 60%);
+}
+.photo-grip.photo-right{
+ clip-path:polygon(92.5% 52%,82% 50%,76% 54%,73% 59%,72% 69%,75% 79%,79% 90%,82% 98%,89% 99%,93.5% 94%,96.5% 83%,96.5% 72%,95% 60%);
+}
+.photo-skin .photo-grip img{
+ position:absolute;top:200px;left:15px;width:225px;height:398px;display:block;max-width:none;
+ object-fit:cover;object-position:center bottom;
+ opacity:var(--side-opacity,1);
+ transform:translate(var(--side-x,0px),var(--side-y,0px)) rotate(var(--side-rotation,0deg)) scale(var(--side-scale,1));
+ transform-origin:center bottom;
+}
+.photo-skin .photo-grip.photo-right img{left:566px}
+.photo-editor #photo-right-upload{display:block;width:100%;font-size:12px;padding:8px;background:#102e2e;border:1px solid #508e84;border-radius:8px}
+.photo-editor #photo-fit,.photo-editor #photo-side{width:100%;background:#102e2e;color:#edfff9;border:1px solid #508e84;border-radius:8px;padding:9px}
+.photo-skin .photo-grip img[src=""]{display:none}
