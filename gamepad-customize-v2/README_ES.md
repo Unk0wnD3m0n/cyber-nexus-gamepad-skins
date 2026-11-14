@@ -22,6 +22,10 @@ Las imágenes permanecen locales a este navegador: se guardan con IndexedDB si e
 
 Las imágenes encontradas en Internet pueden tener derechos de autor; verifica que puedas compartir el resultado si planeas publicarlo.
 
+## ✨ Sin textura, pero con acabado
+
+Elige **«Sin textura · acabado original»** en **Skin / textura del juego**. Se elimina el patrón decorativo sin dejar la carcasa plana: permanece el diseño original de cada juego y una luz satinada muy sutil. También puedes mantener tus fotografías de personaje en ambos grips. Esta selección se recuerda por juego.
+
 ## 🎨 Personalización existente
 
 - **Juegos:** WuWa, Neverness to Everness y Mortal Kombat 1.
