@@ -20,7 +20,7 @@ body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)
 .menu.options{left:551px;background-position:-28px 0}
 .menu.pressed{opacity:1}
 .face{width:55px;height:55px;background-image:url("https://dracula.github.io/gamepad-viewer/ds4/face.svgz")}
-.face.pressed{background-position-y:-55px}
+.face.pressed{background-position-y:55px}
 .cross{left:625px;top:275px;background-position:0 0}
 .circle{left:682px;top:217px;background-position:-57px 0}
 .square{left:567px;top:217px;background-position:-113px 0}
@@ -31,7 +31,7 @@ body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)
 .down{left:136px;top:255px;background-position:0 0}
 .left{left:92px;top:226px;background-position:104px 0}
 .right{left:165px;top:226px;background-position:52px 0}
-.direction.pressed{background-position-y:-52px}
+.direction.pressed{background-position-y:52px}
 .stick{width:94px;height:94px;background-image:url("https://dracula.github.io/gamepad-viewer/ds4/sticks.svgz");transform:translate(var(--x,0px),var(--y,0px));}
 .stick.ls{left:228px;top:308px;background-position:0 0}
 .stick.rs{left:495px;top:308px;background-position:0 0}
