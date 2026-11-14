@@ -171,3 +171,29 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
 .choice[aria-pressed=true]{border-color:#bcffdd;background:#1c5550;outline:1px solid #acffe1}
 .choice:hover{border-color:#e0fff3}
 @media(max-width:650px){.customizer{width:min(305px,calc(100vw - 16px))}.choice-gallery{grid-template-columns:repeat(3,1fr)}}
+
+/* Gamepad Customize V2 — local photo skin, clipped to game controller.
+   Stays behind interactive buttons/touchpad, and never uploads photos. */
+.controller-art{filter:none !important}
+.shell,.part,.touch-ice{filter:hue-rotate(var(--hue-shift))}
+.part.pressed{filter:brightness(1.85) drop-shadow(0 0 5px #d8fffb) drop-shadow(0 0 12px #14ffe1)}
+.photo-skin{position:absolute;inset:0;width:806px;height:598px;z-index:1;pointer-events:none;display:none;overflow:hidden;
+ -webkit-mask-image:var(--game-base);mask-image:var(--game-base);
+ -webkit-mask-position:center;mask-position:center;
+ -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+ -webkit-mask-size:806px 598px;mask-size:806px 598px;
+}
+.photo-skin.visible{display:block}
+.photo-skin img{display:block;position:absolute;left:0;top:0;width:806px;height:598px;object-fit:cover;max-width:none;
+ transform:translate(var(--photo-x,0px),var(--photo-y,0px)) rotate(var(--photo-rotation,0deg)) scale(var(--photo-scale,1));
+ transform-origin:center;opacity:var(--photo-opacity,.75)}
+.using-photo .shell::after{opacity:0 !important}
+.photo-editor{margin:14px 0;border-top:1px solid #326c61;padding-top:12px}
+.photo-editor h3{margin:0 0 5px;font-size:15px;color:#caffed}
+.photo-editor input[type=file]{display:block;width:100%;font-size:12px;padding:8px;background:#102e2e;border:1px solid #508e84;border-radius:8px}
+.photo-editor input[type=range]{width:100%;accent-color:#56e0b9;cursor:pointer}
+.photo-editor .photo-controls.disabled{opacity:.45}
+.photo-editor .photo-actions{display:flex;gap:7px;margin:12px 0}
+.photo-editor .photo-actions button{flex:1;min-width:0;background:#19443c;color:#e5fff5;border:1px solid #619d89;border-radius:8px;padding:8px 5px;font-size:12px;cursor:pointer}
+.photo-editor .photo-actions button:hover{background:#266458}
+.photo-editor #photo-status{font-size:12px;line-height:1.35;min-height:1.4em}
