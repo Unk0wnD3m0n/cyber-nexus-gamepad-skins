@@ -1,0 +1,47 @@
+/* MK1 V4 — retain Dracula DS4 artwork and exact established geometry; recolor only to Sub-Zero.
+   Dracula source art © contributors, MIT: github.com/dracula/gamepad-viewer */
+:root{color-scheme:dark;--ice-filter:hue-rotate(285deg) saturate(1.25) brightness(1.07)}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent;font-family:Arial,sans-serif}
+body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)}
+.stage{position:absolute;left:50%;top:50%;height:598px;width:806px;transform:translate(-50%,-50%) scale(var(--zoom,1));transform-origin:center;isolation:isolate}
+.controller-art{position:absolute;inset:0;filter:var(--ice-filter)}
+.shell{position:absolute;inset:0;background:url("https://dracula.github.io/gamepad-viewer/ds4/base.svgz") no-repeat center/806px 598px}
+.part{position:absolute;z-index:2;background-repeat:no-repeat;transition:filter .055s,opacity .055s;pointer-events:none}
+.part.pressed{filter:drop-shadow(0 0 4px #54cfff) drop-shadow(0 0 9px #167fff)}
+/* Official Dracula sizes and positions used for the DS4 */
+.trigger{top:0;width:99px;height:90px;background-image:url("https://dracula.github.io/gamepad-viewer/ds4/triggers.svgz");opacity:calc(.10 + .90*var(--pressure,0))}
+.trigger.lt{left:109px;background-position:0 0}
+.trigger.rt{left:598px;background-position:-99px 0}
+.bumper{top:94px;width:99px;height:23px;background-image:url("https://dracula.github.io/gamepad-viewer/ds4/bumper.svgz");opacity:.12}
+.bumper.lb{left:109px}.bumper.rb{left:598px;transform:scaleX(-1)}
+.bumper.pressed{opacity:1}
+.menu{top:142px;width:28px;height:46px;background-image:url("https://dracula.github.io/gamepad-viewer/ds4/start.svgz");opacity:.12}
+.menu.create{left:227px;background-position:0 0}
+.menu.options{left:551px;background-position:-28px 0}
+.menu.pressed{opacity:1}
+.face{width:55px;height:55px;background-image:url("https://dracula.github.io/gamepad-viewer/ds4/face.svgz")}
+.face.pressed{background-position-y:-55px}
+.cross{left:625px;top:275px;background-position:0 0}
+.circle{left:682px;top:217px;background-position:-57px 0}
+.square{left:567px;top:217px;background-position:-113px 0}
+.triangle{left:625px;top:159px;background-position:55px 0}
+.direction{background-image:url("https://dracula.github.io/gamepad-viewer/ds4/dpad.svgz")}
+.up,.down{width:36px;height:52px}.left,.right{width:52px;height:36px}
+.up{left:136px;top:181px;background-position:-37px 0}
+.down{left:136px;top:255px;background-position:0 0}
+.left{left:92px;top:226px;background-position:104px 0}
+.right{left:165px;top:226px;background-position:52px 0}
+.direction.pressed{background-position-y:-52px}
+.stick{width:94px;height:94px;background-image:url("https://dracula.github.io/gamepad-viewer/ds4/sticks.svgz");transform:translate(var(--x,0px),var(--y,0px));}
+.stick.ls{left:228px;top:308px;background-position:0 0}
+.stick.rs{left:495px;top:308px;background-position:0 0}
+.stick.ls.pressed{background-position:-96px 0}
+.stick.rs.pressed{background-position:-192px 0}
+.pad{top:122px;left:272px;width:262px;height:151px;opacity:0;background:url("https://dracula.github.io/gamepad-viewer/ds4/touchpad.svgz") center no-repeat}
+.pad.pressed{opacity:1}
+.ps{left:382px;top:357px;width:42px;height:42px;border-radius:50%;opacity:0;background:radial-gradient(circle,#b8f8ff 0,#1a87e9 52%,transparent 68%)}
+.ps.pressed{opacity:.85}
+.brand{position:absolute;left:50%;top:46%;width:240px;max-height:60px;transform:translate(-50%,-50%);pointer-events:none;z-index:3;filter:drop-shadow(0 1px 4px #000)}
+.frost{position:absolute;inset:0;width:806px;height:598px;z-index:4;pointer-events:none;opacity:.73}
+.status{position:absolute;bottom:2px;left:0;width:100%;text-align:center;color:#c8eaff;letter-spacing:2px;font-size:13px;text-shadow:0 0 8px #2692ff;z-index:5}
+.stage.connected .status{display:none}.stage:not(.connected) .part{opacity:.35}
