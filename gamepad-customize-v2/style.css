@@ -223,3 +223,19 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
 .photo-editor #photo-right-upload{display:block;width:100%;font-size:12px;padding:8px;background:#102e2e;border:1px solid #508e84;border-radius:8px}
 .photo-editor #photo-fit,.photo-editor #photo-side{width:100%;background:#102e2e;color:#edfff9;border:1px solid #508e84;border-radius:8px;padding:9px}
 .photo-skin .photo-grip img[src=""]{display:none}
+
+/* Texture-free finish: retain game-specific molded shell with a restrained satin sheen,
+   rather than a flat or transparent surface. Does not affect character grip artwork. */
+.no-texture .shell::after,
+.no-texture.using-photo .shell::after{
+ background-image:linear-gradient(145deg,rgba(255,255,255,.13) 0%,rgba(255,255,255,.025) 28%,rgba(0,0,0,.13) 64%,rgba(255,255,255,.07) 95%) !important;
+ background-size:806px 598px;
+ background-repeat:no-repeat;
+ opacity:.65 !important;
+ mix-blend-mode:soft-light !important;
+}
+.skins-gallery .choice .plain-skin-preview{
+ display:block;width:100%;height:42px;flex-shrink:0;border-radius:5px;
+ background:linear-gradient(135deg,#244e53 0%,#3b7f83 32%,#102b35 70%,#608789 100%);
+ border:1px solid rgba(211,255,252,.35);box-shadow:inset 0 1px 6px rgba(255,255,255,.17);
+}
