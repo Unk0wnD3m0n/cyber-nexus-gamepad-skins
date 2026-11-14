@@ -278,3 +278,9 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
 .rgb-editor .rgb-switches label{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;margin:0;cursor:pointer}
 .rgb-switches input{accent-color:#4deacb}
 .rgb-editor #rgb-reset{width:100%;padding:10px;border-radius:8px;border:1px solid #6bcdbb;color:#e6fff8;background:#1b5148;cursor:pointer}
+
+/* RGB V2 contour-fit pass: less overpowering, no stray lines crossing controller. */
+.rgb-layer .rgb-outline .rgb-halo{stroke-width:7;opacity:.54}
+.rgb-layer .rgb-outline .rgb-core{stroke-width:1.5;opacity:.84}
+.rgb-layer .rgb-sticks .rgb-halo{stroke-width:8;opacity:.55}
+.rgb-layer .rgb-touchpad .rgb-halo{stroke-width:8;opacity:.5}
