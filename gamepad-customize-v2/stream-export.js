@@ -49,6 +49,11 @@ button.addEventListener("click",async()=>{
  try{
   const clone=document.documentElement.cloneNode(true);
   clone.querySelectorAll("script,#customizer,#customizer-toggle").forEach(x=>x.remove());
+  // Do not freeze transient animation frames into the saved overlay.
+  clone.querySelectorAll(".button-fx-burst").forEach(x=>x.remove());
+  const exportedStage=clone.querySelector(".stage");
+  const chosenGame=document.getElementById("game-select")?.value;
+  if(exportedStage&&chosenGame)exportedStage.dataset.fxGame=chosenGame;
   // For streaming: transparent background, no panel, no debug readout.
   clone.querySelector("body")?.classList.remove("show-bg","debug-mode");
   clone.querySelector(".debug")?.remove();
@@ -73,6 +78,13 @@ button.addEventListener("click",async()=>{
   const main=document.createElement("script");
   main.src=new URL("main.js",rootUrl).href;
   clone.querySelector("body").append(main);
+  // The visual-only FX runtime watches main.js pressed classes in the export.
+  // It reads the saved data-fx-* attributes, not editor-only localStorage.
+  if(clone.querySelector("#button-fx-layer")){
+   const effects=document.createElement("script");
+   effects.src=new URL("button-effects.js?v=button-fx-v1",rootUrl).href;
+   clone.querySelector("body").append(effects);
+  }
   // Remove aria/interactive editor remnants if styles change in future.
   clone.querySelector(".status")?.setAttribute("aria-live","off");
   // Ensure all root-level visual variables keep pointing to published art.
