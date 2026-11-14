@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="806" height="598" viewBox="0 0 806 598"><defs><linearGradient id="crack" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eeffff" stop-opacity=".85"/><stop offset=".5" stop-color="#5ccfff" stop-opacity=".55"/><stop offset="1" stop-color="#237fe1" stop-opacity="0"/></linearGradient></defs><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M75 371 L92 340 L89 311 L108 294 L106 274 M92 340 L122 348 L133 333 M108 294 L130 287" stroke="url(#crack)" stroke-width="2"/><path d="M731 371 L714 340 L717 311 L698 294 L700 274 M714 340 L684 348 L673 333 M698 294 L676 287" stroke="url(#crack)" stroke-width="2"/><path d="M130 481 L154 452 L178 447 M676 481 L652 452 L628 447" stroke="#57cfff" stroke-opacity=".33" stroke-width="1.5"/><path d="M318 133 L337 143 L351 133 M488 133 L469 143 L455 133" stroke="#9af1ff" stroke-opacity=".4" stroke-width="2"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="806" height="598" viewBox="0 0 806 598">
+<defs>
+<linearGradient id="frost" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3ffff" stop-opacity=".87"/><stop offset=".5" stop-color="#42bbf9" stop-opacity=".64"/><stop offset="1" stop-color="#075fb5" stop-opacity=".22"/></linearGradient>
+<linearGradient id="shadow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#69deff" stop-opacity=".28"/><stop offset="1" stop-color="#2c73d6" stop-opacity="0"/></linearGradient>
+</defs>
+<!-- Sub-Zero armor-like frosted accents; all pieces remain in the original DS4 geometry -->
+<path d="M50 343 L101 301 L120 314 L88 362 L115 398 L76 477 L50 441Z" fill="url(#shadow)"/>
+<path d="M756 343 L705 301 L686 314 L718 362 L691 398 L730 477 L756 441Z" fill="url(#shadow)"/>
+<g fill="none" stroke="url(#frost)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M57 406 L83 358 L100 341 L97 320 M83 358 L118 369 L132 347 M83 358 L67 343"/>
+<path d="M749 406 L723 358 L706 341 L709 320 M723 358 L688 369 L674 347 M723 358 L739 343"/>
+<path d="M98 466 L119 440 L136 438 M708 466 L687 440 L670 438"/>
+<path d="M264 170 L290 159 L316 170 M542 170 L516 159 L490 170"/>
+</g>
+<g stroke="#d5faff" fill="none" stroke-width="1.1" opacity=".68">
+<path d="M65 422 L92 381 L115 389 M741 422 L714 381 L691 389"/>
+<path d="M80 455 L102 429 M726 455 L704 429"/>
+</g>
+</svg>
