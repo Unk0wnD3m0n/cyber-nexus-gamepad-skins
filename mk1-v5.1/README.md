@@ -1,17 +1,9 @@
-# CYBER NEXUS — MK1 V5 Sub-Zero Edition (visual prototype)
+# CYBER NEXUS — MK1 Sub-Zero V5.1 (development)
 
-V5 is a separate visual development copy of the fully working V4 controller. It retains **the exact Dracula DS4 silhouette**, component coordinates, Gamepad API button mapping, and controller functionality that the owner tested successfully.
+This folder was copied directly from the user-approved **MK1 V5** version. V5 is the preserved design baseline and should not be changed during V5.1 experiments.
 
-## Changes in this iteration
-- Recolored all eight original controller SVG components into midnight navy, icy cyan and glacial blue (rather than using a global color filter).
-- New, smaller CYBER NEXUS / SUB-ZERO branding.
-- Subtle frost crack details on the shell edges, keeping touchpad and buttons unobstructed.
-- Improved pressed-button lights.
-- Input JS unchanged from V4.
+- [Open V5.1](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v5.1/?bg=1)
+- [Open V5 stable](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v5/?bg=1)
+- [Open V4 stable](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v4/?bg=1)
 
-## Try it
-- [V5 dark preview](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v5/?bg=1)
-- [V5 diagnostic](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v5/?bg=1&debug=1)
-- [V4 stable — unchanged](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/mk1-v4/?bg=1)
-
-**V5 has not yet been tested with a physical DualSense after its visual changes.** Inspect it before considering it final. The Dracula SVG originals and license are included in this folder; the derivative recolors retain MIT attribution. Previous V2/V3 folders were removed from the main branch at the owner's request; they remain recoverable from Git history.
+All V5 designs, SVG assets, controller positions and Gamepad API input mappings have been copied into V5.1 unchanged. Future additions will be applied here based on the owner's directions. The imported Dracula DS4 MIT license and attribution remain in DRACULA-LICENSE.txt.
