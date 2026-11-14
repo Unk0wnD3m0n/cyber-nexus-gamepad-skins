@@ -11,27 +11,27 @@
 		.st0{fill:none;}
 		.st1{fill:#91a9bf;}
 		.st2{fill:#f1fbff;}
-		.st3{fill:#091522;}
+		.st3{fill:#061425;}
 		<!-- controller body -->
-		.st4{fill:#17293d;}
+		.st4{fill:#c6e2f1;}
 		<!-- controller shadow -->
 		.st5{fill:#050a12;}
-		.st6{fill:#23b8ff;}
+		.st6{fill:#1376e3;}
 		<!-- pad background circle -->
 		.st7{opacity:0.12;}
 		.st8{fill:url(#SVGID_5_);}
-		.st9{fill:#17293d;}
+		.st9{fill:#102b45;}
 		<!-- dpad mini-arrows -->
 		.st10{fill:#2376aa;}
 		<!-- trigger shadow color -->
 		.st11{fill:#175d95;}
 		<!-- trigger main color -->
 		.st12{fill:#175d95;}
-		.st13{fill:#17293d;}
-		.st14{fill:#17293d;}
-		.st15{fill:#17293d;}
-		.st16{fill:#17293d;}
-		.st17{fill:#17293d;}
+		.st13{fill:#113858;}
+		.st14{fill:#113858;}
+		.st15{fill:#113858;}
+		.st16{fill:#113858;}
+		.st17{fill:#113858;}
 		.st18{fill:#23b8ff;stroke:#02070d;stroke-width:2;stroke-miterlimit:10;}
 		<!-- ps4 logo -->
 		.st19{fill:#050a12;}
