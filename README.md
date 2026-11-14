@@ -21,13 +21,13 @@ Each controller has its own visual identity, assets and calibration while sharin
 
 ---
 
-## 🎨 CYBER NEXUS — Experimental Multi-Game V2 Skin Editor
+## 🎨 CYBER NEXUS — Gamepad Customize
 
-The original **[WuWa V1](wuwa-v1/)**, **[NTE V1](nte-v1/)** and **[MK1 V3](V3/)** are unchanged. The experimental **[Multi-Game V2 customizer](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?bg=1)** lets you select WuWa, NTE or MK1, with **five skins and six themed stick icons for each game** (15 skins and 18 icons total), as well as the existing color picker. Each game's preferences are saved separately.
+The original **[WuWa V1](wuwa-v1/)**, **[NTE V1](nte-v1/)** and **[MK1 V3](V3/)** are unchanged. The experimental **[Gamepad Customize](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1)** lets you select WuWa, NTE or MK1, with **five skins and six themed stick icons for each game** (15 skins and 18 icons total), as well as the existing color picker. Each game's preferences are saved separately.
 
-**[🎮 TRY / CUSTOMIZE V2](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?bg=1)** · [README Español](wuwa-v2/README_ES.md) · [README English](wuwa-v2/README.md) · [Clean OBS overlay](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?overlay=1)
+**[🎮 TRY / GAMEPAD CUSTOMIZE](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1)** · [README Español](gamepad-customize/README_ES.md) · [README English](gamepad-customize/README.md) · [Clean OBS overlay](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1)
 
-> Experimental: appearance options need live validation; controller detection and button coordinates are preserved from V1.
+> Gamepad Customize: visual options can be changed by game; controller detection and button coordinates are preserved from V1.
 
 ---
 
@@ -68,7 +68,7 @@ Each skin is developed independently so its artwork and input positions can be c
 ```text
 cyber-nexus-gamepad-skins/
 │
-├── wuwa-v2/                          # 🎮 Experimental multigame skin & icon customizer
+├── gamepad-customize/                          # 🎮 Gamepad Customize (multigame skins and icon editor)
 │   ├── index.html                    # Editor + viewer
 │   ├── customizer.js                 # Skins, stick icons, color & saved settings
 │   ├── main.js                       # Unchanged input mapping
