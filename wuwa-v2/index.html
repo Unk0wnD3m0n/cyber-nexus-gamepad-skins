@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#051f1c"><title>CYBER NEXUS — WuWa Custom Skins V2</title><link rel="stylesheet" href="style.css?v=wuwa-v2-custom-1"></head>
+<body><main class="stage" aria-label="CYBER NEXUS Wuthering Waves Resonance DualShock theme">
+<div class="controller-art">
+  <div class="shell"></div><div class="touch-ice" aria-hidden="true"></div>
+  <div class="part trigger lt" data-button="6"></div><div class="part trigger rt" data-button="7"></div>
+  <div class="part bumper lb" data-button="4"></div><div class="part bumper rb" data-button="5"></div>
+  <div class="part menu create" data-button="8"></div><div class="part menu options" data-button="9"></div>
+  <div class="part direction up" data-button="12"></div><div class="part direction down" data-button="13"></div><div class="part direction left" data-button="14"></div><div class="part direction right" data-button="15"></div>
+  <div class="part face cross" data-button="0"></div><div class="part face circle" data-button="1"></div><div class="part face square" data-button="2"></div><div class="part face triangle" data-button="3"></div>
+  <div class="part stick ls" data-stick="left" data-button="10"></div><div class="part stick rs" data-stick="right" data-button="11"></div>
+  <div class="part pad" data-button="17"></div><div class="part ps" data-button="16"></div>
+</div><!-- WuWa V1 base: reuse V3 fixed controller geometry -->
+<svg class="brand" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CYBER NEXUS — WUTHERING WAVES" viewBox="0 0 640 280" style="position:absolute;left:403px;top:195px;width:255px;height:112px;transform:translate(-50%,-50%);pointer-events:none;z-index:5;filter:drop-shadow(0 1px 3px #000)">
+<defs>
+  <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#edfffd"/><stop offset=".45" stop-color="#83ffee"/><stop offset="1" stop-color="#1ef1da"/>
+  </linearGradient>
+  <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#d9fffb"/><stop offset="1" stop-color="#7effef"/>
+  </linearGradient>
+</defs>
+<!-- CYBER NEXUS channel logo with WuWa resonance styling -->
+<text x="320" y="90" font-family="Arial,Helvetica,sans-serif" font-size="75" font-weight="900"
+      text-anchor="middle" letter-spacing="19" stroke="#022c27" stroke-width="12" stroke-linejoin="round"
+      paint-order="stroke" fill="url(#ice)">CYBER</text>
+<text x="320" y="188" font-family="Arial,Helvetica,sans-serif" font-size="111" font-weight="900"
+      text-anchor="middle" letter-spacing="15" stroke="#012b27" stroke-width="13" stroke-linejoin="round"
+      paint-order="stroke" fill="url(#ice)">NEXUS</text>
+<path d="M91 205 H549" stroke="#79ffea" stroke-width="3" opacity=".85"/>
+<text x="320" y="255" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="800"
+      text-anchor="middle" letter-spacing="9" stroke="#04342f" stroke-width="4"
+      paint-order="stroke" fill="url(#shine)">WUTHERING WAVES</text>
+</svg><img class="frost" src="assets/ice-overlay.svg?v=wuwa-v1-jade-1" alt="" aria-hidden="true">
+<div class="status">PRESS A BUTTON TO CONNECT</div><div class="debug" aria-live="off"></div></main>
+<script src="main.js"></script><button id="customizer-toggle" type="button" aria-controls="customizer" aria-expanded="true">🎨 Personalizar</button>
+<aside id="customizer" class="customizer" aria-label="Personalización del control">
+  <h2>🎮 CYBER NEXUS · WuWa V2</h2>
+  <p>Elige una skin, color o símbolo. Tus cambios se guardan en este navegador.</p>
+  <label for="skin-select">Skin / textura</label>
+  <select id="skin-select">
+    <option value="jade">Jade Resonance</option>
+    <option value="dark">Dark Jade</option>
+    <option value="aqua">Light Aqua</option>
+  </select>
+  <label for="icon-select">Icono de las palancas</label>
+  <select id="icon-select">
+    <option value="wave">🌊 Ondas originales</option>
+    <option value="pulse">〰️ Pulso resonante</option>
+    <option value="orbit">◎ Órbita futurista</option>
+  </select>
+  <label for="color-select">Tono del control: <span id="color-value">#00D8C0</span></label>
+  <input type="color" id="color-select" value="#00d8c0" aria-label="Elegir el color del control">
+  <div class="swatches" aria-label="Colores rápidos">
+    <button type="button" style="background:#00d8c0" data-preset-color="#00d8c0" aria-label="Jade"></button>
+    <button type="button" style="background:#4e91ff" data-preset-color="#4e91ff" aria-label="Azul"></button>
+    <button type="button" style="background:#bd69ef" data-preset-color="#bd69ef" aria-label="Violeta"></button>
+    <button type="button" style="background:#eb7c64" data-preset-color="#eb7c64" aria-label="Coral"></button>
+  </div>
+  <button id="reset-customizer" type="button">↺ Restaurar diseño original</button>
+  <p class="help">Para OBS: añade <strong>?overlay=1</strong> a la dirección para ocultar el panel.</p>
+</aside>
+<script src="customizer.js?v=wuwa-v2-custom-1"></script></body></html>
