@@ -1,6 +1,6 @@
-# 🎮 CYBER NEXUS — Gamepad Customize V2
+# 🎮 CYBER NEXUS — Gamepad Customize V2.1 · Character Grips
 
-La nueva **Gamepad Customize V2** permite aplicar **fotografías o imágenes locales** como skin sobre la carcasa de los controles de **Wuthering Waves, NTE y Mortal Kombat 1 / Sub-Zero**, además de conservar las 15 texturas, 18 iconos y el selector de colores de la primera versión.
+La nueva **Gamepad Customize V2** permite aplicar **fotografías o imágenes locales** como skin **en ambos grips hasta la punta inferior** de los controles de **Wuthering Waves, NTE y Mortal Kombat 1 / Sub-Zero**, además de conservar las 15 texturas, 18 iconos y el selector de colores de la primera versión.
 
 <p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize V2, base jade"></p>
 
@@ -8,17 +8,19 @@ La nueva **Gamepad Customize V2** permite aplicar **fotografías o imágenes loc
 
 <p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1">🎥 Vista transparente sin panel para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../gamepad-customize/">Versión anterior</a></p>
 
-## 🖼️ Nueva función: subir una foto como skin
+## 🖼️ Skin estilo personaje en ambos grips
+Este modo sigue el ejemplo de las skins físicas: **el personaje se imprime únicamente en las dos empuñaduras**, llegando a los extremos inferiores del mando, sin atravesar los botones, las palancas ni el touchpad.
 
-1. Abre el botón **🎨 Personalizar** y selecciona el juego deseado.
-2. En **Imagen personalizada**, pulsa **Seleccionar imagen** y elige un archivo PNG, JPG o WebP de tu computadora (máximo 15 MB).
-3. El selector cambia automáticamente a **Foto personalizada**. La imagen se recorta a la silueta del mando y se dibuja por debajo de los botones.
-4. Ajusta **tamaño, posición horizontal, posición vertical, rotación y opacidad** con los deslizadores.
-5. Vuelve a **Skin del juego** para usar las texturas originales, sin borrar tu fotografía. También puedes eliminarla o restablecer sus ajustes.
+1. Abre el botón **🎨 Personalizar** y selecciona WuWa, NTE o MK1.
+2. En **Imagen personalizada**, sube un archivo PNG, JPG o WebP de hasta **15 MB** mediante **Foto para ambos lados**. La misma imagen aparecerá en los grips izquierdo y derecho.
+3. Opcionalmente, sube otra imagen con **Foto diferente para el grip derecho**.
+4. Escoge **Grip izquierdo** o **Grip derecho** para ajustar su encuadre independientemente.
+5. Cambia entre **Llenar grip (recorte)** o **Mostrar imagen completa**, y ajusta tamaño, posición X/Y, rotación y opacidad.
+6. Para volver a las texturas originales, elige **Skin del juego**. Puedes restablecer cada encuadre o borrar las fotos.
 
-La imagen **no se envía a GitHub ni a ningún servidor**: se almacena en el navegador con IndexedDB cuando está disponible. Los ajustes por juego se guardan mediante localStorage. Si el almacenamiento privado está bloqueado, la imagen funciona durante la sesión, pero puede desaparecer al recargar.
+Las imágenes permanecen locales a este navegador: se guardan con IndexedDB si está permitido, mientras los ajustes se guardan con localStorage. No se suben a GitHub. Las proporciones de las fotografías varían, por lo que **algunas requerirán ajustes de encuadre** para que el personaje salga entero y con su cara visible.
 
-Puedes descargar una imagen legalmente utilizable de Internet para cargarla; comprueba siempre las licencias antes de compartir públicamente una skin.
+Las imágenes encontradas en Internet pueden tener derechos de autor; verifica que puedas compartir el resultado si planeas publicarlo.
 
 ## 🎨 Personalización existente
 
