@@ -44,7 +44,7 @@ Use the [input diagnostic mode](https://unk0wnd3m0n.github.io/cyber-nexus-gamepa
 
 Try the [transparent overlay](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/nte-v1/). If OBS Browser Source doesn't expose the connected gamepad, capture the Chrome/Edge window instead.
 
-The earlier [NTE skin](../nte/) remains preserved, and [MK1 V3](../V3/) stays unchanged.
+The obsolete original NTE folder was removed; [MK1 V3](../V3/) stays unchanged.
 
 ---
 
