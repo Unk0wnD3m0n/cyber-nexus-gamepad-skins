@@ -1,6 +1,6 @@
-# 🌊 CYBER NEXUS × Wuthering Waves — Customizable V2
+# 🎮 CYBER NEXUS — Multi-Game Customizer V2
 
-**WuWa V2** is a separate experimental controller based on the working **WuWa V1** geometry and unchanged Gamepad API mapping. It adds an interactive style panel without altering button positions.
+This separate experimental controller can switch between **Wuthering Waves, Neverness to Everness and Mortal Kombat 1 / Sub-Zero**, using each game's existing controller artwork with the **unchanged Gamepad API mapping**. All original releases remain untouched.
 
 <p align="center"><img src="preview.svg" alt="CYBER NEXUS Wuthering Waves V2 Jade Resonance controller" width="700"></p>
 
@@ -8,8 +8,17 @@
 
 <p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/wuwa-v2/?overlay=1">Clean OBS overlay</a> · <a href="README_ES.md">🇪🇸 Leer en español</a> · <a href="../wuwa-v1/">Original V1</a></p>
 
-## 🎨 Customization
-**3 skins** (Jade Resonance, Dark Jade, Light Aqua), **3 stick icons** (Wave, Pulse, Orbit), custom hue selection and color swatches. Settings are saved per-browser with `localStorage`, with a one-click reset option. Open/close the editor using the **🎨 Personalizar** button.
+## 🎮 Game-specific customization
+
+Selecting a game updates the controller's artwork, logo subtitle, available skins and analog stick icons. **Only that game's options appear**.
+
+| Game | Five skins | Six analog stick icons |
+|---|---|---|
+| WuWa | Jade Resonance, Abyssal Echo, Celestial Tide, Golden Frequency, Moonlit Sonic | Wave, Echo, Tuning Fork, Pulse, Astral Star, Crescent |
+| NTE | Neon City, Midnight Grid, Hologram City, Sunset Circuit, Electric Violet | Neon N, Skyline, Circuit, Diamond, Portal, Cyber Bolt |
+| MK1 / Sub-Zero | Frozen Armor, Glacial Veins, Dark Blizzard, Frost Relic, Arctic Pulse | Ice Dragon, Snowflake, Shard, Mask, Rune, Blizzard |
+
+There are **15 themed textures and 18 original, game-inspired icon designs** total. A color picker and quick color swatches are available for every game. Settings persist per game with `localStorage`. Reset restores only the currently selected game. Open or hide the settings panel with **🎨 Personalizar**.
 
 ## 🎮 Try the controller
 Use the TRY link above. Connect a compatible controller through USB/Bluetooth and press a button in Chrome/Edge. The mapping remains identical to WuWa V1: **D-pad, face buttons, shoulders/triggers, analog sticks, L3/R3, Create/Options, PS and touchpad**.
