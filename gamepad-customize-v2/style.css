@@ -285,9 +285,6 @@ body.show-bg{background:radial-gradient(ellipse at center,var(--bg-light) 0,var(
 .rgb-layer .rgb-sticks .rgb-halo{stroke-width:8;opacity:.55}
 .rgb-layer .rgb-touchpad .rgb-halo{stroke-width:8;opacity:.5}
 
-/* RGB v2 edge-refine: fade side rails before the controller grip tips.
-   No extraneous glowing loops outside lower shell. */
-.rgb-layer .rgb-outline{
- -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 55%,rgba(0,0,0,.85) 68%,transparent 82%);
- mask-image:linear-gradient(to bottom,#000 0%,#000 55%,rgba(0,0,0,.85) 68%,transparent 82%);
-}
+/* Exact original shell path clipping/fade lives in SVG mask; no CSS mask
+   to conflict with the SVG's original 806x598 coordinate transform. */
+.rgb-layer .rgb-outline{mask:none;-webkit-mask:none}
