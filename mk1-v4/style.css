@@ -45,3 +45,30 @@ body.show-bg{background:radial-gradient(ellipse at center,#122d4c 0,#070d18 70%)
 .frost{position:absolute;inset:0;width:806px;height:598px;z-index:4;pointer-events:none;opacity:.73}
 .status{position:absolute;bottom:2px;left:0;width:100%;text-align:center;color:#c8eaff;letter-spacing:2px;font-size:13px;text-shadow:0 0 8px #2692ff;z-index:5}
 .stage.connected .status{display:none}.stage:not(.connected) .part{opacity:.2}.stage:not(.connected) .trigger,.stage:not(.connected) .bumper,.stage:not(.connected) .menu,.stage:not(.connected) .pad,.stage:not(.connected) .ps{opacity:0}
+
+/* V4.1 — unambiguous feedback for face buttons and D-pad.
+   The Dracula sprite's pressed variant can be subtle after recoloring:
+   use independent ice-glow layers without moving or reshaping the original buttons. */
+.face,.direction{isolation:isolate}
+.face.pressed,.direction.pressed{
+  filter:brightness(1.65) saturate(1.45) drop-shadow(0 0 6px #d1faff) drop-shadow(0 0 13px #19aaff) !important;
+}
+.face::after,.direction::after{
+  content:"";position:absolute;pointer-events:none;opacity:0;
+  transition:opacity 45ms linear;background:transparent;
+}
+.face::after{
+  inset:6px;border-radius:50%;
+  border:3px solid rgba(216,253,255,.95);
+  background:radial-gradient(circle,rgba(127,237,255,.4),rgba(7,127,255,.10) 65%,transparent 85%);
+  box-shadow:0 0 5px #e0ffff,inset 0 0 9px #71e6ff,0 0 15px #168aff;
+}
+.direction::after{
+  inset:3px;border-radius:7px;
+  background:rgba(111,231,255,.58);
+  box-shadow:inset 0 0 10px #e6ffff,0 0 11px #38b9ff;
+}
+.face.pressed::after,.direction.pressed::after{opacity:1}
+.debug{display:none;position:absolute;left:0;right:0;bottom:0;z-index:20;padding:6px 10px;background:rgba(0,8,20,.88);color:#a9eeff;font:12px/1.4 monospace;white-space:nowrap;text-align:center;pointer-events:none}
+body.debug-mode .debug{display:block}
+body.debug-mode .status{bottom:27px}
