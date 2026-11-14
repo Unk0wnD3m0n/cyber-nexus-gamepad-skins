@@ -88,7 +88,14 @@
 </div>
 <p id="photo-status" role="status" aria-live="polite"></p>
 </section>
+  <section class="stream-export" aria-label="Guardar diseño para streaming">
+  <h3>📺 Guardar para OBS / TikTok</h3>
+  <p>Genera un archivo HTML con este mando, sus colores, iconos y fotos incorporadas. Se verá igual aunque OBS use otro navegador.</p>
+  <button id="export-stream-html" type="button">💾 Guardar control para streaming (.html)</button>
+  <p id="stream-export-status" role="status" aria-live="polite"></p>
+  <small>En OBS: Fuente de navegador → Archivo local → selecciona el HTML. Para TikTok LIVE Studio, puedes capturar la escena de OBS con el mando personalizado. El enlace público de GitHub no comparte fotos guardadas en tu navegador.</small>
+</section>
   <button id="reset-customizer" type="button">↺ Restaurar este juego</button>
   <p class="help">En OBS usa <strong>?overlay=1</strong> para ocultar el panel. No se modifican los controles originales.</p>
 </aside>
-<script src="customizer.js?v=no-texture-satin-4"></script><script src="photo-skin.js?v=character-grips-2"></script></body></html>
+<script src="customizer.js?v=no-texture-satin-4"></script><script src="photo-skin.js?v=character-grips-2"></script><script src="stream-export.js?v=export-v1"></script></body></html>
