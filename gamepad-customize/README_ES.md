@@ -1,12 +1,12 @@
-# 🎮 CYBER NEXUS — Gamepad Customize V2.1 · Character Grips
+# 🎮 CYBER NEXUS — Gamepad Customize
 
-La nueva **Gamepad Customize V2** permite aplicar **fotografías o imágenes locales** como skin **en ambos grips hasta la punta inferior** de los controles de **Wuthering Waves, NTE y Mortal Kombat 1 / Sub-Zero**, además de conservar las 15 texturas, 18 iconos y el selector de colores de la primera versión.
+La edición principal **Gamepad Customize** permite aplicar **fotografías o imágenes locales** como skin **en ambos grips hasta la punta inferior** de los controles de **Wuthering Waves, NTE y Mortal Kombat 1 / Sub-Zero**, además de conservar las 15 texturas, 18 iconos y el selector de colores de la primera versión.
 
-<p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize V2, base jade"></p>
+<p align="center"><img src="preview.svg" width="700" alt="CYBER NEXUS Gamepad Customize, base jade"></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-SUBIR_FOTO_Y_PERSONALIZAR-16BFA6?style=for-the-badge&labelColor=092D28" alt="Probar Gamepad Customize V2"></a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1"><img src="https://img.shields.io/badge/%F0%9F%8E%AE_TRY_CONTROL-SUBIR_FOTO_Y_PERSONALIZAR-16BFA6?style=for-the-badge&labelColor=092D28" alt="Probar Gamepad Customize"></a></p>
 
-<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1">🎥 Vista transparente sin panel para OBS</a> · <a href="README.md">🇺🇸 English</a> · <a href="../gamepad-customize/">Versión anterior</a></p>
+<p align="center"><a href="https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1">🎥 Vista transparente sin panel para OBS</a> · <a href="README.md">🇺🇸 English</a></p>
 
 ## 🖼️ Skin estilo personaje en ambos grips
 Este modo sigue el ejemplo de las skins físicas: **el personaje se imprime únicamente en las dos empuñaduras**, llegando a los extremos inferiores del mando, sin atravesar los botones, las palancas ni el touchpad.
@@ -53,13 +53,13 @@ La exportación funciona completamente en tu navegador. Las fotos no se suben a 
 
 ## 🎮 Probar y usar en OBS
 
-[**Abrir Gamepad Customize V2**](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1)
+[**Abrir Gamepad Customize**](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1)
 
-[Modo diagnóstico](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?bg=1&debug=1) · [Overlay sin panel](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize-v2/?overlay=1)
+[Modo diagnóstico](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?bg=1&debug=1) · [Overlay sin panel](https://unk0wnd3m0n.github.io/cyber-nexus-gamepad-skins/gamepad-customize/?overlay=1)
 
 El archivo `main.js` conserva el mismo mapeo Gamepad API probado en las versiones anteriores. Si OBS Browser Source no recibe las pulsaciones del mando, captura la ventana del navegador.
 
-> 🧪 **V2 experimental:** los archivos y las rutas se han verificado en GitHub. Aún falta comprobar el recorte de imagen y la persistencia con un mando y un navegador reales.
+> ✅ **Edición principal:** controles y exportación verificados por el creador con OBS. La configuración de cada navegador continúa guardándose localmente.
 
 ## 📁 Archivos principales
 
@@ -71,7 +71,7 @@ El archivo `main.js` conserva el mismo mapeo Gamepad API probado en las versione
 - `assets/`: texturas y emblemas.
 - `DRACULA-LICENSE.txt`: licencia y atribución de los gráficos derivados de Dracula.
 
-**Gamepad Customize original, WuWa V1, NTE V1 y MK1 V1–V3 permanecen intactos.**
+**WuWa V1, NTE V1 y MK1 V1–V3 permanecen intactos.**
 
 ---
 
