@@ -1,4 +1,4 @@
-# 🌈 CYBER NEXUS — Gamepad Customize V2 · RGB Edition
+# 🌈 CYBER NEXUS — Gamepad Customize V2 · RGB + Press Effects
 
 **Gamepad Customize V2** extends the existing three-game controller designer with **local photo skin uploads**. Users can choose **Wuthering Waves, Neverness to Everness or Mortal Kombat 1**, upload a PNG/JPG/WebP image, and apply it inside the controller silhouette without covering the controller inputs.
 
@@ -15,6 +15,18 @@
 Select **static, breathing, rainbow or energy pulse**, set your lighting color, intensity and animation speed, or turn lighting off. Settings persist in your browser. RGB modes use SVG/CSS and remain in the exported **Save for streaming (.html)** file for OBS without needing the editing script.
 
 This controls **on-screen visual lighting only**, not the physical controller LEDs. The stable [Gamepad Customize main edition](../gamepad-customize/) remains unchanged. This version is experimental and awaits live browser/OBS testing.
+
+## ⚡ Animated on-press effects — V2
+
+The **Button press effects** panel creates short particle bursts only on the transition from released to pressed. The original `main.js` input mapping is not modified.
+
+- **Auto by game:** MK1 = ice ❄️; WuWa = resonance 🌊; NTE = electricity ⚡, with manual ice, resonance, electricity and fire 🔥 options.
+- **Independent groups:** face buttons, D-pad, triggers/shoulders, L3/R3, and optional system buttons.
+- **Settings:** enabled/disabled, intensity 20–100%, duration 250–950 ms, reset, and a preview button that works without a controller.
+- **OBS:** **Save for streaming (.html)** now includes the effect configuration and a lightweight press-effect script. Re-export after editing settings.
+- **Performance:** short CSS particle animations, capped at 38 simultaneous bursts; no sounds or changes to gamepad input.
+
+Existing RGB lighting, photos on both grips and the stable `gamepad-customize/` remain unchanged. **Experimental: validate the exported overlay with OBS before streaming.**
 
 ## 🖼️ Character art on both controller grips
 The photo is now clipped to **the two handles of the controller, right down to the bottom tips**, away from the D-pad, action buttons, analog sticks and touchpad.
