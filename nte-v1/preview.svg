@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="806" height="598" viewBox="0 0 806 598">
-<!-- Static composite preview of the actual NTE V1 Dracula-derived controller base and CYBER NEXUS NTE artwork. Input is interactive in V3/index.html. -->
+<!-- Static composite preview of the actual NTE V1 Dracula-derived controller base and CYBER NEXUS NTE artwork. Input is interactive in nte-v1/index.html. -->
 <svg x="0" y="0" width="806" height="598" viewBox="-556 241.1 806 598.9">
 	<!--
 	<defs>
@@ -556,6 +556,6 @@
       paint-order="stroke" fill="url(#shine)">NEVERNESS TO EVERNESS</text>
 </svg>
 <g fill="#d68bff" stroke="#6d058d" stroke-width="1" opacity=".95"><circle cx="275" cy="356" r="21"/><circle cx="531" cy="356" r="21"/></g>
-<g transform="translate(257 337)" stroke="#65047a" fill="#deb2ff" stroke-linejoin="round"><path d="M7 30 Q0 17 11 11 L9 2 L21 9 L30 4 L29 15 Q40 22 33 30 L23 26 L15 33Z"/></g>
-<g transform="translate(513 337)" stroke="#65047a" fill="#deb2ff" stroke-linejoin="round"><path d="M7 30 Q0 17 11 11 L9 2 L21 9 L30 4 L29 15 Q40 22 33 30 L23 26 L15 33Z"/></g>
+<g fill="none" stroke="#facdff" stroke-width="2.3" stroke-linejoin="round"><path d="M275 342 288 349.5 288 364.5 275 372 262 364.5 262 349.5Z"/><path d="M531 342 544 349.5 544 364.5 531 372 518 364.5 518 349.5Z"/></g>
+<g stroke="#edacff" stroke-width="3.8" fill="none" stroke-linejoin="bevel"><path d="M268 364 V350 L282 364 V350"/><path d="M524 364 V350 L538 364 V350"/></g>
 </svg>
